@@ -1,0 +1,82 @@
+---
+header-includes:
+- \usepackage{longtable}
+- \usepackage[utf8]{inputenc}
+- \usepackage[spanish]{babel}\decimalpoint
+- \setlength{\parindent}{1.25cm}
+- \usepackage{amsmath}
+output:
+  pdf_document:
+    number_sections: true
+fontsize: 12pt
+papersize: letter
+geometry: margin = 1in
+language: "es"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, fig.align = 'center',  message = F, fig.pos = "H")
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(readxl)
+library(car)
+```
+
+\input{titlepage}
+\thispagestyle{empty}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\newpage
+
+\pagestyle{myheadings}
+\setcounter{page}{3}
+
+
+\section{Introducción}
+
+En este Diseño de Experimentos se intentará resolver un problema surgido de una situación cotidiana: ir de compras. Cuando compramos detergentes para ropa, nos damos cuenta del cambio en el precio de diferentes marcas. ¿Este aumento de precio está relacionado con una mayor eficiencia? El diseño presentado incluirá el uso de tres tipos de detergentes para la eliminación de nuestras manchas, con el objetivo de incluirlos en la comparativa de efectividad. Hemos realizado una búsqueda de información sobre detergentes, indagando sobre su composición así como los factores que implican un cambio en el experimento.
+
+En base a los resultados obtenidos, podemos concluir cómo pueden cambiar nuestros hábitos de consumo para mejorar la economía doméstica.
+
+\section{Reconocimiento y planteamiento del problema}
+
+\subsection{Objetivos}
+
+El presente diseño experimental busca evaluar la efectividad de los detergentes para remover un tipo de mancha en específico aplicado en cuatro diferentes tipos de tela.
+
+Los objetivos que se quieren verificar son:
+
+- Identificar si entre los productos seleccionados, alguno de ellos presenta mayor efectividad para el desprendimiento de las manchas.
+
+- Determinar si la capacidad para la remoción de manchas de los productos seleccionados depende del tipo de tela, o si por el contrario, es independiente de alguna de estas.
+
+\section{Diseño expermiental}
+
+\section{Resultados}
+
+\section{Conclusiones}
+
+
+```{r}
+# Finamos semilla para generar la misma muestra para cada una
+set.seed(1) 
+# Microfibra
+a <- sample(1:20,2)
+# Escuba
+b <- sample(1:20,2)
+# Lino
+c <- sample(1:20,2)
+# Poliester
+d <- sample(1:20,2)
+
+
+```
+
+
+
+
+
+

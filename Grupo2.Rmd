@@ -1,0 +1,877 @@
+---
+header-includes:
+- \usepackage{longtable}
+- \usepackage[utf8]{inputenc}
+- \usepackage[spanish]{babel}\decimalpoint
+- \setlength{\parindent}{1.25cm}
+- \usepackage{amsmath}
+output:
+  pdf_document:
+    number_sections: true
+fontsize: 12pt
+papersize: letter
+geometry: margin = 1in
+language: "es"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, fig.align = 'center',  message = F, fig.pos = "H")
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(readxl)
+library(car)
+```
+
+\input{titlepage}
+\thispagestyle{empty}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\newpage
+
+\pagestyle{myheadings}
+\setcounter{page}{3}
+
+\section{Introducción}
+
+La tecnología hace parte de nuestra cotidianidad, pero que tan perjudicial puede ser el uso a tan temprana edad, si bien la tecnología permite que el estudiante esté más cerca del alcance de la información, un uso excesivo de ella puede traer varios efectos negativos en el desarrollo del niño/adolescente cómo lo es la adicción, por está razón en el presente trabajo se hallan una series estimaciones en donde se da a conocer el comportamiento que tienen los estudiantes de la intitución educativa Alonso Carvajal Peralta, del municipio de Chitagá, Norte de Santander (entidad pública) respecto al tiempo que hacen uso de la tecnología y las consecuencias que trae consigo, según la percepción de los mismos estudiantes. 
+
+La institución está dividida en dos categorías, primaria (estudiantes entre los 5 - 11 años) y secundaria (estudiantes entre los 11 - 18 años), cada grado escolar está compuestos por 3 grupos (A,B y C), con el fin de obtener observaciones discriminadas por el grado escolar, los estudiantes de cada grado se enumeraron desde el A hasta el C.
+
+También se han planteado diversas series de hipótesis que más adelante en el trabajo se darán a conocer, en donde se compara el comportamiento de los estudiantes de primaria respecto a los estudiantes de secundaria.
+
+
+
+\newpage
+
+\section{Planteamiento del problema}
+
+¿Qué tan perjudicial puede ser, el tiempo que dedican los estudiantes al uso de la tecnología?
+
+Estamos viviendo en una época donde la tecnología toma control sobre nuestras vidas, pero que tan seguro es que hasta incluso los menores tengan tanto acceso a ella, y es que para nadie es un secreto que hoy en día los bebes nacen con un teléfono bajo sus brazos, puede que estos equipos electrónicos ayuden a la crianza de los bebes, puede ser que los padres de familia simplemente hacen uso de la tecnología para mantener a los infantes “calmados”.  El problema con lo anterior se basa es que tan perjudicial puede ser el uso excesivo de equipos electrónicos en los niños y/o adolescentes, la tecnología está diseñada para mentes adultas y que los infantes tengan tanto acceso a ellas puede traer consigo diferentes problemas al ser usada a tan temprana edad, como lo es: la adicción, déficit de atención y hasta incluso la diminución de habilidades para interactuar con los demás. 
+
+Podría decirse que los niños y jóvenes pasan más tiempo en sus equipos electrónicos que realizando alguna actividad escolar o compartiendo con algún amigo o familiar, se puede cuestionar si se les debe reducir el tiempo que pasan frente a una pantalla para así evitar futuros fracasos en sus estudios o para evitar que sus relaciones personales no se vean afectadas. 
+
+\newpage
+
+\section{Objetivos}
+
+\subsection{Objetivo general}
+
+- Identificar las horas diarias que los estudiantes de la IEALCARPE dedican usando la tecnología. 
+
+\subsection{Objeticos específicos}
+
+- Estimar el tiempo diario que dedican los estudiantes de la IEALCARPE al uso de equipos electróncios para fines educativos y/o recreativos. 
+
+- Comparar si los estudiantes de primaría pasan más tiempo en promedio usando tecnología respecto a los estudiantes de primaria.
+
+- Identificar la proporción de estudiantes de la IEALCARPE que creen que el uso excesivo de la tecnología afecta sus estudios o relaciones interpersonales. 
+
+\newpage
+
+\section{Definición de términos}
+
+-	**Elemento:**  Cada uno de los estudiantes que integran la institución educativa Alonso Carvajal Peralta, de Chitagá, Norte de Santander. (Única institución educativa del casco urbano del municipio, la cual es de carácter público)
+
+-	**Población:** Todos los estudiantes de I.E ALCARPE. 
+
+-	**Unidad de muestreo:** Cada uno de los estudiantes de la I.E ALCARPE.
+
+-	**Marco muestral:** Listado completo de todos los estudiantes de la I.E ALCARPE, agrupados por año escolar, primaria (0° - 5°) y secundaria (6° - 11°).
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+\textit{Grado escolar} & N.Estudiante & Intervalo Acumulado \\ \hline
+0 & 60 & 1-60 \\ \hline
+1 & 90 & 61-150 \\ \hline
+2 & 83 & 151-233 \\ \hline
+3 & 93 & 234-326 \\ \hline
+4 & 87 & 327-413 \\ \hline
+5 & 77 & 414-490 \\ \hline
+6 & 94 & 491-584 \\ \hline
+7 & 80 & 585-664 \\ \hline
+8 & 85 & 665-749 \\ \hline
+9 & 93 & 750-842 \\ \hline
+10 & 84 & 843-926 \\ \hline
+11 & 62 & 927-988 \\ \hline
+Total & 988 &  \\ \hline
+\end{tabular}
+\caption{Marco muestral global}
+\label{tab:tabla1.1}
+\end{table}
+
+- **Tipo de muestreo utilizado:** Para identificar si los estudiantes de primaria diariamente dedican más tiempo o no al uso de equipos electrónicos a comparación de los estudiantes de secundaria se desea realizar un Muestreo aleatorio Estratificado. 
+
+\newpage
+
+\section{Estudio piloto}
+
+Para realizar el MAE, se tuvo en cuenta lo siguiente:
+
+- Los estudiantes se dividen en dos grupos, primaria que consta de 490 estudiantes y secundaria que consta de 498 estudiantes, estos serán los estratos para realizar el MAE. 
+
+- Se selecciona un MAS para cada uno de los estratos, para esto se generan 15 números aleatorios para primaria y 15 para secundaria, representados de la siguiente manera:  
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textit{Grado escolar} & N.Estudiante & Intervalo Acumulado & Número Aleatorio & Est. a muestrear \\ \hline
+0 & 60 & 1-60 & 52 & 1 \\ \hline
+1 & 90 & 61-150 & 66, 108, 114 & 3 \\ \hline
+2 & 83 & 151-233 & 153, 157, 204,219 & 4 \\ \hline
+3 & 93 & 234-326 & 236, 238 & 2 \\ \hline
+4 & 87 & 327-413 & 385, 368, 389, 405 & 4 \\ \hline
+5 & 77 & 414-490 & 463 & 1 \\ \hline
+Total & 490 &  &  & 15 \\ \hline
+\end{tabular}
+\caption{Marco muestral para los estudiantes de primaria}
+\label{tab:my-table}
+\end{table}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textit{Grado escolar} & N.Estudiante & Intervalo Acumulado & Número Aleatorio & Est. a muestrear \\ \hline
+6 & 94 & 1-94 & 61, 72 & 2 \\ \hline
+7 & 80 & 95-175 & 149, 168 & 2 \\ \hline
+8 & 85 & 176-259 & 187, 207, 253 & 3 \\ \hline
+9 & 93 & 260-352 & 285, 314, 322 & 3 \\ \hline
+10 & 84 & 353-436 & 366, 382, 397,401 & 4 \\ \hline
+11 & 62 & 437-498 & 444 & 1 \\ \hline
+Total & 498 &  &  & 15 \\ \hline
+\end{tabular}
+\caption{Marco muestral para los estudiantes de Secundaria}
+\label{tab:my-table}
+\end{table}
+
+
+- Para obtener los datos de la muestra piloto, a cada uno de los estudiantes seleccionados se les realizó la siguiente encuesta, de manera personal a cada uno. 
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|}
+\hline
+N.                 & Pregunta                                                            \\ \hline
+\multirow{2}{*}{1} & \multirow{2}{*}{Edad}                                               \\
+                   &                                                                     \\ \hline
+\multirow{2}{*}{2} & \multirow{2}{*}{Género}                                             \\
+                   &                                                                     \\ \hline
+\multirow{2}{*}{3} & \multirow{2}{*}{Al día, ¿Cuántas horas dedica al uso de cualquier tipo de tecnología.?} \\
+                   &                                                                     \\ \hline
+\multirow{2}{*}{4} & ¿Cuántas horas, de las anteriormente mencionadas, dedica para resolver                  \\
+                   & cualquier tipo de trabajo académico.?                               \\ \hline
+\multirow{2}{*}{5} & Y, ¿Cuántas horas de las mencionadas en la pregunta 3 son dedicadas \\
+                   & para cualquier actividad que no sea educativa ?                     \\ \hline
+\multirow{2}{*}{6} & ¿ Crees que el uso excesivo de tecnología afecta negativamente tus  \\
+                   & calificaciones? Responde Si o No.                                   \\ \hline
+\multirow{2}{*}{7} & ¿ Creerías que dedicas más tiempo usando tu telefono, tablet o computador,              \\
+                   & que compartiendo con tu familia o amigos.? Responde Si o No.        \\ \hline
+\end{tabular}
+\caption{Vista previa encuesta realizada.}
+\label{tab:tabla3}
+\end{table}
+
+
+- Del estudio piloto se obtienen los siguientes resultados para cada uno de los estratos:
+
+
+```{r, echo=FALSE}
+base <- read_excel("M_piloto.xlsx")
+
+prim <- head(base, 15)
+sec <- base[-c(1:15),]
+
+ ## Horas totales al día
+
+mediaTiempoPrim <- round(mean(prim$hr_total),4)
+mediaTiempoSec <- round(mean(sec$hr_total),4)
+
+desvTiempoPrim <- round(sd(prim$hr_total),4)
+desvTiempoSec <- round(sd(sec$hr_total),4)
+
+## Horas para educación
+
+mediaTiempoPrim_ed <- round(mean(prim$hr_edu),4)
+mediaTiempoSec_ed <- round(mean(sec$hr_edu),4)
+
+desvTiempoPrim_ed <- round(sd(prim$hr_edu),4)
+desvTiempoSec_ed <- round(sd(sec$hr_edu),4)
+
+## Horas para ocio
+
+mediaTiempoPrim_oc <- round(mean(prim$hr_ocio),4)
+mediaTiempoSec_oc <- round(mean(sec$hr_ocio),4)
+
+desvTiempoPrim_oc <- round(sd(prim$hr_ocio),4)
+desvTiempoSec_oc <- round(sd(sec$hr_ocio),4)
+
+```
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+$ \ $                                  & Primaria & Secundaria \\ \hline
+Número de Estudiantes                  & 490      & 498        \\ \hline
+Numero Est. en la muestra              & 15       & 15         \\ \hline
+Hrs promedio uso de tecnología al día. & 7.3333   & 10.2667    \\ \hline
+Desv. Hrs promedio al día.             & 2.895    & 3.5146     \\ \hline
+Hrs promedio usa para educación.       & 2.2      & 3.4667     \\ \hline
+Hrs promedio usa para ocio.            & 5.1333   & 6.5333     \\ \hline
+Afecta sus estudios.                   & 10       & 12         \\ \hline
+Afecta sus relaciones interpersonales. & 5        & 8          \\ \hline
+\end{tabular}
+\caption{Tabla de datos}
+\label{tab:my-table}
+\end{table}
+
+\newpage
+
+\section{Tamaño de la muestra}
+
+Se desea realizar un estudio para estimar el tiempo diario promedio que los estudiantes emplean para el uso de la tecnología, por esta razón se necesita encontrar el tamaño de muestra adecuado, para ello se considera un nivel de error de $\alpha = 0.05$ y un límite para la estimación del error de 1 hr, y con ayuda de los resultados obtenidos de la mustra piloto se hallará el tamaño de muestra para cada estrato, en donde se tiene en cuenta lo siguiente: 
+
+- Dado que los costos de obtener una unidad muestral en cada estrato es igual y las varianzas muestrales son diferentes se hace uso de las afijaciones de **Neyman**, cuya fórmula está dada por: 
+
+$$n_i = n\ * \ [ \frac{N_i \ * \sigma_i}{ \sum_{k=1} ^{L} N_k \ * \sigma_k }] = n \ * w_i$$ 
+
+- Con n (tamaño de muestra global) igual a: 
+
+$$n = \frac{\sum_{i=1}^{2} N_i^2* \frac{\sigma_i^2}{w_i}}{D*N + \sum_{i=1}^{2}N_i*\sigma_i^2}, \ \ D=\frac{B^2}{Z_{\alpha/2}^2}$$
+
+
+Aplicando la fórmula anterior, se hallan los $w_i$ para cada estrato:
+
+- Para primaria, $w_1$:
+
+$$ w_1 = \frac{N_1 \ * \sigma_1}{ \sum_{k=1} ^{2} N_k \ * \sigma_k } = 0.4477$$
+
+- Para Secundaria, $w_2$:
+
+$$ w_2 = \frac{N_2 \ * \sigma_2}{ \sum_{k=1} ^{2} N_k \ * \sigma_k } = 0.5523$$
+
+
+Por lo cual el tamaño de la muestra global n estará dado por: 
+
+$$n = \frac{\sum_{i=1}^{2} N_i^2* \frac{\sigma_i^2}{w_i}}{D*N + \sum_{i=1}^{2}N_i*\sigma_i^2} = 37.98 \approx 38$$
+
+
+Así que para cada uno de los estratos los tamaños de muestra son:
+
+- Primaria:
+
+$$n_1 = n * w_1 = 38*0.4477 = 17.0110 \approx 17$$
+- Secundaria:
+
+$$n_2 = n * w_2 = 38*0.5523 = 20.9890 \approx 21$$
+
+- En la siguiente tabla, se pueden apreciar los calculos realizados para obtener los tamaños de muestra para cada estrato.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\rowcolor[HTML]{FFFFFF} 
+{\color[HTML]{CB0000} \textbf{Estrato}} & {\color[HTML]{CB0000} \textbf{Primaria}} & {\color[HTML]{CB0000} \textbf{Secundaria}} & {\color[HTML]{CB0000} \textbf{$\sum$}} \\ \hline
+\rowcolor[HTML]{FFFFFF} 
+$\bar{Y_i}$           & 7.7333       & 10.2667                             &            \\ \cline{1-1}
+\rowcolor[HTML]{FFFFFF} 
+$S_i$                 & 2.895        & 3.5146                              &            \\ \cline{1-1}
+\rowcolor[HTML]{FFFFFF} 
+$N_i$                 & 490          & 498                                 & 998        \\ \cline{1-1}
+\rowcolor[HTML]{FFFFFF} 
+$n_i$                 & 15           & 15                                  &            \\ \hline
+{\color[HTML]{3166FF} \textbf{$c_i$}}   & {\color[HTML]{3166FF} \textbf{1}}        & {\color[HTML]{3166FF} \textbf{1}}          &                                        \\ \cline{1-1}
+$N_iS_i / \sqrt{c_i}$ & 1418.5500    & 1750.2708                           & 3168.8208  \\ \cline{1-1}
+{\color[HTML]{CB0000} $w_i \approx $}   & {\color[HTML]{CB0000} 0.4477}            & {\color[HTML]{CB0000} 0.5523}              & {\color[HTML]{CB0000} 1}               \\ \cline{1-1}
+$N_iS_i^2 / w_i$      & 4495130.7458 & 5546294.5167                        & 10041425.3 \\ \cline{1-1}
+$N_i * S_i ^2$        & 4106.7023    & 6151.5018                           & 10258.204  \\ \cline{1-1}
+$B$                   & 1 hr         &                                     &            \\ \cline{1-1}
+$Z_{\alpha / 2}$      & 1.96         &                                     &            \\ \cline{1-1}
+$ D $                 & 0.2603       &                                     &            \\ \cline{1-1}
+$ n $                 & 37.98        & {\color[HTML]{CB0000} $n \approx $} & 38         \\ \cline{1-1}
+$ n_i $               & 17.0110      & 20.9890                             & 38         \\ \hline
+$n_i = nw_i \approx $ & 17           & 21                                  & 38         \\ \hline
+\end{tabular}
+\caption{Cálculo tamaño muestra para la Media}
+\label{tab:tabla4}
+\end{table}
+
+\newpage
+
+\section{Estimación parámetros de interes}
+
+- Para realizar el muestreo final, se utilizaron los datos obtenidos de la muestra piloto, pero para mantener la aletoriedad, para el caso de primaria se añadieron 2 observaciones más para así obtener un tamaño de muestra igual a 17, esto se realizó por medio de números aleatorios (sin incluir los ya utilizados anteriormente en el muestreo piloto) que representan a cada estudiante, y para Secundaria se realizó el mismo proceso, pero para 6 estudiantes, para de esta manera obtener una muestra de 21 estudiantes.  
+
+El marco muestral, quedó de la siguiente manera: 
+
+
+```{r, echo =FALSE}
+a <- c(1:490)
+b <- a[-c(52,66,108,114,153,157,204,219,236,238,285,368,389,405,463)]
+m_1 <- sample(b, 2)
+c <- c(1:498)
+d <- c[-c(61,72,149,168,187,207,253,285,314,322,366,382,397,401)]
+m_2 <- sample(d, 6)
+
+```
+
+- Para primaria 
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textit{Grado escolar} & N.Estudiante & Intervalo Acumulado & Número Aleatorio & Est. a muestrear \\ \hline
+0 & 60 & 1-60 & 52 & 1 \\ \hline
+1 & 90 & 61-150 & 66, 108, 114 & 3 \\ \hline
+2 & 83 & 151-233 & 153, 157, 204,219 & 4 \\ \hline
+3 & 93 & 234-326 & 236, 238, 235,312 & 4 \\ \hline
+4 & 87 & 327-413 & 385, 368, 389, 405 & 4 \\ \hline
+5 & 77 & 414-490 & 463 & 1 \\ \hline
+Total & 490 &  &  & 17 \\ \hline
+\end{tabular}
+\caption{Estudiantes de primaria muestreados}
+\label{tab:my-table}
+\end{table}
+
+- Para secundaria
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+\textit{Grado escolar} & N.Estudiante & Intervalo Acumulado & Número Aleatorio & Est. a muestrear \\ \hline
+6 & 94 & 1-94 & 61, 72, 85 & 3 \\ \hline
+7 & 80 & 95-175 & 115, 149, 168 & 3 \\ \hline
+8 & 85 & 176-259 & 182, 187, 207, 253 & 4 \\ \hline
+9 & 93 & 260-352 & 261, 285, 314, 322 & 4 \\ \hline
+10 & 84 & 353-436 & 357, 366, 382, 397,401 & 5 \\ \hline
+11 & 62 & 437-498 & 444, 457 & 2 \\ \hline
+Total & 498 &  &  & 21 \\ \hline
+\end{tabular}
+\caption{Estudiantes de Secundaria muestreados}
+\label{tab:my-table}
+\end{table}
+
+
+
+```{r, echo=FALSE}
+
+base2 <- read_excel("FINAL.xlsx")
+
+primF <- head(base2, 17)
+secF <- base2[-c(1:17),]
+
+ ## Horas totales al día
+
+FmediaTiempoPrim <- round(mean(primF$hr_total),4)
+FmediaTiempoSec <- round(mean(secF$hr_total),4)
+
+FdesvTiempoPrim <- round(sd(primF$hr_total),4)
+FdesvTiempoSec <- round(sd(secF$hr_total),4)
+
+## Horas para educación
+
+FmediaTiempoPrim_ed <- round(mean(primF$hr_edu),4)
+FmediaTiempoSec_ed <- round(mean(secF$hr_edu),4)
+
+FdesvTiempoPrim_ed <- round(sd(primF$hr_edu),4)
+FdesvTiempoSec_ed <- round(sd(secF$hr_edu),4)
+
+## Horas para ocio
+
+FmediaTiempoPrim_oc <- round(mean(primF$hr_ocio),4)
+FmediaTiempoSec_oc <- round(mean(secF$hr_ocio),4)
+
+FdesvTiempoPrim_oc <- round(sd(primF$hr_ocio),4)
+FdesvTiempoSec_oc <- round(sd(secF$hr_ocio),4)
+
+```
+
+- Se registrarón los datos que se obtuvieron por medio de una ecuesta realizada personalmente a los 38 estudiantes de la institución educativa Alonso Carvajal Peralta, de Chitagá, seleccionados para la muestra final, en donde se obtuvo los siguientes resultados, los cuales son necesarios para hallar estimaciones de los respectivos parámetros de interés.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+$ \ $                                  & Primaria & Secundaria \\ \hline
+Número de Estudiantes                  & 490      & 498        \\ \hline
+Numero Est. en la muestra              & 17       & 21         \\ \hline
+Hrs promedio uso de tecnología al día. & 7.2941   & 10.5238    \\ \hline
+Desv. Hrs promedio al día.             & 2.801    & 3.5160     \\ \hline
+Hrs promedio usa para educación.       & 2.1176   & 3.1905     \\ \hline
+Hrs promedio usa para ocio.            & 5.1765   & 7.1429     \\ \hline
+Afecta sus estudios.                   & 11/17    & 17/21      \\ \hline
+Afecta sus relaciones interpersonales. & 5/17     & 11/21      \\ \hline
+\end{tabular}
+\caption{Datos de la muestra final}
+\label{tab:tabla6}
+\end{table}
+
+
+\subsection{Estimación de $\mu$}
+
+\subsubsection{Estimación tiempo diario promedio que dedican los estudiantes al uso de la tecnología}
+
+Se desea estimar el tiempo diario promedio que los estudiantes dedican al uso de la tecnología y su respectivo intervalo de confianza del 95%, para esto se tiene en cuenta lo siguiente: 
+
+- $Y_i:$ Tiempo diario que los estudiantes de primaria y secundaria dedican al uso de la tecnología.
+
+- $L$ = 2, número de estratos (Primario y Secundaria).
+
+- $N = \sum_{i=1}^{2}N_i = 490+498=998 \rightarrow$ Número de estudiantes de la institución.
+
+- $\hat{\mu} = \bar{Y_{st}} = \frac{ 1 }{N}\sum_{i=1}^{2}N_i\bar{Y_i} = \frac{ 490\times 7.2941\ +498\times 10.5238\  }{998} = 8.8326$
+
+- $\beta = Z_{0.05/2} \sqrt{\sum_{i=1}^{2}\frac{N_i^2}{N^2}\frac{S_i^2}{n_i}\frac{N_i-n_i}{N_i}} = 1.96 \times \sqrt{ \frac{490^2}{998^2}\frac{2.801^2}{17} \frac{490-17}{490}+ \frac{498^2}{998^2} \frac{3.516^2}{21} \frac{498-21}{498}} \approx 0.9756$
+
+- $\hat{\mu} \pm \beta = 8.8326 \pm 0.9756 = \ I.C :(7.857, 9.8082)$
+
+
+**Interpretación:** La estimación del tiempo diario promedio que los estudiantes dedican al uso de la tecnología es igual a 8.83 hrs y con una confianza de 95% su Intervalo de canfianza está dado entre 7.86 y 9.81 hrs.
+
+
+\subsubsection{tiempo promedio primaria vs secundaria}
+
+Ahora se desea conocer si el tiempo diario promedio que dedican al uso de la tecnología los estudiantes de primaria es significativamante mayor que el de los estudiantes de secundaria, para comprobar lo anterior se tienen la siguiente prueba de hipótesis:
+
+
+$$
+\begin{cases}
+\begin{aligned}
+H_0&:  \mu_1-\ \mu_{2} \ \leq 0 \\
+H_a&: \mu_1-\ \mu_{2} \ >  0 
+\end{aligned}
+\end{cases}
+$$
+
+Siendo $\mu_1:$ tiempo diario promedio de los estudiantes de primaria y $\mu_{2}:$ tiempo diario promedio de los estudiantes de Secundaria
+
+
+- Para hallar el estadístico de prueba para corroborar las hipotesis debo saber si los datos se distribuyen normal o no,  por lo cual aplico la prueba de Shapiro-W en donde se van a probar las siguientes hipótesis:
+
+$$H_0: Y_i \sim Normal(\mu, \sigma^2) \,\ i=1,2$$
+
+```{r, echo=FALSE, fig.cap = "Gráficos normalidad"}
+
+test1 <- shapiro.test(primF$hr_total) 
+test2 <- shapiro.test(secF$hr_total) 
+
+par(mfrow=c(1, 2))
+
+qqPlot(primF$hr_total,pch=20, ylab='hr dedicadas al uso de tecnología',
+       main='QQplot hr totales primaria')
+legend("topleft",legend=rbind(c("Statistic W","p.value"),round(c(test1$statistic,test1$p.value),digits=5)),cex=0.8)
+
+qqPlot(secF$hr_total,pch=20, ylab='hr dedicadas al uso de tecnología',
+       main='QQplot hr totales Secundaria')
+legend("topleft",legend=rbind(c("Statistic W","p.value"),round(c(test2$statistic,test2$p.value),digits=5)),cex=0.8)
+
+
+```
+
+- Se puede ver mediante el gráfico y los valores del P-value que los datos registrados para el tiempo diario que los estudiantes dedican al uso de la tecnología siguen una distribución normal, tanto para primaria como para secundaria. 
+
+- Ya que las distribuciones de los tiempos de los estudiantes de primaria y secundaria se distribuyen Normal, lo siguiente es determinar el estadistico de prueba para corroborar la hipotesis principal, de la siguiente manera:
+
+
+- Se tiene que el estadístico de prueba es:
+
+$$T_c = \frac{  \bar{Y_1} \ - \ \bar{Y_2}}{ \sqrt{\hat{V}( \hat{\mu_1})+\hat{V}( \hat{\mu_2})}} = \frac{  \bar{Y_1} \ - \ \bar{Y_2}}{ \sqrt{\hat{V}( \bar{Y_1})+\hat{V}( \bar{Y_2})}} \sim t(n_1 +n_2 - 2)$$
+
+- La región de rechazo está dada por:
+
+$$RR = \{T\ |\ T_c > \ T_{\alpha}(n_1+n_2-2) \} = \{T\ |\ T_c > \ 1.688298 \}  $$
+
+- Para hallar $T_c$ debo estimar las varianzas:
+
+$$ \hat{V}( \bar{Y_1}) = \frac{S_1^2}{n_1} \frac{N_1-n_1}{N_1} =\frac{2.801^2}{17} \frac{490-17}{490} \approx 0.4455 \approx 0.45$$
+$$ \hat{V}( \bar{Y_2}) = \frac{S_2^2}{n_2} \frac{N_2-n_2}{N_2} =\frac{3.516^2}{21} \frac{498-21}{498} \approx 0.5639 \approx 0.56$$
+
+
+$$T_c = \frac{7.2941 \ - \ 10.5238}{ \sqrt{0.45+0.56}}\approx -3.2137 \approx -3.21 $$
+
+- Conlusión: Como Tc < 1.69, no hay suficiente evidencia muestral para rechazar la hipótesis nula $H_0$, por lo tanto, $\mu_1 \leq \mu_{2}$, por lo cual se puede afirmar con un nivel de sinificancia de $\alpha = 5 \%$ que el tiempo diario promedio que los estudiantes dedican al uso de la tecnología en primaria es menor o igual que en secundaria, esto se puede ver tambien a través del siguiente gráfico:
+
+```{r, echo = FALSE, fig.cap = "Gráfico para el tiempo promedio discriminado por estrado" }
+
+base2$Estr <- as.factor(base2$Estr)
+
+plot(x = base2$Estr,  y = base2$hr_total, ylab = "Hr dedicadas al uso de la tecnología", xlab = "Niveles", col= c("purple", "pink"))
+```
+
+\subsubsection{Estimación tiempo diario promedio que dedican los estudiantes al uso de la tecnología con fines educativos}
+
+Se desea estimar el tiempo diario promedio que los estudiantes dedican al uso de la tecnología para fines educativos y su respectivo intervalo de confianza del 95%, para esto se tiene en cuenta lo siguiente: 
+
+- $Y_i:$ Tiempo diario que los estudiantes de primaria y secundaria dedican al uso de la tecnología con fines educativos.
+
+- $L$ = 2, número de estratos (Primario y Secundaria).
+
+- $N = \sum_{i=1}^{2}N_i = 490+498=998 \rightarrow$ Número de estudiantes de la institución.
+
+- $\hat{\mu} = \bar{Y_{st}} = \frac{ 1 }{N}\sum_{i=1}^{2}N_i\bar{Y_i} = \frac{ 490\times 2.1176\ +498\times 3.1905\  }{998} = 2.6318$
+
+- $\beta = Z_{0.05/2} \sqrt{\sum_{i=1}^{2}\frac{N_i^2}{N^2}\frac{S_i^2}{n_i}\frac{N_i-n_i}{N_i}} = 1.96 \times \sqrt{ \frac{490^2}{998^2}\frac{1.5363^2}{17} \frac{490-17}{490}+ \frac{498^2}{998^2} \frac{1.9136^2}{21} \frac{498-21}{498}} \approx 0.2718$
+
+- $\hat{\mu} \pm \beta = 2.6318 \pm 0.2718 = \ I.C :(2.36, 2.9036)$
+
+
+**Interpretación:** La estimación del tiempo diario promedio que los estudiantes dedican al uso de la tecnología con fines educativos es igual a 2.6 hrs y con una confianza de 95% su Intervalo de canfianza está dado entre 2.36 y 2.9 hrs.
+
+
+- Ahora se desea conocer si el tiempo diario promedio que dedican al uso de la tecnología los estudiantes de primaria con fines educativos es significativamante mayor que el de los estudiantes de secundaria, para comprobar lo anterior se tienen la siguiente prueba de hipótesis:
+
+
+$$
+\begin{cases}
+\begin{aligned}
+H_0&:  \mu_1-\ \mu_{2} \ \leq 0 \\
+H_a&: \mu_1-\ \mu_{2} \ >  0 
+\end{aligned}
+\end{cases}
+$$
+
+Siendo $\mu_1:$ tiempo diario promedio de los estudiantes de primaria dedicados al uso de la tecnología con fines educativos y $\mu_{2}:$ tiempo diario promedio de los estudiantes de Secundaria dedicados al uso de la tecnología con fines educativos.
+
+
+- Se tiene que el estadístico de prueba es:
+
+$$T_c = \frac{  \bar{Y_1} \ - \ \bar{Y_2}}{ \sqrt{\hat{V}( \hat{\mu_1})+\hat{V}( \hat{\mu_2})}} = \frac{  \bar{Y_1} \ - \ \bar{Y_2}}{ \sqrt{\hat{V}( \bar{Y_1})+\hat{V}( \bar{Y_2})}} \sim t(n_1 +n_2 - 2)$$
+
+- La región de rechazo está dada por:
+
+$$RR = \{T\ |\ T_c > \ T_{\alpha}(n_1+n_2-2) \} = \{T\ |\ T_c > \ 1.688298 \}  $$
+
+- Para hallar $T_c$ debo estimar las varianzas:
+
+$$ \hat{V}( \bar{Y_1}) = \frac{S_1^2}{n_1} \frac{N_1-n_1}{N_1} =\frac{1.54^2}{17} \frac{490-17}{490}  \approx 0.135$$
+$$ \hat{V}( \bar{Y_2}) = \frac{S_2^2}{n_2} \frac{N_2-n_2}{N_2} =\frac{1.91^2}{21} \frac{498-21}{498}  \approx 0.168$$
+
+
+$$T_c = \frac{2.1176-3.1905 }{ \sqrt{0.135+0.468}} \approx -1.3817 $$
+
+- Conlusión: Como Tc < 1.69, no hay suficiente evidencia muestral para rechazar la hipótesis nula $H_0$, por lo tanto, $\mu_1 \leq \mu_{2}$, por lo cual se puede afirmar con un nivel de sinificancia de $\alpha = 5 \%$ que el tiempo diario promedio que los estudiantes dedican al uso de la tecnología con fines educativos en primaria es menor o igual que en secundaria, esto se puede ver tambien a través del siguiente gráfico:
+
+
+```{r, echo = FALSE, fig.cap = "Gráfico para el tiempo promedio discriminado por estrado para uso educativo" }
+
+
+
+plot(x = base2$Estr,  y = base2$hr_edu, ylab = "Hr dedicadas al uso educativo", xlab = "Niveles", col= c("blue", "green"))
+```
+
+\subsubsection{Estimación tiempo diario promedio que dedican los estudiantes al uso de la tecnología con fines recreativos}
+
+Se desea estimar el tiempo diario promedio que los estudiantes dedican al uso de la tecnología para fines recreativos y su respectivo intervalo de confianza del 95%, para esto se tiene en cuenta lo siguiente: 
+
+- $Y_i:$ Tiempo diario que los estudiantes de primaria y secundaria dedican al uso de la tecnología con fines recreativos.
+
+- $L$ = 2, número de estratos (Primario y Secundaria).
+
+- $N = \sum_{i=1}^{2}N_i = 490+498=998 \rightarrow$ Número de estudiantes de la institución.
+
+- $\hat{\mu} = \bar{Y_{st}} = \frac{ 1 }{N}\sum_{i=1}^{2}N_i\bar{Y_i} = \frac{ 490\times 5.1765\ +498\times 7.1429\  }{998} = 6.1059$
+
+- $\beta = Z_{0.05/2} \sqrt{\sum_{i=1}^{2}\frac{N_i^2}{N^2}\frac{S_i^2}{n_i}\frac{N_i-n_i}{N_i}} = 1.96 \times \sqrt{ \frac{490^2}{998^2}\frac{2.3515^2}{17} \frac{490-17}{490}+ \frac{498^2}{998^2} \frac{3.6095^2}{21} \frac{498-21}{498}} \approx 0.4729$
+
+- $\hat{\mu} \pm \beta = 6.1059 \pm 0.4729 = \ I.C :(5.633, 6.5788)$
+
+
+**Interpretación:** La estimación del tiempo diario promedio que los estudiantes dedican al uso de la tecnología con fines educativos es igual a 6.11 hrs y con una confianza de 95% su Intervalo de canfianza está dado entre 5.63 y 6.6 hrs.
+
+
+- Ahora se desea conocer si el tiempo diario promedio que dedican al uso de la tecnología los estudiantes de primaria con fines educativos es significativamante mayor que el de los estudiantes de secundaria, para comprobar lo anterior se tienen la siguiente prueba de hipótesis:
+
+
+$$
+\begin{cases}
+\begin{aligned}
+H_0&:  \mu_1-\ \mu_{2} \ \leq 0 \\
+H_a&: \mu_1-\ \mu_{2} \ >  0 
+\end{aligned}
+\end{cases}
+$$
+
+Siendo $\mu_1:$ tiempo diario promedio de los estudiantes de primaria dedicados al uso de la tecnología con fines educativos y $\mu_{2}:$ tiempo diario promedio de los estudiantes de Secundaria dedicados al uso de la tecnología con fines educativos.
+
+
+- Se tiene que el estadístico de prueba es:
+
+$$T_c = \frac{  \bar{Y_1} \ - \ \bar{Y_2}}{ \sqrt{\hat{V}( \hat{\mu_1})+\hat{V}( \hat{\mu_2})}} = \frac{  \bar{Y_1} \ - \ \bar{Y_2}}{ \sqrt{\hat{V}( \bar{Y_1})+\hat{V}( \bar{Y_2})}} \sim t(n_1 +n_2 - 2)$$
+
+- La región de rechazo está dada por:
+
+$$RR = \{T\ |\ T_c > \ T_{\alpha}(n_1+n_2-2) \} = \{T\ |\ T_c > \ 1.688298 \}  $$
+
+- Para hallar $T_c$ debo estimar las varianzas:
+
+$$ \hat{V}( \bar{Y_1}) = \frac{S_1^2}{n_1} \frac{N_1-n_1}{N_1} =\frac{2.35^2}{17} \frac{490-17}{490} \approx 0.3136$$
+$$ \hat{V}( \bar{Y_2}) = \frac{S_2^2}{n_2} \frac{N_2-n_2}{N_2} =\frac{3.61^2}{21} \frac{498-21}{498} \approx 0.5944$$
+
+
+$$T_c = \frac{5.1765-7.1429 }{ \sqrt{0.3136+0.5944}} \approx -2.064 $$
+
+- Conlusión: Como Tc < 1.69, no hay suficiente evidencia muestral para rechazar la hipótesis nula $H_0$, por lo tanto, $\mu_1 \leq \mu_{2}$, por lo cual se puede afirmar con un nivel de sinificancia de $\alpha = 5 \%$ que el tiempo diario promedio que los estudiantes dedican al uso de la tecnología con fines recreativos en primaria es menor o igual que en secundaria, esto se puede ver tambien a través del siguiente gráfico:
+
+
+```{r, echo = FALSE, fig.cap = "Gráfico para el tiempo promedio discriminado por estrado para uso educativo" }
+
+
+
+plot(x = base2$Estr,  y = base2$hr_ocio, ylab = "Hr dedicadas al uso educativo", xlab = "Niveles", col= c("red", "brown"))
+```
+
+\subsubsection{Tiempo educativo vs tiempo dedicado al ocio}
+
+Dado lo anterior también surge la duda, sobre si los estudiantes significativamente dedican mayor tiempo al uso de la tecnología en lugar de usarla con fines educativos, para resolver esto se tiene en cuenta las siguientes hipótesis:
+
+
+$$
+\begin{cases}
+\begin{aligned}
+H_0&:  \mu_1-\ \mu_{2} \ \leq 0 \\
+H_a&: \mu_1-\ \mu_{2} \ >  0 
+\end{aligned}
+\end{cases}
+$$
+
+Siendo $\mu_1:$ tiempo diario promedio con fines educativos y $\mu_{2}:$ tiempo diario promedio con fines recreativos.
+
+
+- Se tiene que el estadístico de prueba es:
+
+$$T_c = \frac{  \bar{Y_1} \ - \ \bar{Y_2}}{ \sqrt{\hat{V}( \hat{\mu_1})+\hat{V}( \hat{\mu_2})}} = \frac{  \bar{Y_1} \ - \ \bar{Y_2}}{ \sqrt{\hat{V}( \bar{Y_1})+\hat{V}( \bar{Y_2})}} \sim t(n_1 +n_2 - 2)$$
+
+- La región de rechazo está dada por:
+
+$$RR = \{T\ |\ T_c > \ T_{\alpha}(n_1+n_2-2) \} = \{T\ |\ T_c > \ 1.6657 \}  $$
+
+- Para hallar $T_c$ debo estimar las varianzas:
+
+$$ \hat{V}( \bar{Y_1}) = \frac{S_1^2}{n} \frac{N-n}{N} =\frac{1.81^2}{38} \frac{998-38}{998} \approx 0.083$$
+$$ \hat{V}( \bar{Y_2}) = \frac{S_2^2}{n} \frac{N-n}{N} =\frac{3.22^2}{38} \frac{998-38}{998} \approx 0.2624$$
+
+
+$$T_c = \frac{2.7105-6.2632}{ \sqrt{0.083+0.264}} \approx -6.04 $$
+
+- Como Tc < 1.67, no hya suficiente evidencia muestral para rechazar la hipótesis nula, por lo tanto con una confianza del 95% se tiene que el tiempo diario promedio dedicado al uso de la tecnología con fines educativos es menor o igual al tiempo diario promedio dedicado al uso recreativo
+
+\subsection{Estimación de $\hat{p}$}
+
+\subsubsection{El uso de la tecnología afecta o no sus calificaciones}
+
+A cada uno de los estudiantes seleccionados, se les preguntó acerca de si creían que el uso que le dan a la tecnología estaría o no afectando sus calificaciones, así que para conocer que proporción de estudiantes dicen ser afectados por el excesivo uso de tecnología se plantea lo siguiente:
+
+- $\hat{p_i}:$ es la proporción de estudiantes en la muestra del estrato $i$ donde se cumple con el atributo:
+
+$$\hat{p_i} = \frac{a_i}{n_i}$$
+
+Con $\ a_i:$N. de estudiantes que cumplen con el atributo.
+
+- Para primaria:
+
+$$\hat{p_1} = \frac{a_1}{n_1} = \frac{11}{17} \approx 0.6471 $$
+y su varianza estimada:
+
+$$\hat{V}(\hat{p_1})= \frac{\hat{p_1}(1-\hat{p_1})}{n_1-1} \frac{N_1-n_1}{N_1} = \frac{0.6471(1-0.6471)}{17-1} \times \frac{490-17}{490}\approx 0.0138$$
+
+
+
+- Para secundaria:
+
+$$\hat{p_2} = \frac{a_2}{n_2} = \frac{17}{21} \approx 0.8095 $$
+y su varianza estimada:
+
+$$\hat{V}(\hat{p_2})= \frac{\hat{p_2}(1-\hat{p_2})}{n_2-1} \frac{N_2-n_2}{N_2} = \frac{0.8095(1-0.8095)}{21-1} \times \frac{498-21}{498}\approx 0.0074$$
+
+- El estimador puntual de la proporción de estudiantes que creen que el uso de la tecnología puede afectar sus estudios es:
+
+$$\hat{p} = \sum_{i=1}^2\frac{N_i}{N}\hat{p_i} = \frac{490}{998} \times 0.6471 + \frac{498}{998} \times 0.8095 \approx 0.5791$$
+
+Y cuya varianza está dada por:
+
+$$\hat{V}(\hat{p}) = \sum_{i=1}^2 (\frac{N_i}{N})^2 \times \hat{V}(\hat{p_i}) = (\frac{490}{998})^2 \times 0.0138 + (\frac{498}{998})^2 \times 0.0074 \approx 0.0052 $$
+
+- El límite en error de estimación estimado (LEE) al 95% está dado por:
+
+$$B_p = Z_{\frac{0.05}{2}}\times \sqrt{\hat{V}(\hat{p})} = 1.96 \times \sqrt{0.0052} \approx 0.1413$$
+- Por lo tanto un Intervalo de confianza del 95% para la proporción de estudiantes que creen que el uso de la tecnología afecta sus estudios está dado por:
+
+$$\hat{p} \pm B_p = (0.5791\pm0.1413) \rightarrow I.C:(0.4378, \ 0.7204)$$
+**Interpretación:** La proporción de estudiantes que creen que sus calificaciones se ven afectadas por el uso de la tecnología es del 57.9 % y con una confianza del 95% la proporción de estudiantes se encuentra entre el 43.4 % y el 72 %.
+
+
+\subsubsection{El uso de la tecnología afecta o no sus relaciones personales}
+
+A cada uno de los estudiantes seleccionados, se les preguntó acerca de si creían que el uso que le dan a la tecnología estaría o no afectando sus relacione spersonales, así que para conocer que proporción de estudiantes dicen ser afectados por el excesivo uso de tecnología se plantea lo siguiente:
+
+- $\hat{p_i}:$ es la proporción de estudiantes en la muestra del estrato $i$ donde se cumple con el atributo:
+
+$$\hat{p_i} = \frac{a_i}{n_i}$$
+
+Con $\ a_i:$N. de estudiantes que cumplen con el atributo.
+
+- Para primaria:
+
+$$\hat{p_1} = \frac{a_1}{n_1} = \frac{5}{17} \approx 0.2941 $$
+
+y su varianza estimada:
+
+$$\hat{V}(\hat{p_1})= \frac{\hat{p_1}(1-\hat{p_1})}{n_1-1} \frac{N_1-n_1}{N_1} = \frac{0.2941(1-0.2941)}{17-1} \times \frac{490-17}{490}\approx 0.0125$$
+
+
+
+- Para secundaria:
+
+$$\hat{p_2} = \frac{a_2}{n_2} = \frac{17}{21} \approx 0.5238 $$
+
+y su varianza estimada:
+
+$$\hat{V}(\hat{p_2})= \frac{\hat{p_2}(1-\hat{p_2})}{n_2-1} \frac{N_2-n_2}{N_2} = \frac{0.5238(1-0.5238)}{21-1} \times \frac{498-21}{498}\approx 0.0119$$
+
+- El estimador puntual de la proporción de estudiantes que creen que el uso de la tecnología puede afectar sus relaciones personales es:
+
+$$\hat{p} = \sum_{i=1}^2\frac{N_i}{N}\hat{p_i} = \frac{490}{998} \times 0.2941 + \frac{498}{998} \times 0.5238 \approx 0.4058$$
+
+Y cuya varianza está dada por:
+
+$$\hat{V}(\hat{p}) = \sum_{i=1}^2 (\frac{N_i}{N})^2 \times \hat{V}(\hat{p_i}) = (\frac{490}{998})^2 \times 0.0125 + (\frac{498}{998})^2 \times 0.0119 \approx 0.006 $$
+
+- El límite en error de estimación estimado (LEE) al 95% está dado por:
+
+$$B_p = Z_{\frac{0.05}{2}}\times \sqrt{\hat{V}(\hat{p})} = 1.96 \times \sqrt{0.006} \approx 0.1518$$
+
+- Por lo tanto un Intervalo de confianza del 95% para la proporción de estudiantes que creen que el uso de la tecnología afecta sus relaciones personales está dado por:
+
+$$\hat{p} \pm B_p = (0.4058\pm0.1518) \rightarrow I.C:(0.2540, \ 0.5576)$$
+
+**Interpretación:** La proporción de estudiantes que creen que sus relaciones personales se ven afectadas por el uso de la tecnología es del 40.6% y con una confianza del 95% la proporción de estudiantes se encuentra entre el 25.4% y el 55.8%.
+
+
+\newpage
+
+\section{Conclusiones}
+
+- Se pudo evidenciar que los estudiantes desde los más pequeños hsta los más grandes, dedican un tiempo suficientemente alto al uso de la tecnología, mediante las pruebas de hipótesis se logró observar que los estudiantes de secundaria dedican más horas, esto puede ser debido a la edad, ya que ellos tienen más fácil acceso a un equipo electrónico a comparación de un estudiante de primaria que en la mayoría de casos usan los de sus padres.
+
+- Más del 58% de los estudiantes creen que este excesivo tiempo dedicado al uso de la tecnología pudo afectar sus calificaciones, es una cifra que puede ser preocupante, ya que los estudiantes estarían propensos a fracasar en sus estudios. 
+
+- Más del 40% de los estudiantes creen que el uso de la tecnología está afectando sus relaciones personales, no se trata de ver los defectgos de la tecnología, sino de llegar a un punto donde  adecue a las relaciones familiares o amistosas, el mal manejo de la tecnología en las familias afecta el desarrollo emocional de los niños - adolescentes, impactando en su proceso de socialización  que pueden causar alteraciones del estado de ánimo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r, echo=FALSE}
+
+#MAE
+
+#Estimaciones de mu y tau en MAE
+est_mu_taumae <- function(ni, Ni, ybari, S2i, alpha = 0.05) {
+  #ni es el tamano de muestra en los estratos
+  #Ni es el tamano de los estratos
+  #ybari son las estimaciones de la media en los estratos
+  #S2i es la estimacion de la varianza muestral en los estratos
+  #alpha es el nivel de significancia
+  
+  L <- length(Ni)
+  N <- sum(Ni)
+  n <- sum(ni)
+  varybari <- (1 - ni/Ni)*S2i/ni
+  mi <- Ni/N
+  ybar <- sum(mi*ybari)
+  varybar <- sum(mi^2*varybari)
+  liybar <- ybar - qt(alpha/2, n-L, lower.tail = F)*sqrt(varybar)
+  lsybar <- ybar + qt(alpha/2, n-L, lower.tail = F)*sqrt(varybar)
+  tau <- N*ybar
+  litau <- N*liybar
+  lstau <- N*lsybar
+  df <- data.frame(Estimacion = c(ybar, tau), vars = c(varybar, N^2 * varybar), li = c(liybar, litau), ls = c(lsybar, lstau))
+  rownames(df) <- c("mu", "tau")
+  return(df)
+}
+
+#estimaciones de p y A en MAE
+est_p_Amae <- function(ni, Ni, p_i, alpha = 0.05) {
+  #ni es el tamano de muestra en los estratos
+  #Ni es el tamano de los estratos
+  #p_i son las estimaciones de las proporciones en los estratos
+  #alpha es el nivel de significancia
+  
+  L <- length(Ni)
+  N <- sum(Ni)
+  n <- sum(ni)
+  S2i <- p_i*(1-p_i)
+  varp_i <- (1 - ni/Ni)*S2i/(ni-1)
+  mi <- Ni/N
+  p <- sum(mi*p_i)
+  varp <- sum(mi^2*varp_i)
+  lip <- p - qt(alpha/2, n-L, lower.tail = F)*sqrt(varp)
+  lsp <- p + qt(alpha/2, n-L, lower.tail = F)*sqrt(varp)
+  A <- N*p
+  liA <- N*lip
+  lsA <- N*lsp
+  df <- data.frame(Estimacion = c(p, A), vars = c(varp, N^2 * varp), li = c(lip, liA), ls = c(lsp, lsA))
+  rownames(df) <- c("p", "A")
+  return(df)
+}
+
+#genera afijaciones
+gen_afij <- function(Ni, si = NULL, ci = NULL) {
+  #Ni es el tamano de los estratos
+  #si son las desviaciones estandar
+  #ci son los costos
+  if (is.null(si)) {
+    si <- rep(1, length(Ni))
+  }
+  if (is.null(ci)) {
+    ci <- rep(1, length(Ni))
+  }
+  num <- Ni * si / sqrt(ci)
+  psi_i <- num / sum(num)
+  return(psi_i)
+}
+
+#Tamano de muestra en MAE
+
+samplesizeMAE <- function(Ni, si2, psi_i, D) {
+  #Ni es el tamano de los estratos
+  #Si2 es la varianza en los estratos
+  #psi_i son las afijaciones
+  #D es tal como se define en la teoria
+  N <- sum(Ni)
+  num <- sum(Ni^2*si2/psi_i)
+  den <- N^2*D + sum(Ni*si2)
+  napprox <- num/den
+  return(napprox)
+}
+
+Ni <- c(490,498); ni <- c(17,21)
+Si1 <- c(2.801, 3.516); Si2 <- c(1.5363, 1.9136); si3 <- c(2.3515, 3.6095)
+ci <- c(1,1); p_i1 <- c((11/17),(17/21)); p_i2 <- c((5/17),(11/17))
+y_bari1 <- c(7.2941,10.5238); y_bari2 <- c(2.1176,3.1905); y_bari3 <- c(5.1765,7.1429)
+
+## Estimación horas promedio al dia primaria vs secundaria
+
+
+```
+
