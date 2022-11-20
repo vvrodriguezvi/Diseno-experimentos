@@ -151,6 +151,25 @@ d <- sample(1:20,3)
 
 - Resultados obtenidos
 
+```{r}
+
+```
+
+\begin{table}[h]
+\center
+\caption{Resultados aplicación del diseño}
+\label{tab:my-table}
+\begin{tabular}{l|lll|}
+\cline{2-4}
+ & \multicolumn{3}{c|}{Detergente} \\ \cline{2-4} 
+ & \multicolumn{1}{l|}{Más económico} & \multicolumn{1}{l|}{Medio} & Más costoso \\ \hline
+\multicolumn{1}{|l|}{Tela} & \multicolumn{1}{l|}{Bonaropa} & \multicolumn{1}{l|}{Límpido} & Vanish \\ \hline
+\multicolumn{1}{|l|}{Scuba} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}3.25\\ 3.25\\ 3.75\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}4.5\\ 4.75\\ 5\end{tabular}} & \begin{tabular}[c]{@{}l@{}}2.5\\ 2.5\\ 1.5\end{tabular} \\ \hline
+\multicolumn{1}{|l|}{Poliéster} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}1.5\\ 1.25\\ 1.5\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}5\\ 5\\ 5\end{tabular}} & \begin{tabular}[c]{@{}l@{}}1.5\\ 1.25\\ 1.25\end{tabular} \\ \hline
+\multicolumn{1}{|l|}{Microfibra} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}3.75\\ 3.75\\ 4.25\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}5\\ 5\\ 4.5\end{tabular}} & \begin{tabular}[c]{@{}l@{}}3.5\\ 3.75\\ 4\end{tabular} \\ \hline
+\multicolumn{1}{|l|}{Lino} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}3.75\\ 4.5\\ 4.5\end{tabular}} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}5\\ 5\\ 5\end{tabular}} & \begin{tabular}[c]{@{}l@{}}4.75\\ 4.5\\ 3.75\end{tabular} \\ \hline
+\end{tabular}
+\end{table}
 
 \section{Conclusiones}
 
