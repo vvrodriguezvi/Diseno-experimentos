@@ -17,6 +17,6 @@
 \contentsline {subsection}{\numberline {4.3}Modelo del diseño experimental}{10}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Verificación de los supuestos}{10}{subsection.4.4}%
 \contentsline {subsubsection}{\numberline {4.4.1}Normalidad}{10}{subsubsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.2}Varianza}{11}{subsubsection.4.4.2}%
-\contentsline {section}{\numberline {5}Conclusiones}{11}{section.5}%
-\contentsline {section}{\numberline {6}Referencias}{12}{section.6}%
+\contentsline {subsubsection}{\numberline {4.4.2}Homogeneidad de varianza}{11}{subsubsection.4.4.2}%
+\contentsline {section}{\numberline {5}Conclusiones}{12}{section.5}%
+\contentsline {section}{\numberline {6}Referencias}{13}{section.6}%

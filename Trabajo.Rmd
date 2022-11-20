@@ -320,7 +320,16 @@ $$ Y_{ijk} = \mu + \tau_i + \beta_j + (\tau\beta)_{ij} + \varepsilon_{ijk}$$
 
 \subsection{Verificación de los supuestos}
 
+Se procede a verificar los supuestos de normalidad y homogeneidad de varianza sobre los residulaes del modelo expuesto anteriormente.
+
 \subsubsection{Normalidad}
+
+Se plantea la siguiente prueba de hipótesis sobre los errores del modelo:
+
+$$ \left\lbrace\begin{array}{c} H_0:\epsilon_{ij}~\sim~Normal \\ H_a:\epsilon_{ij}\nsim~Normal
+\end{array}\right.$$
+
+Luego, se presenta el gráfico de normalidad así como los resultados de la prueba de _Shapiso-Wilk_:
 
 ```{r, fig.cap="Gráfico Qqplot"}
 residuales <- residuals(modPromedio)
@@ -330,10 +339,16 @@ qqline(residuales,col="#7d3434", lwd=2)
 legend("topleft",title = "Test de Shapiro-Wilk",title.col="#7d3434",title.adj= 1, legend=rbind(c("Statistic W","p-value"), round(c(test$statistic,test$p.value),digits=6)), cex=.8)
 ```
 
-- con una significancia del 5%, no se rechaza la hipotesis nula, es decir se cumple el supuesto de normalidad.
+- Puesto que el p-value = 0.06 > $\alpha = 0.05$. A un nivel de confianza del 95% se concluye que, no se rechaza la hipótesis nula, es decir, los residuales del modelo cumplen con el supuesto de normalidad.
 
 
-\subsubsection{Varianza}
+\subsubsection{Homogeneidad de varianza}
+
+Se busca corroborar si los residuales presentan una varianza homogenea, por ello se realiza la siguiente prueba de hipótesis sobre los errores del modelo:
+$$\left\lbrace\begin{array}{c}
+H_0:~ V(\varepsilon_{ij}) = \sigma^2,~~ \sigma ^2 \ \ constante\\ 
+H_a:~ V(\varepsilon_{ij})~no~es~constante
+\end{array}\right.$$
 
 ```{r, fig.cap="Residuales vs. Valores ajustados"}
   res<-ggplot(modPromedio, aes(x=modPromedio$fitted.values, y=modPromedio$residuals))+
@@ -354,7 +369,8 @@ b1 <- bartlett.test(residuales, Detergente)
 b2 <- bartlett.test(residuales, Tela)
 ```
 
-- A un nivel de significancia del 5% se cumple el supuesto de homogeneidad de varianza para el término de error del modelo.
+
+- De este gráfico que muestra los residuales versus los valores ajustados, se observa como todos ellos se distribuyen aleatoriamente alrededor del cero, variando entre valores de -0.5 a 0.5.  Además,  no se evidencia un patrón aparente en forma de parlante, cono o balón de futbol americano. Por lo cual se puede decir, al menos desde una prueba gráfica, que existe homogeneidad de varianza en los residuales del modelo en cuestión.
 
 \begin{table}[h]
 \center
@@ -370,6 +386,7 @@ Bartlett's K-squared = 0.15063, df = 3, p-value = 0.9851 \\ \hline
 \end{tabular}
 \end{table}
 
+- De los resultados presentados en el cuadro 4, se observa como, usando el test de Barlett, para el caso de los residuales y el detergente se obtuvo un p-value = 0.7179 > $\alpha = 0.05$. A un nivel de confianza del 95% se concluye que, no se rechaza $H_0$. Mientras que, para el caso de los residuales y la tela se obtuvo un p-value = 0.9851 > $\alpha = 0.05$. Por lo cual, análogamente al caso anterior, se rechaza $h_0$. Y en definitiva, se concluye que existe evidencia suficiente a favor del supuesto de homogeneidad de varianza sobre los residuales del modelo. 
 
 
 
