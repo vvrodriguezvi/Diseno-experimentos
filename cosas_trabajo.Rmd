@@ -1,0 +1,13 @@
+---
+title: "cosas del trabajo"
+author: "Genaro Alfonso Aristizabal Echeverri"
+date: "2022-11-20"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Descripción detallada del diseño experimental
+
