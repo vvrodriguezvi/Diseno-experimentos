@@ -1,0 +1,596 @@
+---
+title: "DosFactores"
+author: "Juan Esteban Sanchez Pulgarin"
+date: "4/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+__Objetivo__: Estudiar e interpretar los resultados del analisis de varianza con dos factores, considerando efectos fijos y efectos aleatorios; recalcar la diferencia entre estos dos modelos de analisis de varianza. Mostrar el encubrimiento de un factor principal producida por la significancia de la interaccion.
+
+__PROBLEMA 1 Caso de Estudio 5__
+El gerente de una fabrica efectuo tres replicas de un diseño factorial para investigar el efecto del supervisor y del turno en una linea de produccion. El numero de articulos producidos por turno de ocho horas y por supervisor en cada replica aparece en la tabla siguiente.
+
+Con base en el enunciado, la teoria y en los resultados de la ejecucion del programa responda las siguientes preguntas: Identifique la variable respuesta, las variables que definen los factores, los niveles de cada factor y los tratamientos.
+
+ + Variable respuesta: La produccion de articulos.
+ + Factores: Turno, Supervisor
+   + Turno: Mañana, Tarde, Noche
+   + Supervisor: A, B
+   + Tratamientos: Mañana-A, Mañana-B, Tarde-A, Tarde-B, Noche-A, Noche-B.
+
+## 1. Suponga que los supervisores y los turnos fueron seleccionados explicitamente por el gerente, es decir, considere un diseño de efectos fijos.
+
+  a) Plantee, interprete y realice las pruebas de hipotesis que establecen la significancia de la interaccion y de los factores. Analice posible encubrimiento de los factores.
+  
+Construimos primero la tabla ANOVA:
+```{r}
+#Datos
+Turno <- as.factor(c(rep(1:3, 6)))
+Supervisor <- as.factor(c(rep("A", 9), rep("B", 9)))
+Produccion <- c(570, 480, 470, 610, 475, 430, 625, 540, 450, 480, 625, 630, 515, 600, 680, 465, 580, 660)
+datos <- data.frame(Produccion, Turno, Supervisor)
+```
+
+
+ANOVA
+```{r}
+modProduccion <- aov(Produccion~Turno*Supervisor)
+summary(modProduccion)
+```
+
+
+__Conlusión:__ El factor Supervisor a partir del siguiente par de hipótesis:
+
+$$H_0:\tau_1=\tau_2=0~~vs~~H_1:\tau_j\neq0, ~~p.a ~~j=1,2$$
+
+Es significativo a un nivel del 5%, al igual que la interaccion entre supervisor y turno, con hipotesis asociada:
+$$H_0:(\tau\beta)_{ij}=0 ~~\forall_{ij}~~vs~~H_1:(\tau\beta)_{ij}\neq0~~p.a~~(i,j)~i=1,2,~j=1,2,3$$
+
+por tanto no existe __encubrimiento__ de la significancia del factor supervisor debida a la presencia significativa de la interaccion entre el supervisor y turno. La conclusion anterior es valida a un nivel de significancia del 5%. sin embargo, se presenta __encubrimiento__ de la significancia del factor Turno(ya que este es no significativo) debido a la presencia significativa de la interaccion entre el supervisor y turno.
+
+
+Modelo:
+$$Y_{ijk}= \mu+\tau_i+\beta_j+\varepsilon_{ijk};~i=1,2, ~j=1,2,3,~k=1,2,3$$
+$\tau_i:$Efecto del supervisor i, i = {a, B}
+$\beta_j:$Efecto del turno j, j = {mañana, tarde, noche}
+$n=3$ replicas.
+
+
+  b) Construya una tabla de medias por tratamiento y por nivel de los factores. Emplee esta tabla para estimar los efectos de los niveles de los factores y de las interacciones(tratamientos). Analice la significancia de los efectos debidos a las interacciones y a los factores. Estudie la existencia de efectos positivos y negativos que producen el encubrimiento del factor turno. Analice las graficas de las interacciones.
+
+
+```{r}
+mediaTurno <- tapply(Produccion,Turno, mean)
+desvT <- tapply(Produccion, Turno, sd)
+
+mediasuper <- tapply(Produccion, Supervisor, mean)
+desvS <- tapply(Produccion, Supervisor, sd)
+
+Interaccion <- tapply(Produccion, list(Turno, Supervisor), mean)
+InteraccionSd <- tapply(Produccion, list(Turno, Supervisor), sd)
+
+```
+
+```{r}
+require(kableExtra)
+kable(data.frame("Media" = mediaTurno, "Desviacion" = desvT), row.names = T)
+```
+
+```{r}
+mediasuper
+desvS
+```
+
+Se ve que el supervisor B, ofrece en promedio mayor produccion.
+
+```{r}
+Interaccion
+InteraccionSd
+```
+
+Se mira que en el turno de la mañana con el supervisor A, ofrece mayor produccion promedio que con el supervisor B en el mismo turno, Mientras que en el turno de la noche el supervisor B ofrece mejor produccion promedio que el supervisor A.
+
+Grafico de efectos.
+```{r}
+plot.design(Produccion~Turno*Supervisor, main = "Grafico de efecto", las = 1)
+```
+
+Del grafico se obseva que el supervisor B ofrece mayor producion promedio con respecto a la media global que el supervisor A.
+
+Del grafico se observa que el turno de la noche ofrece en en promedio mayor produccion con respecto a la media global, mientras el turno de la mañana ofrece una menor produccion promedio con respecto a la media global.
+
+
+grafico de interaccion
+```{r}
+interaction.plot(Turno, Supervisor, Produccion, type = "b", pch = 19, fixed = T, xlab = "Turno", ylab = "Numero de articulos producidos", main = "Grafico de interaccion", las = 1, col=c("red", "blue", "black"))
+```
+
+Se observa como el supervisor B producer mayor numero de articulos en el turno de la noche con respecto al supervisor A, Mientras el supervisor A produce mayor numero de articulos en el turno de la mañana con respecto al supervisor b.
+
+
+grafico de interaccion
+```{r}
+interaction.plot(Supervisor, Turno, Produccion, type = "b", pch = 19, fixed = T, xlab = "Supervisor", ylab = "Numero de articulos producidos", main = "Grafico de interaccion", las = 1, col=c("red", "blue", "black"))
+```
+
+Hay que hacer notar la diferencia aparentemente grande entre el supervisor B con el turno de la noche, con respecto al turno de la mañana.
+
+Verificacion de los supuestos.
+```{r}
+residuales <- residuals(modProduccion)
+qqnorm(residuales)
+qqline(residuales)
+shapiro.test(residuales)
+```
+
+con una significancia del 5%, no se rechaza la hipotesis nula, es decir se cumple el supuesto de normalidad.
+
+Homogeneidad de varianza
+
+```{r}
+plot(modProduccion$fitted.values, residuales)
+abline(h=0)
+```
+
+
+```{r}
+bartlett.test(residuales, Turno)
+```
+
+```{r}
+bartlett.test(residuales, Supervisor)
+```
+
+A un nivel de significancia del 5% se cumple el supuesto de homogeneidad de varianza para el termino de error del modelo.
+
+ c. plantee y realice contrastes entre los tratamientos que le permitan concluir que existen diferencias significativas en la produccion del turno de la noche y del turno de la mañana(dia).
+ Ayuda: Considere el contraste: $L = \mu_{.3}-\mu_{.1}$. Note que un estimador insesgado de este contraste es $\hat{L}=\hat{\mu}_{.3}-\hat{\mu}_{.1}=\bar{Y}_{.3}-\bar{Y}_{.1}$ y su respectiva varianza estimada está dada por:
+
+$\hat{Var}(\hat{L})=\hat{Var}(\hat{Y}_{.3})+\hat{Var}(\hat{Y}_{.1})=\frac{MSE}{an}+\frac{MSE}{an}\\=2\frac{MSE}{2*3}=\frac{719}{3}=239.6667$
+
+Intervalo de confianza del 95% para el contraste:
+$$\bar{Y}_{.3} - \bar{Y}_{.1} \pm t_{\alpha/2; ab(n-1)}\sqrt{\hat{Var}(\hat{L})} = 553.3-544.16\pm t_{0.025;2*3*2}\sqrt{239.6667}$$
+$$=9.14\pm2.178813*15.48117$$
+$$9.14\pm 33.73058=(-24.59, 42.87)$$
+Como el intervalo de confianza contiene al cero, hay suficiente evidencia para concluir que las dos medias de produccion son iguales, es decir estadisticamente el turno de la mañana ofrece en promedio los mismo resultados que el turno de la noche.
+
+ d. Plantee contrastes que le permitan responder las siguientes preguntas:
+ 
+   + i. ¿El supervisor B tiene igual desempeño en el turno de la mañana y en el de la noche?, $(\mu_{21}-\mu_{23})$
+  
+Tenemos el siguiente contraste:$L = \mu_{21}-\mu_{23}$, y un estimador insesgado es $\hat{L} = \hat{\mu}_{21}-\hat{\mu}_{23}=\bar{Y}_{21}-\bar{Y}_{23}$ y su respectiva varianza dada por:
+$\hat{Var}(\hat{L}) =\hat{Var}(\bar{Y}_{21})-\hat{Var}(\bar{Y}_{23})=\frac{MSE}{n}+\frac{MSE}{n}$
+
+$\hat{Var}(\hat{L})=\frac{719 }{3}+\frac{719 }{3}=479.33$
+
+Intervalo de confianza:
+$\bar{Y}_{21} - \bar{Y}_{23} \pm t_{\alpha/2; ab(n-1)}\sqrt{\hat{Var}(\hat{L})}$
+
+$=486.6667-656.6667\pm2.178813\sqrt{479.33} = (-217.70, -122.29)$
+
+Como el intervalo no contiene al cero, se puede decir que estadisticamente los desempeños promedios del supervisor B en turno de la mañana es diferente a del supervisor B en el turno de la noche.
+   
+   + ii. ¿Es la produccion en el turno de la tarde igual al promedio de la produccion en el turno de la mañana y de la noche? $(2\mu_{.2}=\mu_{.1}+\mu_{.3})$
+
+$\hat{L}=2\bar{Y}_{.2}-\bar{Y}_{.1}-\bar{Y}_{.3}$
+
+$\hat{Var}(\hat{L}) = 6\frac{MSE}{6}=MSE=719$
+
+Un intervalo de confianza dado por:
+$2*550-544.1667-553.3333\pm2.178813\sqrt{719}$
+$(1032.41, 1149.25)$
+
+Luego como el intervalo de confianza no contiene al cero, la produccion del turno de la tarde es diferente al promedio de la produccion en los turnos de la mañana y noche.
+
+Miremos que salen en las agrupaciones por MSD
+Tener en cuenta que la interaccion es significativa entonces no tiene sentido
+```{r}
+require(agricolae)
+lsd1 <- LSD.test(modProduccion, "Turno")
+lsd1
+lsd2 <- LSD.test(modProduccion, "Supervisor")
+lsd2
+```
+
+
+similarmente para duncan.
+
+
+Comparacion de medias de un factor para niveles fijos del otro factor
+
+```{r}
+supervisorA <- datos[datos$Supervisor=="A", ]
+#anova
+modSupeA <- aov(supervisorA$Produccion~supervisorA$Turno)
+summary(modSupeA)
+boxplot(supervisorA$Produccion~supervisorA$Turno)
+duncanA <- duncan.test(modSupeA, "supervisorA$Turno")
+duncanA
+```
+
+```{r}
+supervisorB <- datos[datos$Supervisor=="B", ]
+#anova
+modSupeB <- aov(supervisorB$Produccion~supervisorB$Turno)
+summary(modSupeB)
+boxplot(supervisorB$Produccion~supervisorB$Turno)
+duncanB <- duncan.test(modSupeB, "supervisorB$Turno")
+duncanB
+```
+
+# Caso de estudio 6. Diseño de TRES FACTORES
+
+ + Una empresa embotelladora de refresco está interesa en obtenr alturas de llenado mas uniformes en las botellas que se frabican en su proceso de manufactura. 
+ 
+ + Teoricamente, la maquina de llenado llena cada botella a la altura objetivo, por lo que a la embotelladora le gustaria entender mejor las funtes de esta variabilidad para reducirla.
+ 
+ + El ingeniero del proceso puede controlar tres variables durante el proceso de llenado: el porcentaje de carbonatacion (A), la presion de operacion en el llenador(B) y las botellas producidas por minuto o rapidez de linea(C).
+ 
+ + Es sencillo controlar la presion y la rapidez, pero el porcentaje de carbonatacion es mas dificil de controlar durante la manufactura real debido a que varian con la temperatura.
+ 
+sin embargo, para los fines del experimento se logran controlar:
+
+ + La carbonatacion en tres(3) niveles: 10, 12 y 14 por ciento.
+ 
+ + Se eligen dos(2) niveles para la presion: 25 y 30 psi
+ 
+ + Dos(2) niveles para la rapidez de la linea:200 y 250 botellas por minuto bpm.
+ 
+El ingeniero decide correr dos(2) replicas de un diseño factorial con estos tres factores, haciendo las 24 corridas de manera aleatoria. 
+
+La variable respuesta observada es la desviacion promedio de la altura del llenado objetivo que se observa en una corrida de produccion de botellas con cada conjunto de condiciones.
+
+los datos recolectados se reportan en una tabla. Valores positivos significan alturas de llenado arriba del objetivo y valores negativos alturas de llenado abajo del objetivo.
+
+
+  1. Plantee, interprete y contraste las pruebas de hipotesis que establecen la significancia de las interacciones y de los efectos principales, analice encubrimiento de los factores. Elimine las interacciones y los factores no significativos y construya un nuevo modelo de analisis de varianza.
+  
+```{r}
+# datos.
+Carbonatacion <- as.factor(c(rep(10,8), rep(12,8), rep(14,8)))
+Velocidad <- as.factor(c(rep(c(200,250,200,250),6)))
+Presion <- as.factor(c(rep(c(25, 25, 30, 30), 6)))
+Desviacion <- c(-3, -1, -1, 1, -1, 0, 0, 1, 0, 2, 2, 6, 1, 1, 3, 5, 5, 7, 7, 10, 4, 6, 9, 11)
+
+datos <- data.frame(Desviacion, Carbonatacion, Velocidad, Presion)
+```
+
+ 
+Tabla ANOVA
+```{r}
+modDesviacion <- aov(Desviacion~Carbonatacion*Presion*Velocidad)
+summary(modDesviacion)
+```
+
+De la tabla Anova se dice que con una significancia del 5% la interaccion triple es no significativa, es decir no se rechaza la hipotesis nula, luego no hay encubrimiento sobre las interacciones dobles.
+
+Un nuevo modelo sin la interaccion triple
+```{r}
+mod1 <- aov(Desviacion~Carbonatacion+Presion+Velocidad+Carbonatacion*Presion + Carbonatacion*Velocidad + Presion*Velocidad)
+summary(mod1)
+```
+
+De la tabla ANOVA se puede decir que con una significancia del 5% la interaccion entre el nivel de carbonatacion y velocidad no es significativa, por lo tanto se eliminara del modelo.
+
+```{r}
+mod2 <- aov(Desviacion~Carbonatacion+Presion+Velocidad+Carbonatacion*Presion + Presion*Velocidad)
+summary(mod2)
+```
+
+Con una significancia del 5% se observa que la interaccion entre los niveles de presion y velocidad no es significativa, por lo tanto se considera un nuevo modelo que no la incluya.
+
+```{r}
+modFinal <- aov(Desviacion~Carbonatacion+Presion+Velocidad+Carbonatacion*Presion)
+summary(modFinal)
+```
+
+Con una significancia del 5% rechazamos la hipotesis nula para la interaccion entre los niveles de carbonatacion con presion, es decir es significativa, por otro lado con el mismo nivel de significancia observese que los tres factores considerados salen como significativos.
+
+
+  2. Estime los efectos principales para los niveles de cada factor, y pruebe su significancia, interprete el signo.
+
+Grafico de efectos:
+```{r}
+plot.design(Desviacion~Carbonatacion*Presion)
+```
+
+Del efecto de los factores observamos que a un nivel del 30 psi tenemos un incremento positivo con respecto a la media global y por otro lado esta por encima de 0, con un nivel de 25 psi tenemos un efecto negativo con respecto a la media global
+
+Del efecto de carbonatacion vemos que con un nivel del 10% hay un efecto negativo con respecto a la media global y es que unico que alcanza el 0, con un porcentaje de carbonatacion del 14% se ve que hay un efecto positivo y este es muy alejado del 0, que es el valor objetivo.
+
+
+```{r}
+interaction.plot(Carbonatacion, Presion, Desviacion, type = "b", pch = 19, fixed = T)
+```
+
+```{r}
+boxplot(Desviacion~Carbonatacion)
+boxplot(Desviacion~Presion)
+boxplot(Desviacion~Velocidad)
+```
+Si mira cada factor de manera individual.
+
+```{r}
+Interaccion <- tapply(Desviacion, list(Carbonatacion, Presion), mean)
+Interaccion
+```
+
+```{r}
+medias <- tapply(Desviacion, list(Carbonatacion, Velocidad), mean)
+medias
+```
+
+```{r}
+media2 <- tapply(Desviacion, list(Presion, Velocidad), mean)
+media2
+```
+
+```{r}
+boxplot(Desviacion~Carbonatacion+Presion)
+abline(h=0)
+```
+
+Del boxplot se da indicios que el mejor tratamiento seria uno con un porcentaje de carbonacion del 10% y una presion de 30 psi.
+
+```{r}
+boxplot(Desviacion~Carbonatacion+Velocidad, las = 2)
+abline(h=0)
+```
+
+agrupaciones
+```{r}
+duncan <- duncan.test(modFinal, "Carbonatacion")
+duncan
+```
+
+Deberiamos fijar el factor de velocidad y mirar agrupaciones.
+
+
+# Efectos aleatorios y Mixtos.
+__Objetivo__: Estudiar e interpretar los resultados del analisis de varianza con dos factores, considerando efectos fijos y efectos aleatorios; recalcar la diferencia entre estos dos modelos de analisis de varianza. Mostrar el encubrimiento de un factor principal producida por la significancia de la interaccion.
+
+__Planteamiento del problema__
+El gerente de un fabrica efectuo tres replicas de un diseño factorial para investigar el efecto del supervisor y del turno en una linea de produccion. El numero de articulos producidos por turno de ocho horas y por supervisor en cada replica aparece en la tabla siguiente.
+
+ II. Suponga que las asignaciones de los niveles de los factores se seleccionan aleatoriamente dando origen a un modelo de efectos aleatorios.
+ 
+  1. Escriba las expresiones teoricas para el valor esperado del cuadrado medio de los elementos de la tabla ANOVA, correspondiente a este diseño.
+  
+  __RTA:__ A: supervisor, a:2; B:Turno,b:3; n=3
+  
+   + $E[MS_A]=\sigma^2 + 3\sigma_{\tau\beta} ^2 + 3*3\sigma_{\tau}^2$
+   
+   + $E[MS_B] = \sigma^2 + 3\sigma_{\tau\beta} ^2 + 3*2\sigma_{\beta}^2$
+   
+   + $E[MS_{AB}]=\sigma^2+3\sigma_{\tau\beta}^2$
+   
+   + $E[MS_E] = \sigma^2$
+   
+```{r}
+#Datos
+Turno <- as.factor(c(rep(1:3, 6)))
+Supervisor <- as.factor(c(rep("A", 9), rep("B", 9)))
+Produccion <- c(570, 480, 470, 610, 475, 430, 625, 540, 450, 480, 625, 630, 515, 600, 680, 465, 580, 660)
+```
+
+```{r}
+#anova 
+anovaaux <- aov(Produccion~Turno*Supervisor)
+a <- anova(anovaaux)[,1:3]
+
+F0 <- c(a$`Mean Sq`[1]/a$`Mean Sq`[3], a$`Mean Sq`[2]/a$`Mean Sq`[3], a$`Mean Sq`[3]/a$`Mean Sq`[4], NA)
+
+vp <- c(pf(F0[1], a$Df[1], a$Df[3], lower.tail = F), pf(F0[2], a$Df[2], a$Df[3], lower.tail = F), pf(F0[3], a$Df[3], a$Df[4], lower.tail = F), NA)
+
+anovaFR <- cbind(a, F0, vp)
+```
+
+   
+  b) Plantee, interprete y contraste las hipotesis posibles, elimine las interacciones y los factores no significativos de este diseño y construya una nueva tabla ANOVA.
+
+ + Variabilidad de la interaccion: 
+ $H_0:\sigma_{\tau\beta}^2=0~~v.s~~H_1:\sigma_{\tau\beta}^2>$
+   
+VP < 0.0001
+
+Con una significancia del 5% la interaccion aporta una variabilidad significativa de la variable respuesta.
+
+ + Variabilidad del supervisor
+ $H_0: \sigma_{\tau}^2=0~~v.s~~H_1:\sigma_{\tau}^2>0$
+
+VP = 0.563 > 0.05
+
+con una significancia del 5% la variabilidad del supervisor NO es significativa, sin embargo, no se puede eliminar esta componente del modelo ya que hay presencia de variabilidad de la interaccion significativa.
+A una conclusion similiar se llega al analizar la significancia de la variabilidad asociada al TURNO.
+Por las razones anteriores no es posible reducir la tabla ANOVA, por el posible encubrimiento que puede existir al tener una variabilidad de la interaccion significativa.
+
+  2. Estime la varianza de las interacciones y de los factores significativos:
+  
+   + Varianza estimada del termino de Error:$\sigma^2=MS_E = 719.44$
+   
+   + Varianza estimada de la interaccion:
+   $\sigma_{\tau\beta}^2 = \frac{MS_{AB}-MS_{E}}{n} = \frac{40454.17 - 719.4}{3} = 13244.923$
+   
+   
+# Caso de Estudio 6: Gaseosas-Continuacion Taller 4.
+
+  II. Suponga que las asignaciones de los niveles de los factores se seleccionan aleatoriamente dando origen a un modelo de efectos aleatorios.
+  
+   1. Escriba las expresiones teoricas para el valor esperado del cuadrado medio de los elementos de la tabla ANOVA, correspondiente a este diseño. a=3, b=2, c=2, r=n=2
+   
+   + $E[MS_A]=\sigma^2+2\sigma_{abc}^2+2*2\sigma_{ab}^2 + 2*2\sigma_{ac}^2 + 2*2*2\sigma_a^2$
+   
+   + $E[MS_B] = \sigma^2 +2\sigma_{abc}^2 + 2*2\sigma_{ab}^2+2*3\sigma_{bc}^2+2*3*2\sigma_b^2$
+   
+   + $E[MS_C]=\sigma^2 +2\sigma_{abc}^2 + 2*2\sigma_{ac}^2+2*3\sigma_{bc}^2+2*3*2\sigma_c^2$
+   
+   + $E[MS_{AB}]=\sigma^2+2\sigma_{abc}^2 + 2*2\sigma_{ab}^2$
+   
+   + $E[MS_{AC}]=\sigma^2+2\sigma_{abc}^2+2*2\sigma_{ac}^2$
+   
+   + $E[MS_{BC}]=\sigma^2+2\sigma_{abc}^2+2*3\sigma_{bc}^2$
+   
+   + $E[MS_{ABC}]=\sigma^2+2\sigma_{abc}^2$
+   
+   + $E[MS_E]=\sigma^2$
+   
+   
+  2. plantee, interprete y contraste las hipotesis posibles.
+  
+```{r}
+# datos.
+Carbonatacion <- as.factor(c(rep(10,8), rep(12,8), rep(14,8)))
+Velocidad <- as.factor(c(rep(c(200,250,200,250),6)))
+Presion <- as.factor(c(rep(c(25, 25, 30, 30), 6)))
+Desviacion <- c(-3, -1, -1, 1, -1, 0, 0, 1, 0, 2, 2, 6, 1, 1, 3, 5, 5, 7, 7, 10, 4, 6, 9, 11)
+
+#modelo no aleatorio 
+modAux <- aov(Desviacion~Carbonatacion*Presion*Velocidad)
+anovaaux <- anova(modAux)
+```
+  
+  
+Significancia de la interaccion triple
+   
+```{r}
+#estadistico de prueba
+F3 <- anovaaux$`Mean Sq`[7]/anovaaux$`Mean Sq`[8]
+F3
+vp3 <- pf(F3, anovaaux$Df[7], anovaaux$Df[8], lower.tail = F)
+vp3
+```
+ 
+Con una significancia del 5% la variabilidad asociada a la interaccion triple NO es significativa.
+
+Significancia de las interacciones dobles.
+
+Para la interaccion entre AB
+```{r}
+#estadistico de prueba
+F_ab <- anovaaux$`Mean Sq`[4]/anovaaux$`Mean Sq`[7]
+F_ab
+#valor-p
+vp_ab <- pf(F_ab, anovaaux$Df[4], anovaaux$Df[7], lower.tail = F)
+vp_ab
+```
+
+Con un nivel de significancia del 5% la variabilidad asociada a la interaccion doble entre el porcentaje de carbonatacion y la presion es NO significativa.
+
+Para la interaccion entre AC
+```{r}
+#estadistico de prueba
+F_ac <- anovaaux$`Mean Sq`[5]/anovaaux$`Mean Sq`[7]
+F_ac
+#valor-p
+vp_ac <- pf(F_ac, anovaaux$Df[5], anovaaux$Df[7], lower.tail = F)
+vp_ac
+```
+
+A un nivel de significancia del 5% la variabilidad asociada a la interaccion doble entre el porcentaje de carbonatacion y la rapidez de la linea NO es significativa.
+
+
+Significancia de la interaccion doble entre BC
+```{r}
+#estadistico de prueba
+F_bc <- anovaaux$`Mean Sq`[6]/anovaaux$`Mean Sq`[7]
+F_bc
+#valor-p
+vp_bc <- pf(F_bc, anovaaux$Df[6], anovaaux$Df[7], lower.tail = F)
+vp_bc
+```
+
+A un nivel de significancia del 5% la variabilidad asociada a la interaccion doble entre la presion de operacion y la rapidez de la linea NO es significativa.
+
+  + c. Elimine las interacciones y los factores no significativos de este diseño y construya una nueva tabla ANOVA.
+  
+Para completar la tabla ANOVA anterior, note inicialmente que la tabla de los cuadrados medios esperados, del modelo reducido,
+
+$$Y_{ijkl}=\mu+\tau_i+\beta_j+y_k + \varepsilon_{ijkl}$$
+   
+Con $\tau_i\sim NID(0, \sigma_a^2)$, $\beta_j\sim NID(0,\sigma_b^2)$, $y_k\sim NID(0,\sigma_c^2)$ y $\varepsilon_{ijkl}\sim NID(0,\sigma^2)$. variables aleatorias independientes entre si, se reduce a:
+
+  + $E[MS_A]=\sigma^2+2*2*2\sigma_a^2$
+  
+  + $E[MS_B]=\sigma^2+2*3*2\sigma_b^2$ 
+  
+  + $E[MS_C]=\sigma^2+2*3*2\sigma_c^2$
+  
+  + $E[MS_E]=\sigma^2$ 
+   
+Note que bajo el supuesto de la hipotesis nula de la no significancia de la varianza de cada uno de los factores, ed.
+$$H_0:\sigma_a^2=0, H_0:\sigma_b^2=0, H_0:\sigma_c^2=0$$
+   
+El $MS_A, MS_B$ y $MS_C$ son tambien estimadores insesgados para $\sigma^2$. Luego los EP respectivos son los cocientes entre los cuadrados medios asociados y el $MS_E$
+   
+Tabla ANOVA reducida
+```{r}
+anovaRedu <- anovaaux[,1:3]
+anovaRedu$Df[8] <- sum(anovaaux$Df[4:8])
+anovaRedu$`Sum Sq`[8] <- sum(anovaaux$`Sum Sq`[4:8])
+anovaRedu$`Mean Sq`[8] <- anovaRedu$`Sum Sq`[8]/anovaRedu$Df[8]
+anovaRedu <- anovaRedu[c(1:3,8), 1:3]
+
+F0 <- c(anovaRedu$`Mean Sq`[1:3]/anovaRedu$`Mean Sq`[4], NA)
+VP <- c(pf(F0[1], anovaRedu$Df[1], anovaRedu$Df[4], lower.tail = F), pf(F0[2:3],anovaRedu$Df[2], anovaRedu$Df[4], lower.tail = F), NA)
+
+anovaFinal <- cbind(anovaRedu, F0, VP)
+anovaFinal
+```
+
+A un nivel de significancia del 5% la variabilidad asociada al porcentaje de carbonatacion, la presion de operacion y la rapidez de la linea son significativas.
+
+
+  2. Estime la varianza de las interacciones y los factores significativos. En este caso como la variabilidad de la interaccion triple y las dobles no son significativas, entonces solo se estiman las varianzas asociadas a los factores principales, a partir de la tabla de cuadrados medios esperados reducida:
+  
+  + $\sigma_a^2=\frac{MS_A-MS_E}{8}=15.69$
+  
+  + $\sigma_b^2=\frac{MS_B-MS_E}{12}=3.71$
+  
+  + $\sigma_c^2=\frac{MS_C-MS_E}{8}=1.765$
+  
+Y la variabilidad estimada de la desviacion promedio de la altura de llenado de las botellas está dada por:
+
+$$\hat{V}(Y_{ijkl})=0.86+15.69+3.71+1.765$$
+
+El 71.19% de la variabilidad en desviacion promedio de la altura es debida al porcentaje de carbonatacion.
+
+
+
+
+  
+  
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+   
+
+
+
+
+
+
+
+   
+   
+   
+   
+   
+   
+   

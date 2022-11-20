@@ -3,24 +3,25 @@
     "path": "C:/Users/vvrod/OneDrive/Escritorio/UNAL-VANESSA/2022_2/DISEÑO/DISEÑO_FINAL/Diseno-experimentos/Trabajo.Rmd",
     "project_path": "Trabajo.Rmd",
     "type": "r_markdown",
-    "hash": "2585087621",
+    "hash": "1645256365",
     "contents": "",
-    "dirty": false,
+    "dirty": true,
     "created": 1668914679709.0,
     "source_on_save": false,
     "relative_order": 1,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "158,7",
-        "scrollLine": "149"
+        "cursorPosition": "240,0",
+        "scrollLine": "239",
+        "last_setup_crc32": "1E4FEDA923c31d6a"
     },
     "folds": "",
-    "lastKnownWriteTime": 1668916458,
+    "lastKnownWriteTime": 1668928011,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1668916458963,
+    "last_content_update": 1668928085960,
     "read_only": false,
     "read_only_alternatives": []
 }
