@@ -75,24 +75,24 @@ _ __Variable respuesta__: Calificación promedio de la eficiencia de los deterge
 
 1. Tipo de tela
 
-    - Scuba: Grueso tejido de punto con trama en Licra e hilado de fibra torzal, con un gramaje de 275gsm. Scuba es una tela sólida realizada a través de la combinación de fibras de poliéster, entre las que se incluye el Policloropeno. Con una estructura con elasticidad en los 4 sentidos, especialmente en la trama. [2]
+    - __Scuba:__ Grueso tejido de punto con trama en Licra e hilado de fibra torzal, con un gramaje de 275gsm. Scuba es una tela sólida realizada a través de la combinación de fibras de poliéster, entre las que se incluye el Policloropeno. Con una estructura con elasticidad en los 4 sentidos, especialmente en la trama. [2]
   
-    - Poliéster: El Poliéster es una fibra sintética que ofrece un abanico muy amplio de posibilidades: La intensidad del color de la estampación es mayor. Mayor resistencia a humedades, abrasiones y condiciones climáticas extremas. Fácil lavado. [3]
+    - __Poliéster:__ El Poliéster es una fibra sintética que ofrece un abanico muy amplio de posibilidades: La intensidad del color de la estampación es mayor. Mayor resistencia a humedades, abrasiones y condiciones climáticas extremas. Fácil lavado. [3]
 
-    - Microfribra: La Microfibra es una fibra sintética y es altamente empleada en el mundo textil tanto para la elaboración de Toallas Deportivas y de Playa como material de limpieza. Se caracterizan por los hilos empleados en su fabricación, siendo cien veces más finos que el cabello humano. [4]
+    - __Microfribra:__ La Microfibra es una fibra sintética y es altamente empleada en el mundo textil tanto para la elaboración de Toallas Deportivas y de Playa como material de limpieza. Se caracterizan por los hilos empleados en su fabricación, siendo cien veces más finos que el cabello humano. [4]
   
-    - Lino: La tela de lino es una fibra vegetal que se compone principalmente de celulosa. Procede del tallo de la planta de lino, cuya semilla, comestible, se llama linaza. [5]
+    - __Lino:__ La tela de lino es una fibra vegetal que se compone principalmente de celulosa. Procede del tallo de la planta de lino, cuya semilla, comestible, se llama linaza. [5]
     
 ![Tipos de tela: a) Scuba, b) Poliéster, c) Microfibra y d) Lino](foto1.jpg){width=250 height=250}
 
   
 2. Tipo de detergente, ordenados del más económico al más costoso, con la descripción que traen en sus etiquetas:
 
-    - Bonaropa: quitamanchas para ropa blanca. 1000 ml precio: $3.890 pesos.
+    - __Bonaropa:__ quitamanchas para ropa blanca. 1000 ml precio: $3.890 pesos.
     
-    - Límpido: ofrece un gran poder de desinfección necesario para la limpieza del hogar. Su alto nivel de concentración elimina hasta el 99,9% de gérmenes y bacterias. También es un excelente producto para remover las manchas difíciles. 1000 ml precio: $4.328 pesos.
+    - __Límpido:__ ofrece un gran poder de desinfección necesario para la limpieza del hogar. Su alto nivel de concentración elimina hasta el 99,9% de gérmenes y bacterias. También es un excelente producto para remover las manchas difíciles. 1000 ml precio: $4.328 pesos.
     
-    - Vanish: es un quitamanchas sin cloro que elimina las manchas más dificiles de tus prendas a la vez que hace tus blancos más blancos. Ahora con su fórmula mejorada tambien elimina hasta el 99.9% de bacterias.. 1000 ml precio $10.278 pesos.
+    - __Vanish:__ es un quitamanchas sin cloro que elimina las manchas más dificiles de tus prendas a la vez que hace tus blancos más blancos. Ahora con su fórmula mejorada tambien elimina hasta el 99.9% de bacterias.. 1000 ml precio $10.278 pesos.
     
 ![Tipos de detergente líquido: a) Bonaropa, b) Límpido y c) Vanish ropa blanca](foto2.jpg){width=250 height=250}
 
