@@ -11,3 +11,19 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Descripción detallada del diseño experimental
 
+Para llevar a cabo este diseño se pretende realizar un diseño de dos factores
+
+**Modelo:**
+
+$$ Y_{ijkl} = \mu + \tau_i + \delta_j +\gamma_k+(\tau\delta)_{ij} + (\tau\gamma)_{ik} + (\delta\gamma)_{jk}+ (\tau\delta\gamma)_{jkl} + \beta_l+ \varepsilon_{ijkl}$$
+
+* $\mu:$ media global.
+* $\tau_i:$ Efecto asociado al factor A (Tamaño de los aviones), $i=1,2$
+* $\delta_j:$ Efecto asociado al factor B (Grosor de los aviones), $j=1,2$
+* $\gamma_k:$ Efecto asociado al factor C (Tipo de avión), $k=1,2$
+* $(\tau\delta)_{ij}:$ Efecto asociado a la interacción entre A y B.
+* $(\tau\gamma)_{ik}:$ Efecto asociado a la interacción entre A y C.
+* $(\delta\gamma)_{jk}:$ Efecto asociado a la interacción entre B y C. 
+* $(\tau\delta\gamma)_{ijkl}:$ Efecto asociado a la interacción entre A, B y C.
+* $\beta_l:$ Efecto asociado al l-ésimo bloque
+* $\varepsilon_{ijk}:$ Término de error
