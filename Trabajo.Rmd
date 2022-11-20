@@ -124,7 +124,7 @@ $$\sum \tau_i = \sum \beta_j = \sum_i (\tau\beta)_{ij} = \sum_j (\tau\beta)_{ij}
 
 \subsection{Realización del diseño experimental}
 
-
+Para llevar a cabo este diseño experimental, primero se compro medio metro de tela de cada uno de los tipos de tela 
 
 \section{Resultados}
 
