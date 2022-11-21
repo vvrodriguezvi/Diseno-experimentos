@@ -501,6 +501,15 @@ El valor P de la prueba es $1.22e^{-05}  < \alpha=0.05$
 
 - No se presenta ___Encubrimiento___ de la significancia de ninguno de los factores del diseño experimental, dado que tanto la interacción como cada uno de los factores son significativos a un nivel de confianza del 5%.
 
+\subsection{Agrupaciones de medias y contrastes}
+
+Dado que con el análisis de significancia sobre los factores y su interacción, se concluyo que todos son significativos. Por consiguiente, se procede a realizar comparaciones de medias entre los tratamientos y pruebas de contrastes, a fin de determinar que combinaciones de tratamientos (tipo de tela y marca de detergente) presentan mayor eficacia a la hora mitigar la mancha de vino.
+
+\subsubsection{Diferencia de medias}
+
+Para la diferencia de medias se plantean los siguientes juegos de hipóteisis:
+
+
 \subsection{Verificación de los supuestos de los errores del modelo del diseño experimental}
 
 \subsubsection{Normalidad}
@@ -625,10 +634,21 @@ Bartlett's K-squared = 0.15063, df = 3, p-value = 0.9851 \\ \hline
 
 **Conclusión:** a un nivel de significancia del 5% se cumple el supuesto de homogeneidad de varianza para el termino de error del modelo, dado que los p-valores dieron mayores a $\alpha = 0.05$, y graficamente tampoco se observa un patrón que permita indicar que no se cumple el supuesto.
 
-
-\section{}
-
 \section{Conclusiones}
+
+El diseño experimental presentado tuvo el fin de dar a conocer la eficiencia de tres marcas de detergentes (_Limpido_, _Bonaropa_ y _vanish_) a la hora de eliminar o hasta cierto punto mitigar una mancha causada por el vino en cuatro distintos tipos de tela (lino, _scuba_, poliester y microfibra). A continuación, se presentan conclusiones, observaciones, comentarios y recomendaciones; dadas por los investigadores y que son fruto del desarrollo de este experimento, así como los resultados e impresiones generadas durante la realización del mismo.
+
+Del diseño experimental es menester destacar lo siguiente:
+
+- El __Lmpido__ en definitiva, resulto ser el que presento mejores resultados a la hora de eliminar la mancha de vino, ya que sin importar el tipo de tela, esta marca dejo, en la mayoría de los casos, nula evidencia de la mancha de vino.
+
+- Resulta curioso dar cuenta de que, el detergente __Vanish__ pese a ser el más costoso de todos, fue el que menos resultados mostró a la hora de mitigar la mancha de vino. Sin embargo, resulta ser fácil de manipular y no deterioro tanto las telas a diferencia del detergente __limpido__.
+
+- Se observó en cuanto a las telas _scuba_ y microfibra, como en este era un poco más complicado que la sustancia del vino se diluyera en ellas y perdurara dado la contextura de las mismas.
+
+- El lino es el tipo de tela que presentó menor resistencia a la remoción de la mancha del vino, al aplicar cualquiera de los 3 detergentes.
+
+- El poliéster fue el tipo de tela que mejor absorbió la mancha de vino, por lo que el detergente _Bonaropa_ y el detergente _Vanish_ demostraron ser menos efectivos en la remoción de la mancha de vino en este tipo de tela.
 
 
 
