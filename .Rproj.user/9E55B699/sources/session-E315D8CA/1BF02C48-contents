@@ -99,10 +99,7 @@ A fin de estudiar el efecto de los tres tipos de detergentes sobre los cuatro di
     
 ![Tipos de detergente líquido: a) Bonaropa, b) Límpido y c) Vanish ropa blanca](foto2.jpg){width=250 height=250}
 
-    
-\subsubsection{Efectos fijos}
 
-- A cada retazo de tela de 20x20 cm se les aplicó 3 gotas de vino (medidas mediante un gotero) y se dejó actuar 5 minutos en cada uno.
 
 \subsection{Previo al diseño experimental}
 
@@ -315,11 +312,6 @@ $$\hat{(\tau \beta)}_{ij} ~=~ \bar{Y}_{ij.}-\bar{Y}_{i..}-\bar{Y}_{.j.}+\bar{Y}_
 
 - $\hat{(\tau \beta)}_{34} ~=~ \bar{Y}_{34.}-\bar{Y}_{3..}-\bar{Y}_{.4.}+\bar{Y}_{...} \\$
   $\hat{(\tau \beta)}_{34} ~=~ 2.17-2.88-3.44+ 3.63 = -0.52$
-
-
-
-
-
 
 
 **Nota:** Dado que los detergentes y los tipos de telas fueron seleccionados explicitamente por los integrnates del grupo, se considera un diseño de efectos fijos, por lo tanto, se plantean, interpretan y realizan las pruebas de hipotesis que establecen la significancia de la interaccion y de los factores y se analiza el posible encubrimiento de los factores.
