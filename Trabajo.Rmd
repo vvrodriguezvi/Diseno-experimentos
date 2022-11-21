@@ -122,9 +122,37 @@ $$\sum \tau_i = \sum \beta_j = \sum_i (\tau\beta)_{ij} = \sum_j (\tau\beta)_{ij}
 
 - A cada retazo de tela de 20x20 cm se les aplicó 3 gotas de vino (medidas mediante un gotero) y se dejó actuar 5 minutos en cada uno.
 
-\subsection{Realización del diseño experimental}
+\subsection{Previo al diseño experimental}
 
-Para llevar a cabo este diseño experimental, primero se compro medio metro de tela de cada uno de los tipos de tela 
+Para llevar a cabo este diseño experimental, primero se compró medio metro de tela de cada uno de los tipos de tela (_scuba_, poliéster, microfibra y lino). Dado que se buscaba tener cierto nivel de variabilidad en cuanto los tipos de tela, la _scuba_  resulta ser muy fina y delgada, mientras que la tela en lino resulta ser un poco más gruesa y lisa. Por otro lado, la tela en microfibra resulta ser la más lanuda y gruesa a diferencia de la tela poliéster que presenta ser la más delgada y "fragil" de todas.  Con la compra de estas cuatro telas,  cuyos precios por medio metro fueron de 9.000 pesos colombianos para la tela en microfibra, 9.500 pesos para la tela en poliéster, 8.000 para la tela en lino y 8.500 para la tela en _Scuba_. Se espera tener una variedad suficiente de telas que permita dar a conocer el efecto del detergente líquido a la hora de remover manchas, en este caso en particular una mancha de vino. 
+
+Posteriormente, se compró en un almacén del _D1_ la sustancia a ser echada en la tela, en este caso se optó por el vino, puesto que se concluyo que con estos cuatro tipos de tela blanca la mancha sería muy visible, en consecuencia esto permite que a la hora de realizar la calificación por cada uno de los integrantes la mancha sea lo que más resalte de la tela, ya sea por su ausencia o presencia de la misma después de aplicar el tratamiento (detergente líquido). Después se compraron las tres distintas marcas de detergente líquido también en un establecimiento _D1_ los cuales fueron _Bonaropa_ de 1000 ml costo 3.890 pesos, _Limpido_ de 1000 ml costo 4.328 pesos y _Vanish_ de 1000 ml costo 10.278 pesos.
+
+Adicionalmente, se compraron materiales secundarios para la realización de dicho experimento, materiales tales como: 2 tarros de orina, tijeras, cinta de enmascarar, un paquete de resortes, vasos desechables y un gotero. Ya después de haber conseguido estos materiales se procedió a realizar la muestra piloto, dicho procedimiento se detalla seguidamente.
+
+\subsubsection{Prueba piloto}
+
+Se realiza una prueba piloto con el fin de identificar qué inconvenientes se pueden llegar a presentar al momento de realizar el experimento final. El diseño piloto se llevará a cabo de la siguiente manera: de las 20 divisiones de cada tipo de tela se escogió de manera aleatoria 1 retazo de tela para cada uno de los 3 diferentes tipos de detergentes, estos retazos fueron cortados y luego manchados cada uno con 3 gotas de vino y se esperó un lapso de 1 minuto para que la mancha se acentuará sobre la tela y luego se procedió a dejar el el retazo de tela remojando en la solución de agua con cada uno de los detergentes durante dos minutos.
+
+Se contempló además de vino, usar chocolate para manchar los retazos de tela, pero debido al espesor del chocolate, las gotas de chocolate que se aplicaban no se adherían a los retazos de tela. 
+
+De los resultados obtenidos de la realizacion de la prueba piloto, se llego a las siguientes observaciones:
+
+- A la tela _scuba_ le tomaba más tiempo absorber las gotas de vino en comparación a los otros 3 tipos de tela. 
+
+- Las 20 divisiones de 10x10cm, fueron escogidas de manera que se optimizará la limitada cantidad de tela que se tenía a disposición.
+
+- Para medir la eficacia del detergente al eliminar la mancha de vino, cada uno de los experimentadores le dió una calificación de 1 a 5, siendo 1 que no quitó nada la mancha y 5 quitó completamente la mancha.
+
+- Para evitar sesgos a la hora de dar la calificación a cada detergente, cada uno de los experimentadores dio una nota sin conocer la nota dada por los otros experimentadores.
+
+- El estudio piloto sirvió para determinar cuál era el tiempo adecuado para dejar acentuar la mancha en la tela.
+
+- El estudio piloto sirvió para determinar cuál era el tiempo adecuado para dejar el retazo de tela sumergido en la solución de agua con cada uno de los diferentes tipos de tela. 
+
+
+
+\subsection{Realización del diseño experimental}
 
 \section{Resultados}
 
