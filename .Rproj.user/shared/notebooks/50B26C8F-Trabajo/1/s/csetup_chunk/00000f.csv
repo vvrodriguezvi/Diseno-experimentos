@@ -1,6 +1,0 @@
-"0","knitr::opts_chunk$set(echo = F, fig.align = 'center',  message = F, fig.pos = ""H"", fig.width=5, fig.height=4)"
-"0","library(tidyverse)"
-"0","library(knitr)"
-"0","library(kableExtra)"
-"0","library(readxl)"
-"0","library(car)"

@@ -32,7 +32,7 @@ library(car)
 \newpage
 
 \pagestyle{myheadings}
-\setcounter{page}{3}
+\setcounter{page}{4}
 
 
 \section{Introducción}
@@ -218,9 +218,14 @@ Media por nivel & 4.53 & 4.06 & 2.50 & 3.44 & 3.63 = $\bar{\textbf{Y}}_{...}$ \\
 \end{tabular}
 \end{table}
 
+
+\newpage
+
+
+
 1. Estimación de la media global $\mu$, siendo $N=n\times12=3\times12=36$:
 
-$$\hat{\mu} = \bar{\textbf{Y}}... ~=  \frac{Y_{...}}{\textbf{N}}~=~3.63$$
+$$\hat{\mu} = \bar{\textbf{Y}}... ~= \frac{Y_{...}}{\textbf{N}}~=~3.63$$
 
 2. Estimación del efecto ***Detergente*** $\tau_i, ~ i= 1:Bonaropa, ~ 2:Límpido, ~3: Vanish$
 
@@ -235,7 +240,6 @@ $$\hat{\tau}_i = \bar{\textbf{Y}}_{i..}-\bar{\textbf{Y}}_{...}, \ \ i=1,2,3$$
 - $\hat{\tau_3} = \bar{\textbf{Y}}_{3..}-\bar{\textbf{Y}}_{...}\\$
   $\hat{\tau_3} = 2.88 - 3.63 = -0.75$
 
-
 3. Estimación del efecto ***Tela*** $\beta_j$
 
 
@@ -245,13 +249,11 @@ $$\hat{\beta_j} = \bar{\textbf{Y}}_{.j.}-\bar{\textbf{Y}}_{...}, \ ~j~=~1:Lino,~
 - $\hat{\beta_1} = \bar{\textbf{Y}}_{.1.}-\bar{\textbf{Y}}_{...}$
   $\hat{\beta_1} = 4.53-3.63=0.9$
 
-
 - $\hat{\beta_2} = \bar{\textbf{Y}}_{.2.}-\bar{\textbf{Y}}_{...}$
   $\hat{\beta_2}= 4.06-3.63= 0.43$
   
 - $\hat{\beta_3} = \bar{\textbf{Y}}_{.1.}-\bar{\textbf{Y}}_{...}$
   $\hat{\beta_3} = 2.50-3.63=-1.13$
-
 
 - $\hat{\beta_4} = \bar{\textbf{Y}}_{.2.}-\bar{\textbf{Y}}_{...}$
   $\hat{\beta_4}= 3.44-3.63= -0.19$  
@@ -263,28 +265,50 @@ $$\hat{(\tau \beta)}_{ij} ~=~ \bar{Y}_{ij.}-\bar{Y}_{i..}-\bar{Y}_{.j.}+\bar{Y}_
 
 
 - $\hat{(\tau \beta)}_{11} ~=~ \bar{Y}_{11.}-\bar{Y}_{1..}-\bar{Y}_{.1.}+\bar{Y}_{...} \\$
-  $\hat{(\tau \beta)}_{11} ~=~ 601.6667-3.21-516.6667+3.63 = 90$
+  $\hat{(\tau \beta)}_{11} ~=~ 4.25-3.21-4.53+3.63 = 0.14$
 
 
 - $\hat{(\tau \beta)}_{12} ~=~ \bar{Y}_{12.}-\bar{Y}_{1..}-\bar{Y}_{.2.}+\bar{Y}_{...} \\$
-  $\hat{(\tau \beta)}_{12} ~=~ 486.6667-3.21-581.6667+3.63=-90$
+  $\hat{(\tau \beta)}_{12} ~=~ 3.75-3.21-4.06+3.63=0.11$
 
 
-- $\hat{(\tau \beta)}_{21} ~=~ \bar{Y}_{21.}-\bar{Y}_{2..}-\bar{Y}_{.1.}+\bar{Y}_{...} \\$  
-  $\hat{(\tau \beta)}_{21} ~=~ 498.3333-4.81-516.6667+ 3.63 = -19.1667$
+- $\hat{(\tau \beta)}_{13} ~=~ \bar{Y}_{13.}-\bar{Y}_{1..}-\bar{Y}_{.3.}+\bar{Y}_{...} \\$  
+  $\hat{(\tau \beta)}_{13} ~=~ 1.42-3.21-2.50+ 3.63 = -0.66$
 
 
-- $\hat{(\tau \beta)}_{22} ~=~ \bar{Y}_{22.}-\bar{Y}_{2..}-\bar{Y}_{.2.}+\bar{Y}_{...} \\$ 
-  $\hat{(\tau \beta)}_{22} ~=~ 601.6667-4.81-581.6667+ 3.63=19.1667$
+- $\hat{(\tau \beta)}_{14} ~=~ \bar{Y}_{14.}-\bar{Y}_{1..}-\bar{Y}_{.4.}+\bar{Y}_{...} \\$ 
+  $\hat{(\tau \beta)}_{14} ~=~ 3.42-3.21-3.44+ 3.63=0.4$
 
 
-- $\hat{(\tau \beta)}_{31} ~=~ \bar{Y}_{31.}-\bar{Y}_{3..}-\bar{Y}_{.1.}+\bar{Y}_{...} \\$
-  $\hat{(\tau \beta)}_{31} ~=~ 450.0000-2.88-516.6667+ 3.63 = -70.8333$
+- $\hat{(\tau \beta)}_{21} ~=~ \bar{Y}_{21.}-\bar{Y}_{2..}-\bar{Y}_{.1.}+\bar{Y}_{...} \\$
+  $\hat{(\tau \beta)}_{21} ~=~ 5.00-4.81-4.53+ 3.63 = -0.71$
 
 
-- $\hat{(\tau \beta)}_{32} ~=~ \bar{Y}_{32.}-\bar{Y}_{3..}-\bar{Y}_{.2.}+\bar{Y}_{...} \\$
-  $\hat{(\tau \beta)}_{32} ~=~ 656.6667-2.88-581.6667+ 3.63 = 70.8333$
+- $\hat{(\tau \beta)}_{22} ~=~ \bar{Y}_{22.}-\bar{Y}_{2..}-\bar{Y}_{.2.}+\bar{Y}_{...} \\$
+  $\hat{(\tau \beta)}_{22} ~=~ 4.83-4.81-4.06+ 3.63 = -0.41$
   
+- $\hat{(\tau \beta)}_{23} ~=~ \bar{Y}_{23.}-\bar{Y}_{2..}-\bar{Y}_{.3.}+\bar{Y}_{...} \\$
+  $\hat{(\tau \beta)}_{23} ~=~ 4.67-4.81-2.50+3.63 = 0.99$
+
+
+- $\hat{(\tau \beta)}_{24} ~=~ \bar{Y}_{24.}-\bar{Y}_{2..}-\bar{Y}_{.4.}+\bar{Y}_{...} \\$
+  $\hat{(\tau \beta)}_{24} ~=~ 4.75-4.81-3.44+3.63=0.13$
+
+
+- $\hat{(\tau \beta)}_{31} ~=~ \bar{Y}_{31.}-\bar{Y}_{3..}-\bar{Y}_{.1.}+\bar{Y}_{...} \\$  
+  $\hat{(\tau \beta)}_{31} ~=~ 4.33-2.88-4.53+ 3.63 = 0.55$
+
+
+- $\hat{(\tau \beta)}_{32} ~=~ \bar{Y}_{32.}-\bar{Y}_{3..}-\bar{Y}_{.2.}+\bar{Y}_{...} \\$ 
+  $\hat{(\tau \beta)}_{22} ~=~ 3.58-2.88-4.06+ 3.63=0.27$
+
+
+- $\hat{(\tau \beta)}_{33} ~=~ \bar{Y}_{33.}-\bar{Y}_{3..}-\bar{Y}_{.3.}+\bar{Y}_{...} \\$
+  $\hat{(\tau \beta)}_{33} ~=~ 1.42-2.88-2.50+ 3.63 = -0.33$
+
+
+- $\hat{(\tau \beta)}_{34} ~=~ \bar{Y}_{34.}-\bar{Y}_{3..}-\bar{Y}_{.4.}+\bar{Y}_{...} \\$
+  $\hat{(\tau \beta)}_{34} ~=~ 2.17-2.88-3.44+ 3.63 = -0.52$
 
 
 
@@ -292,9 +316,167 @@ $$\hat{(\tau \beta)}_{ij} ~=~ \bar{Y}_{ij.}-\bar{Y}_{i..}-\bar{Y}_{.j.}+\bar{Y}_
 
 - insertar formula látex!!!
 
-\subsection{Verificación de los supuestos}
+\subsubsection{Significancia de los efectos debidos a las interacciones y a los factores}
+
+
+Dado el modelo anterior se obtiene la siguiente tabla ANOVA:
+
+\begin{table}[h]
+\center
+\caption{Análisis de varianza para el modelo del diseño experimental}
+\label{tab:my-table}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{} & Df & Sum.sq & Mean Sq & F value & $Pr(>F)$ \\ \hline
+Detergente & 2 & 25.753 & 12.877 & 86.24 & 1.10e-11 *** \\ \hline
+Tela & 3 & 20.686 & 6.895 & 46.18 & 4.02e-10 *** \\ \hline
+Detergente:Tela & 6 & 9.163 & 1.527 & 10.23 & 1.22e-05 *** \\ \hline
+Residuals & 24 & 3.583 & 0.149 &  &  \\ \hline
+Total & 35 & 59.185 &  &  &  \\ \hline
+\end{tabular}
+\end{table}
+
+
+Para cada uno de los factores y la interacción entre ellos se realizan las respectivas pruebas de significancia:
+
+1. Significancia de la ___interacción___ de los factores del diseño:
+
+Se plantea las siguiente prueba de hipótesis:
+  
+$$
+\begin{cases}
+\begin{aligned}
+H_0&: (\tau \beta)_{ij}~ = 0, \forall~i=1,2,3, ~j=1,2,3,4 \\
+H_a&: (\tau \beta)_{ij}~\neq0,~p.a~~i=1,2,3, ~j=1,2,3,4\ 
+\end{aligned}
+\end{cases}
+$$
+```{r}
+modPromedio <- aov(Promedio~Detergente*Tela)
+```
+
+El estadístico de prueba para la significancia de la interacción es:
+
+$$F_0=\frac{MSAB}{MSE} = \frac{1.527}{0.149}= 10.24832$$
+
+Región de rechazo de la prueba bajo $H_0$:
+
+$$F_{cal}>F_{\alpha,(a-1)(b-1),ab(n-1)}$$
+$$F_{cal}>F_{0.05,(3-1)(4-1),3\times4(3-1)}$$
+
+Como el valor de $F_{cal}> 2.508189$, se rechaza la hipótesis nula.
+  
+
+**Conclusión**: Dado que el valor P de la prueba es $1.22e^{-05} < \alpha=0.05$ se rechaza la hipótesis nula, es decir, la ___interacción___ entre los factores, Tela y Detergente es significativo a un nivel de confianza del 5%.
+
+2. Significancia del factor ___Detergente___
+
+
+Se plantea la siguiente prueba de hipótesis para verificar la significancia del factor Detergente:
+  
+$$
+\begin{cases}
+\begin{aligned}
+H_0&: \tau_{1}=\tau_{2}=\tau_{3}~ = 0 \\
+H_a&: \tau_{i}~\neq0,~~p.a~~i=1,2,3\ 
+\end{aligned}
+\end{cases}
+$$
+
+El estadístico de prueba para la significancia del factor Detergente es:
+
+$$F_0=\frac{MSA}{MSE} = \frac{12.877}{0.149}= 86.42282$$
+
+La región de rechazo bajo $H_0$ es:
+
+$$F_{cal}>F_{\alpha,(a-1),ab(n-1)} ~~~~~| ~~~~~a=3,b=4,n=3$$
+
+Como el valor de $F_{cal}>3.402826$, se rechaza la hipótesis nula, ahora procedemos a observar el valor-p de la prueba.
+  
+El valor P de la prueba es $4.02e^{-1} < \alpha=0.05$
+
+
+**Conclusión:** Se rechaza la hipótesis nula, es decir, el factor ___Detergente___  es significativo a un nivel de confianza del 5%.
+
+3. Significancia del factor ___Tela___
+
+Se plantea la siguiente prueba de hipótesis para verificar la significancia del factor Tela:
+  
+$$
+\begin{cases}
+\begin{aligned}
+H_0&: \beta_{1}=...=\beta_{4} = 0 \\
+H_a&: \beta_{j}~\neq0,~~p.a~~j=1,2,3,4\ 
+\end{aligned}
+\end{cases}
+$$
+
+El estadístico de prueba para la significancia del factor Tela es:
+
+$$F_0=\frac{MSB}{MSE} = \frac{6.895}{0.149}= 46.27517$$
+
+La región de rechazo bajo $H_0$ es:
+
+$$F_{cal}>F_{\alpha,(b-1),ab(n-1)} ~~~~~| ~~~~~a=3,b=4,n=3$$
+Como el valor de $F_{cal}>3.008787$, se rechaza la hipótesis nula, ahora se procede a observar el valor-p de la prueba-
+  
+El valor P de la prueba es $1.22e^{-05}  < \alpha=0.05$ 
+
+**Conclusión:** Se rechaza la hipótesis nula, es decir, el factor ___Tela___  es significativo a un nivel de confianza del 5%.
+
+
+**Conclusiones generales sobre significancia de los factores:** 
+
+- No se presenta ___Encubrimiento___ de la significancia de ninguno de los factores del diseño experimental, dado que tanto la interacción como cada uno de los factores son significativos a un nivel de confianza del 5%.
+
+\subsection{Gráfico de los efectos de los factores}
+
+```{r, fig.cap="Gráfico de efectos"}
+plot.design(Promedio~Tela*Detergente, main = "Grafico de efectos", las = 1)
+```
+
+- Del gráfico se puede observar que el tipo de __Detergente__ Límpido presenta un mayor promedio de calificación de eficiencia en la eliminación de manchas de vino, con respecto a los otros dos detergentes, además, se observa que el efecto es más alto con respecto a los otros.
+
+- Sobre el factor __Tela__ se puede observar que los tipos de tela Lino y Microfibra ofrecen en promedio mayor calificación con respecto a la media global, mientras que los tipos de tela Scuba y Poliéster, ofrecen una menor calificación promedio con respecto a la media global.
+
+\subsubsection{Gráfico de interacción de los efectos}
+
+```{r, fig.cap="Gráfico de interacción de los efectos - 1"}
+interaction.plot(Tela, Detergente, Promedio, type = "b", pch = 19, fixed = T, xlab = "Tipo de tela", ylab = "Calificación promedio", main = "Grafico de interaccion de los efectos", las = 1, col=c("red", "blue", "black"), cex.axis=.7, leg.bty =0.1)
+```
+
+
+- Se puede observar en el gráfico que, el detergente __Límpido__ tiende a obtener una mejor calificación promedio en la eficiencia a la hora de eliminar manchas de vino, con respecto a los demás detergente, para cada uno de los tipos de tela.
+
+- También se puede observar que los Detergentes __Bonaropa__ y __Vanish__ obtienen calificaciones similares en cuanto a la eficiencia al momento de eliminar manchas de vino en cada una de las telas, a exepción del tipo de tela __scuba__, que tiene menores calificacione con respecto a las demás.
+
+
+```{r, fig.cap="Gráfico de interacción de los efectos - 2"}
+
+interaction.plot(Detergente, Tela, Promedio, type = "b", pch = 19, fixed = T, xlab = "Tipo de tela", ylab = "Calificación promedio", main = "Grafico de interaccion de los efectos", las = 1, col=c("red", "blue", "black", "green"), cex.axis=.7, leg.bty =0.1)
+```
+
+- Se observa que para cada una de las telas, al usar detergente __Límpido__ obtuvieron mejores calificaciones promedio de eficiencia al momento de eliminar una mancha de vino.
+
+- Tambien se observa la gran diferencia que hay en el promedio de eficiencia al momento de eliminar una mancha cuando se trata de un tipo de tela __Poliéster__, ya que en el detergente más económico y en el más costoso, sus calificaciones fueron muy por debajo a lo referente al tipo de detergente que se encuentra en la mitad de los rangos de precios de los demás.
+
+- En general, se observa que hay una notable diferencia entre todos los tipos de tela con el detergente límpido, con respecto a las demás interacciones.
+
+\subsection{Verificación de los supuestos de los errores del modelo del diseño experimental}
 
 \subsubsection{Normalidad}
+
+Para verificar la normalidad de los errores del modelo, se plantea la siguiente prueba de hipótesis:
+
+  
+$$
+\begin{cases}
+\begin{aligned}
+H_0&: \varepsilon_{ijk} \sim N(0,\sigma^2) \\
+H_a&: \varepsilon_{ijk} \nsim N(0,\sigma^2)\ 
+\end{aligned}
+\end{cases}
+$$
 
 ```{r, fig.cap="Gráfico Qqplot"}
 residuales <- residuals(modPromedio)
@@ -304,10 +486,68 @@ qqline(residuales,col="#7d3434", lwd=2)
 legend("topleft",title = "Test de Shapiro-Wilk",title.col="#7d3434",title.adj= 1, legend=rbind(c("Statistic W","p-value"), round(c(test$statistic,test$p.value),digits=6)), cex=.8)
 ```
 
-- con una significancia del 5%, no se rechaza la hipotesis nula, es decir se cumple el supuesto de normalidad.
+
+**Conclusión:**: Dado que el valor p de la prueba de shapiro es $0.062  ~es~ <\alpha=0.05$, no se rechaza la hipótesis nula, es decir, los errores del modelo si siguen una distribución Normal,a una significancia del 5%. Esto también se puede observar en el gráfico Qqplot, dado que la mayoría de las observaciones se ajustan sobre la linea de la normalidad.
+
+\subsubsection{Independencia}
+
+Para verificar el supuesto de independencia en los errores se plantea la siguiente prueba de hipótesis:
+
+  
+$$
+\begin{cases}
+\begin{aligned}
+H_0&: \varepsilon_{ij} ~~son~~ v.a~ ~independientes \\
+H_a&: \varepsilon_{ij} ~~no~~son~~ v.a~ ~independientes\ 
+\end{aligned}
+\end{cases}
+$$
+Aplicando la prueba de Durbin Watson, sobre la correlación de los errores se obtienen los siguientes resultados en R:
+
+```{r}
+dwtest <- durbinWatsonTest(modPromedio)
+```
+
+\begin{table}[h]
+\center
+\caption{Resultados del test de Durbin Watson}
+\label{tab:my-table}
+\begin{tabular}{|llll|}
+\hline
+\multicolumn{1}{|l|}{Lag} & \multicolumn{1}{l|}{Autocorrelation} & \multicolumn{1}{l|}{D-W Statistic} & Valor p \\ \hline
+\multicolumn{1}{|l|}{1} & \multicolumn{1}{l|}{-0.1531008} & \multicolumn{1}{l|}{2.203488} & 0.512 \\ \hline
+\multicolumn{4}{|l|}{Alternative hypothesis: rho != 0} \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+```{r, fig.cap="Órden vs. Residuales"}
+
+plot(residuals(modPromedio), pch=19, col=1, 
+     main = "Grafico de órden vs. Residuales del modelo", 
+     xlab = "Órden", ylab = "Residuales")
+abline(h=0, col="#7d3434", lwd = 3)
+
+```
+
+
+**Conclusión:** Los residules del modelo del diseño experimental no tiene correlación de órden 1 (valor p > $\alpha=$ 0.05), por lo tanto, se concluye la independencia del término de error del modelo. Esto mismo se puede concluir al observar el gráfico de los residuales ($e_{ijk}=Y_{ijk}-\hat{Y}_{ijk}$) con el índice, ya que no se observa ningún tipo de patrón que indique dependencia en los errores.
 
 
 \subsubsection{Varianza}
+
+Para verificar el supuesto de homogeniedad de varianza se plantea la siguiente prueba de hipótesis:
+
+  
+$$
+\begin{cases}
+\begin{aligned}
+H_0&: Var(\varepsilon_{ij})=\sigma^2 \\
+H_a&: Var(\varepsilon_{ij})\neq\sigma^2\ 
+\end{aligned}
+\end{cases}
+$$
 
 ```{r, fig.cap="Residuales vs. Valores ajustados"}
   res<-ggplot(modPromedio, aes(x=modPromedio$fitted.values, y=modPromedio$residuals))+
@@ -344,16 +584,7 @@ Bartlett's K-squared = 0.15063, df = 3, p-value = 0.9851 \\ \hline
 \end{tabular}
 \end{table}
 
-
-
-
-
-
-
-
-
-
-
+**Conclusión:** a un nivel de significancia del 5% se cumple el supuesto de homogeneidad de varianza para el termino de error del modelo, dado que los p-valores dieron mayores a $\alpha = 0.05$, y graficamente tampoco se observa un patrón que permita indicar que no se cumple el supuesto.
 
 
 
@@ -372,7 +603,7 @@ Bartlett's K-squared = 0.15063, df = 3, p-value = 0.9851 \\ \hline
 
 - [4]   https://waixo.com/blog/que-es-la-tela-de-microfibra-todos-los-tipos-y-usos
 
-- [5]  https://www.norvilsa.com/tela-de-lino
+- [5]   https://www.norvilsa.com/tela-de-lino
 
 
 
