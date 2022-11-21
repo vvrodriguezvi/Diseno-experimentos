@@ -313,11 +313,41 @@ $$\hat{(\tau \beta)}_{ij} ~=~ \bar{Y}_{ij.}-\bar{Y}_{i..}-\bar{Y}_{.j.}+\bar{Y}_
 - $\hat{(\tau \beta)}_{34} ~=~ \bar{Y}_{34.}-\bar{Y}_{3..}-\bar{Y}_{.4.}+\bar{Y}_{...} \\$
   $\hat{(\tau \beta)}_{34} ~=~ 2.17-2.88-3.44+ 3.63 = -0.52$
 
+\subsection{Gráfico de los efectos de los factores}
 
-**Nota:** Dado que los detergentes y los tipos de telas fueron seleccionados explicitamente por los integrnates del grupo, se considera un diseño de efectos fijos, por lo tanto, se plantean, interpretan y realizan las pruebas de hipotesis que establecen la significancia de la interaccion y de los factores y se analiza el posible encubrimiento de los factores.
+```{r, fig.cap="Gráfico de efectos"}
+plot.design(Promedio~Tela*Detergente, main = "Grafico de efectos", las = 1)
+```
+
+- Del gráfico se puede observar que el tipo de __Detergente__ Límpido presenta un mayor promedio de calificación de eficiencia en la eliminación de manchas de vino, con respecto a los otros dos detergentes, además, se observa que el efecto es más alto con respecto a los otros.
+
+- Sobre el factor __Tela__ se puede observar que los tipos de tela Lino y Microfibra ofrecen en promedio mayor calificación con respecto a la media global, mientras que los tipos de tela Scuba y Poliéster, ofrecen una menor calificación promedio con respecto a la media global.
+
+\subsubsection{Gráfico de interacción de los efectos}
+
+```{r, fig.cap="Gráfico de interacción de los efectos - 1"}
+interaction.plot(Tela, Detergente, Promedio, type = "b", pch = 19, fixed = T, xlab = "Tipo de tela", ylab = "Calificación promedio", main = "Grafico de interaccion de los efectos", las = 1, col=c("red", "blue", "black"), cex.axis=.7, leg.bty =0.1)
+```
+
+
+- Se puede observar en el gráfico que, el detergente __Límpido__ tiende a obtener una mejor calificación promedio en la eficiencia a la hora de eliminar manchas de vino, con respecto a los demás detergente, para cada uno de los tipos de tela.
+
+- También se puede observar que los Detergentes __Bonaropa__ y __Vanish__ obtienen calificaciones similares en cuanto a la eficiencia al momento de eliminar manchas de vino en cada una de las telas, a exepción del tipo de tela __scuba__, que tiene menores calificacione con respecto a las demás.
+
+
+```{r, fig.cap="Gráfico de interacción de los efectos - 2"}
+
+interaction.plot(Detergente, Tela, Promedio, type = "b", pch = 19, fixed = T, xlab = "Tipo de tela", ylab = "Calificación promedio", main = "Grafico de interaccion de los efectos", las = 1, col=c("red", "blue", "black", "green"), cex.axis=.7, leg.bty =0.1)
+```
+
+- Se observa que para cada una de las telas, al usar detergente __Límpido__ obtuvieron mejores calificaciones promedio de eficiencia al momento de eliminar una mancha de vino.
+
+- Tambien se observa la gran diferencia que hay en el promedio de eficiencia al momento de eliminar una mancha cuando se trata de un tipo de tela __Poliéster__, ya que en el detergente más económico y en el más costoso, sus calificaciones fueron muy por debajo a lo referente al tipo de detergente que se encuentra en la mitad de los rangos de precios de los demás.
+
+- En general, se observa que hay una notable diferencia entre todos los tipos de tela con el detergente límpido, con respecto a las demás interacciones.
+
 
 \subsection{Modelo del diseño experimental}
-
 
 **Modelo estadístico:**
 
@@ -337,6 +367,8 @@ $$\varepsilon_{ijk} \sim NID(0, \sigma ^2)$$
 
 $$\sum \tau_i = \sum \beta_j = \sum_i (\tau\beta)_{ij} = \sum_j (\tau\beta)_{ij} = 0$$
 
+
+**Nota:** Dado que los detergentes y los tipos de telas fueron seleccionados explicitamente por los integrnates del grupo, se considera un diseño de efectos fijos, por lo tanto, se plantean, interpretan y realizan las pruebas de hipotesis que establecen la significancia de la interaccion y de los factores y se analiza el posible encubrimiento de los factores.
 
 \subsubsection{Significancia de los efectos debidos a las interacciones y a los factores}
 
@@ -449,39 +481,6 @@ El valor P de la prueba es $1.22e^{-05}  < \alpha=0.05$
 **Conclusiones generales sobre significancia de los factores:** 
 
 - No se presenta ___Encubrimiento___ de la significancia de ninguno de los factores del diseño experimental, dado que tanto la interacción como cada uno de los factores son significativos a un nivel de confianza del 5%.
-
-\subsection{Gráfico de los efectos de los factores}
-
-```{r, fig.cap="Gráfico de efectos"}
-plot.design(Promedio~Tela*Detergente, main = "Grafico de efectos", las = 1)
-```
-
-- Del gráfico se puede observar que el tipo de __Detergente__ Límpido presenta un mayor promedio de calificación de eficiencia en la eliminación de manchas de vino, con respecto a los otros dos detergentes, además, se observa que el efecto es más alto con respecto a los otros.
-
-- Sobre el factor __Tela__ se puede observar que los tipos de tela Lino y Microfibra ofrecen en promedio mayor calificación con respecto a la media global, mientras que los tipos de tela Scuba y Poliéster, ofrecen una menor calificación promedio con respecto a la media global.
-
-\subsubsection{Gráfico de interacción de los efectos}
-
-```{r, fig.cap="Gráfico de interacción de los efectos - 1"}
-interaction.plot(Tela, Detergente, Promedio, type = "b", pch = 19, fixed = T, xlab = "Tipo de tela", ylab = "Calificación promedio", main = "Grafico de interaccion de los efectos", las = 1, col=c("red", "blue", "black"), cex.axis=.7, leg.bty =0.1)
-```
-
-
-- Se puede observar en el gráfico que, el detergente __Límpido__ tiende a obtener una mejor calificación promedio en la eficiencia a la hora de eliminar manchas de vino, con respecto a los demás detergente, para cada uno de los tipos de tela.
-
-- También se puede observar que los Detergentes __Bonaropa__ y __Vanish__ obtienen calificaciones similares en cuanto a la eficiencia al momento de eliminar manchas de vino en cada una de las telas, a exepción del tipo de tela __scuba__, que tiene menores calificacione con respecto a las demás.
-
-
-```{r, fig.cap="Gráfico de interacción de los efectos - 2"}
-
-interaction.plot(Detergente, Tela, Promedio, type = "b", pch = 19, fixed = T, xlab = "Tipo de tela", ylab = "Calificación promedio", main = "Grafico de interaccion de los efectos", las = 1, col=c("red", "blue", "black", "green"), cex.axis=.7, leg.bty =0.1)
-```
-
-- Se observa que para cada una de las telas, al usar detergente __Límpido__ obtuvieron mejores calificaciones promedio de eficiencia al momento de eliminar una mancha de vino.
-
-- Tambien se observa la gran diferencia que hay en el promedio de eficiencia al momento de eliminar una mancha cuando se trata de un tipo de tela __Poliéster__, ya que en el detergente más económico y en el más costoso, sus calificaciones fueron muy por debajo a lo referente al tipo de detergente que se encuentra en la mitad de los rangos de precios de los demás.
-
-- En general, se observa que hay una notable diferencia entre todos los tipos de tela con el detergente límpido, con respecto a las demás interacciones.
 
 \subsection{Verificación de los supuestos de los errores del modelo del diseño experimental}
 
@@ -608,6 +607,7 @@ Bartlett's K-squared = 0.15063, df = 3, p-value = 0.9851 \\ \hline
 **Conclusión:** a un nivel de significancia del 5% se cumple el supuesto de homogeneidad de varianza para el termino de error del modelo, dado que los p-valores dieron mayores a $\alpha = 0.05$, y graficamente tampoco se observa un patrón que permita indicar que no se cumple el supuesto.
 
 
+\section{}
 
 \section{Conclusiones}
 
