@@ -103,17 +103,19 @@ A fin de estudiar el efecto de los tres tipos de detergentes sobre los cuatro di
 
 \subsection{Previo al diseño experimental}
 
-Para llevar a cabo este diseño experimental, primero se compró medio metro de tela de cada uno de los tipos de tela (_scuba_, poliéster, microfibra y lino). Dado que se buscaba tener cierto nivel de variabilidad en cuanto los tipos de tela, la _scuba_  resulta ser muy fina y delgada, mientras que la tela en lino resulta ser un poco más gruesa y lisa. Por otro lado, la tela en microfibra resulta ser la más lanuda y gruesa a diferencia de la tela poliéster que presenta ser la más delgada y "fragil" de todas.  Con la compra de estas cuatro telas,  cuyos precios por medio metro fueron de 9.000 pesos colombianos para la tela en microfibra, 9.500 pesos para la tela en poliéster, 8.000 para la tela en lino y 8.500 para la tela en _Scuba_. Se espera tener una variedad suficiente de telas que permita dar a conocer el efecto del detergente líquido a la hora de remover manchas, en este caso en particular una mancha de vino. 
+Para llevar a cabo este diseño experimental, primero se compró medio metro de tela de cada uno de los tipos de tela (_scuba_, poliéster, microfibra y lino). Dado que se buscaba tener cierto nivel de variabilidad en cuanto los tipos de tela, la _scuba_  resulta ser muy fina y delgada, mientras que la tela en lino resulta ser un poco más gruesa y lisa. Por otro lado, la tela en microfibra resulta ser la más lanuda y gruesa a diferencia de la tela poliéster que presenta ser la más delgada y "fragil" de todas.  Con la compra de estas cuatro telas,  cuyos precios por medio metro fueron de 9.000 pesos colombianos para la tela en microfibra, 9.500 pesos para la tela en poliéster, 8.000 para la tela en lino y 8.500 para la tela en _Scuba_. Se espera tener una variedad suficiente de telas que permita dar a conocer el efecto del detergente líquido a la hora de remover manchas, en este caso en particular una mancha de vino.
 
-Posteriormente, se compró en un almacén del _D1_ la sustancia a ser echada en la tela, en este caso se optó por el vino, puesto que se concluyo que con estos cuatro tipos de tela blanca la mancha sería muy visible, en consecuencia esto permite que a la hora de realizar la calificación por cada uno de los integrantes la mancha sea lo que más resalte de la tela, ya sea por su ausencia o presencia de la misma después de aplicar el tratamiento (detergente líquido). Después se compraron las tres distintas marcas de detergente líquido también en un establecimiento _D1_ los cuales fueron _Bonaropa_ de 1000 ml costo 3.890 pesos, _Limpido_ de 1000 ml costo 4.328 pesos y _Vanish_ de 1000 ml costo 10.278 pesos.
+Posteriormente, se compró en un almacén del _D1_ la sustancia a ser echada en la tela, en este caso se optó por el vino, puesto que se concluyó que con estos cuatro tipos de tela blanca la mancha sería muy visible, en consecuencia esto permite que a la hora de realizar la calificación por cada uno de los integrantes la mancha sea lo que más resalte de la tela, ya sea por su ausencia o presencia de la misma después de aplicar el tratamiento (detergente líquido). Después se compraron las tres distintas marcas de detergente líquido también en un establecimiento _D1_ los cuales fueron _Bonaropa_ de 1000 ml costo 3.890 pesos, _Limpido_ de 1000 ml costo 4.328 pesos y _Vanish_ de 1000 ml costo 10.278 pesos.
 
-Adicionalmente, se compraron materiales secundarios para la realización de dicho experimento, materiales tales como: 2 tarros de orina, tijeras, cinta de enmascarar, un paquete de resortes, vasos desechables y un gotero. Ya después de haber conseguido estos materiales se procedió a realizar la muestra piloto, dicho procedimiento se detalla seguidamente.
+Adicionalmente, se utilizaron materiales secundarios para la realización de dicho experimento, materiales tales como: 2 tarros para muestras de orina, tijeras, marcadores, lápiz, cinta de enmascarar,, vasos transparentes desechables y un gotero. Ya después de haber conseguido estos materiales se procedió a realizar la muestra piloto, dicho procedimiento se detalla seguidamente.
+
 
 \subsubsection{Prueba piloto}
 
-Se realiza una prueba piloto con el fin de identificar qué inconvenientes se pueden llegar a presentar al momento de realizar el experimento final. El diseño piloto se llevará a cabo de la siguiente manera: de las 20 divisiones de cada tipo de tela se escogió de manera aleatoria 1 retazo de tela para cada uno de los 3 diferentes tipos de detergentes, estos retazos fueron cortados y luego manchados cada uno con 3 gotas de vino y se esperó un lapso de 1 minuto para que la mancha se acentuará sobre la tela y luego se procedió a dejar el el retazo de tela remojando en la solución de agua con cada uno de los detergentes durante dos minutos.
+Se realizó una prueba piloto con el fin de identificar qué inconvenientes se pueden llegar a presentar al momento de realizar el experimento final. El diseño piloto se llevó a cabo de la siguiente manera: de las 20 divisiones de cada tipo de tela se escogió de manera aleatoria 3 retazos de tela para cada uno de los 3 diferentes tipos de detergentes, estos retazos fueron cortados y luego manchados cada uno con 3 gotas de vino y se esperó un lapso de 1 minuto para que la mancha se acentuará sobre la tela y luego se procedió a dejar  el retazo de tela remojando en la solución de agua con cada uno de los detergentes durante dos minutos.
 
 Se contempló además de vino, usar chocolate para manchar los retazos de tela, pero debido al espesor del chocolate, las gotas de chocolate que se aplicaban no se adherían a los retazos de tela. 
+ 
 
 De los resultados obtenidos de la realizacion de la prueba piloto, se llego a las siguientes observaciones:
 
@@ -154,11 +156,28 @@ De los resultados obtenidos de la realizacion de la prueba piloto, se llego a la
 \end{tabular}
 \end{table}
 
+\subsection{Aleatorización}
+
+Para el proceso de aleatorización se llevo a cabo lo siguiente:
+
+__1.__ Para cada uno de los tipos de tela se realizó una división de 20 fragmentos de 10x10cm.
+
+__2.__ Se le asignó un número a cada una de las 20 divisiones en cada uno de los diferentes tipos de tela.
+
+__3.__ Se pusieron en un vaso desechable 20 papelitos con el números del 1 a 20, de esos se escogieron 3 números aleatorios, para seleccionar qué división de la tela fue cortada y manchada con vino, donde el primer número aleatorio corresponde al retazo de tela que fue sumergido en la solución de agua y el detergente _Bonaropa_, el segundo número aleatorio corresponde al retazo de tela que fue sumergido en la solución de agua y el detergente _Límpido_. El tercer número aleatorio corresponde al retazo de tela que fue sumergido en la solución de agua y el detergente _Vanish_.
+
+__4.__ Este proceso anterior se repitió con cada una de las diferentes tipos de tela.
+
 
 \subsection{Aplicación del diseño experimental}
 
+Después de haber obtenido las unidades experimentales producto de la aleatorización. Se realizaron 3 réplicas del diseño factorial para investigar el efecto de las telas y de los detergentes en la eficiencia al eliminar una mancha de vino. Esencialmente, se les aplicó a las telas tres gotas de vino, utilizando un gotero y velando porque el perímetro de las manchas para cada tipo de tela fuera el más similar posible. Se esperó un tiempo prudencial de cinco minutos, tiempo en el cual el vino ya se había secado en todas las telas.
 
-Se realizaron 3 réplicas del diseño factorial para investigar el efecto de las telas y de los detergentes en la eficiencia al eliminar una mancha de vino. Los promedios obtenidos por cada detergente y tipo de tela en cada réplica aparece en la tabla siguiente:
+Posteriormente, se sumergió las telas en vasos desechables que contenían agua y el detergente en cuestión, específicamente se echaron dos basados de agua por uno de detergente usando como medidor un frasco para muestras de orina de 56.3 mm. Se esperó un tiempo de aproximadamente cinco minutos, entre cada tanda de telas, es decir, las tres corridas de tela distintas por tela y detergente. También, se registraron los órdenes en que fueron tomadas las mediciones.
+
+Finalmente, se extrajeron las telas y se escurrieron, luego se organizaron preservando el orden en el cual se habían aplicado los tratamientos a la tela. Seguidamente, cada integrante del equipo de manera individual observaba cada una de las telas y realizaba la calificación. Así mismo para cada una de las tandas o corridas experimentales realizadas.
+
+Los promedios obtenidos por cada detergente y tipo de tela en cada réplica aparece en la tabla siguiente:
 
 \begin{table}[h!]
 \center
@@ -492,8 +511,8 @@ Para verificar la normalidad de los errores del modelo, se plantea la siguiente 
 $$
 \begin{cases}
 \begin{aligned}
-H_0&: \varepsilon_{ijk} \sim N(0,\sigma^2) \\
-H_a&: \varepsilon_{ijk} \nsim N(0,\sigma^2)\ 
+H_0&: \varepsilon_{ijk} \sim  Normales \\
+H_a&: \varepsilon_{ijk} \nsim Normales\ 
 \end{aligned}
 \end{cases}
 $$
