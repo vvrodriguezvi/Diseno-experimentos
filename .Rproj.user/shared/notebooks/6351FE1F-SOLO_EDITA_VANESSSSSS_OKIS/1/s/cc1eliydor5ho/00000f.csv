@@ -1,0 +1,1 @@
+"0","plot.design(Promedio~Tela*Detergente, main = ""Grafico de efectos"", las = 1)"

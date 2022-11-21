@@ -1,0 +1,4 @@
+"0",""
+"0","plot(residuals(modPromedio), pch=19, col=1, "
+"0","     main = ""Grafico de órden vs. Residuales del modelo"", "
+"0","     xlab = ""Órden"", ylab = ""Residuales"")"

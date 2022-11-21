@@ -1,0 +1,7 @@
+"0",""
+"0","ggplot(datos,aes(y=Promedio, x=Tela, col=Tela, fill=Tela))+labs(title='Box-plot según el tipo de Tela')+"
+"0","  geom_boxplot(alpha=0.4)+"
+"0","  stat_summary(aes(y=Promedio,x=Tela, group=Tela),"
+"0","               fun=mean, geom=""point"", shape=20, "
+"0","               size=3, color=""yellow"")+theme(legend.title=element_text( face='bold', size=14, color='black', hjust=0.5), title=element_text( face='bold', size=14, color='black', hjust=0.5))"
+"0",""

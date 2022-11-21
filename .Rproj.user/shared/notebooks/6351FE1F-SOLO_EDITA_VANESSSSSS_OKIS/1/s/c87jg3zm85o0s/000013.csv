@@ -1,0 +1,1 @@
+"0","legend(""topleft"",title = ""Test de Shapiro-Wilk"",title.col=""#7d3434"",title.adj= 1, legend=rbind(c(""Statistic W"",""p-value""), round(c(test$statistic,test$p.value),digits=6)), cex=.8)"

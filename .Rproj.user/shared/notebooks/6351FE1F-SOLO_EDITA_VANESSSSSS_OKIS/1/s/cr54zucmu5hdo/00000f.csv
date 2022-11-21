@@ -1,0 +1,1 @@
+"0","interaction.plot(Tela, Detergente, Promedio, type = ""b"", pch = 19, fixed = T, xlab = ""Tipo de tela"", ylab = ""Calificación promedio"", main = ""Grafico de interaccion de los efectos"", las = 1, col=c(""red"", ""blue"", ""black""), cex.axis=.7, leg.bty =0.1)"

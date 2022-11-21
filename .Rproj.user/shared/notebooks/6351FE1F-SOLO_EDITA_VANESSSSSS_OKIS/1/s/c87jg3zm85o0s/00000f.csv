@@ -1,0 +1,3 @@
+"0","residuales <- residuals(modPromedio)"
+"0","test <- shapiro.test(residuales)"
+"0","qqnorm(residuales,main=""Gráfico de normalidad de los residuos del modelo"", cex.main = 1, cex = 1, pch = 20) "

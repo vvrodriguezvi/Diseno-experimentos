@@ -607,8 +607,75 @@ Bartlett's K-squared = 0.15063, df = 3, p-value = 0.9851 \\ \hline
 **Conclusión:** a un nivel de significancia del 5% se cumple el supuesto de homogeneidad de varianza para el termino de error del modelo, dado que los p-valores dieron mayores a $\alpha = 0.05$, y graficamente tampoco se observa un patrón que permita indicar que no se cumple el supuesto.
 
 
-\section{}
+\section{Comparación de Medias}
 
+Según los resultados anteriores, se quiere responder a la pregunta de cúal de los detergente o tipos de tela tiene una mejor calificación al momento de eliminar una mancha de vino, y como se puedo ver el los gráficos de los efectos, se puede observar que el tipo de detergente Límpido presentaba un puntaje de calificación más alto con respecto a los demás detergentes; y con respecto a las telas, se observaba que el tipo de tela poliéster presenta menores puntajes de eficiencia. Para corroborar lo anterior se plantean diversas pruebas de contrastes, pero antes de esto, se presentan algunos gráficos que permiten corroborar los resultados
+
+1. Boxplot para el factor A: Detergente
+
+```{r, fig.cap="Box-plot para tipo de Detergente"}
+
+ggplot(datos,aes(y=Promedio, x=Detergente, col=Detergente, fill=Detergente))+labs(title='Box-plot según el tipo de Detergente')+
+  geom_boxplot(alpha=0.4)+
+  stat_summary(aes(y=Promedio,x=Detergente, group=Detergente),
+               fun=mean, geom="point", shape=20, 
+               size=3, color="yellow")+theme(legend.title=element_text( face='bold', size=14, color='black', hjust=0.5), title=element_text( face='bold', size=14, color='black', hjust=0.5))
+
+```
+
+- Del gráfico se puede observar que el tipo de Detergente Límpido es quién presenta menor variabilidad, y el tipo de Detergente Vanish es quién presenta una variablidad mucho mayor con respectos a los otros dos tipos de detergentes. 
+
+- Del Box-Plot se podría inferir que existe diferencia significativa entre las medias de los promedios  de la eliminación de una mancha de vino según el tipo de Detergente, ya que para cada una de las 3 cajas del gráfico, se observan comportamientos diferentes.
+
+2. Boxplot para el factor B: Tipo de tela
+
+```{r, fig.cap="Box-plot para tipo de Tela"}
+
+ggplot(datos,aes(y=Promedio, x=Tela, col=Tela, fill=Tela))+labs(title='Box-plot según el tipo de Tela')+
+  geom_boxplot(alpha=0.4)+
+  stat_summary(aes(y=Promedio,x=Tela, group=Tela),
+               fun=mean, geom="point", shape=20, 
+               size=3, color="yellow")+theme(legend.title=element_text( face='bold', size=14, color='black', hjust=0.5), title=element_text( face='bold', size=14, color='black', hjust=0.5))
+
+```
+
+
+- Del gráfico se puede observar que el tipo de Tela Poliéster es quién presenta mayor variabilidad, y el tipo de Tela Lino y Microfibra presentan menor variablidad respectos a los otros dos tipos de telas. 
+
+- Del Box-Plot se podría inferir que existe diferencia significativa entre las medias de los promedios  de eficiencia de la eliminación de una mancha de vino según el tipo de tela, ya que para cada una de las 4 cajas del gráfico, se observan comportamientos diferentes.
+
+
+\subsection{Diferencia de medias del Factor A}
+
+Para determinar si existe diferencia significativa entre las medias según el tipo de Detergente, se platea la siguiente prueba de hipótesis:
+
+$$
+\begin{cases}
+\begin{aligned}
+H_0&: \mu_{1..}=\mu_{2..}=\mu_{3..} \\
+H_a&: \mu_{i..} \neq\mu_{j..} ~p.a~i\neq j, ~i,j=1,2,3\ 
+\end{aligned}
+\end{cases}
+$$
+
+```{r}
+modDet <- aov(Promedio~Detergente)
+summary(modDet)
+```
+
+
+\subsection{Diferencia de medias del Factor B}
+
+Para determinar si existe diferencia significativa entre las medias según el tipo de Tela, se platea la siguiente prueba de hipótesis:
+
+$$
+\begin{cases}
+\begin{aligned}
+H_0&: \mu_{.1.}=\mu_{.2.}=\mu_{.3.}=\mu_{.4.} \\
+H_a&: \mu_{.i.} \neq\mu_{.j.} ~p.a~i\neq j, ~i,j=1,2,3,4\ 
+\end{aligned}
+\end{cases}
+$$
 \section{Conclusiones}
 
 

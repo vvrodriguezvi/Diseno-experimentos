@@ -1,0 +1,2 @@
+"0","b1 <- bartlett.test(residuales, Detergente)"
+"0","b2 <- bartlett.test(residuales, Tela)"
