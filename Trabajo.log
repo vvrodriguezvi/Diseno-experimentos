@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.15)  21 NOV 2022 22:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.15)  21 NOV 2022 22:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -704,8 +704,13 @@ Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-13-1.pdf  used
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[23 <./Trabajo_files/figure-latex/unnamed-chunk-13-1.pdf>] [24] [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1178--1181
+[23 <./Trabajo_files/figure-latex/unnamed-chunk-13-1.pdf>]
+Overfull \hbox (27.36932pt too wide) detected at line 1147
+[]\OT1/lmr/m/n/12 ([]) = []([]) + []([]) \OMS/lmsy/m/n/12 ^^@ []\OT1/lmr/m/n/12 ([]) = [] + [] \OMS/lmsy/m/n/12 ^^@ [][]  \OT1/lmr/m/n/12 = 3[] = [] = 0\OML/lmm/m/it/12 :\OT1/lmr/m/n/12 7635
+ []
+
+[24] [25]
+Underfull \hbox (badness 10000) in paragraph at lines 1209--1212
 []\T1/lmr/m/n/12 [3] []$https : / / waixo . com / blog / tela -[] de -[] poliester -[] que -[] es -[] para -[] que -[] utilizarla -[] ventajas -[] y -[]
  []
 
@@ -731,7 +736,7 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  72i,16n,77p,633b,763s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}<c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Trabajo.pdf (27 pages, 1030453 bytes).
+Output written on Trabajo.pdf (27 pages, 1034428 bytes).
 PDF statistics:
  501 PDF objects out of 1000 (max. 8388607)
  417 compressed objects within 5 object streams

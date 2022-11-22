@@ -744,6 +744,21 @@ __Conclusión:__ Se observa usando el método Duncan de comparaciones entre pare
 
 \subsection{Contrastes de medias}
 
+Además de las comparaciones dobles entre los niveles de los factores, también se proponen comparaciones múltiples mediante contrastes con el objetivo de determinar que combinaciones de tratamientos, es decir, que marca de detergente con qué tipo de tela en conjunto, hacen que la eficiencia a la hora de quitar la mancha de vino sea la máxima posible.
+
+Por ello se proponen los siguientes contrastes:
+
+_1._ Se observa que el detergente de la marca _límpido_ y el tipo de tela _lino_ maximizan la eficiencia en la remoción de la mancha de vino. En contraste con las demas telas  poliéster y scuba y el _Límpido_.
+
+por lo cual se plantea el siguiente contraste: $L = \mu_{2,4}-\mu_{2,1} - \mu_{2,2}$. Note que un estimador insesgado de este contraste es $\hat{L}=\hat{\mu}_{2,4}-\hat{\mu}_{2,1} - \hat{\mu}_{2,2}=\bar{Y}_{2,4}-\bar{Y}_{2,1}-\bar{Y}_{2,2}$ y su respectiva varianza estimada está dada por:
+
+$$\hat{Var}(\hat{L})=\hat{Var}(\hat{Y}_{2,4})+\hat{Var}(\hat{Y}_{2,1})-\hat{Var}(\hat{Y}_{2,4}) =\frac{MSE}{an}+\frac{MSE}{an}- \frac{MSE}{an}\\=3\frac{MSE}{3*3}=\frac{1.527}{3}= 0.7635$$
+
+Cuyo intervalo de confianza del 95% para el contraste:
+$$\hat{Var}(\hat{Y}{2,4})+\hat{Var}(\hat{Y}_{2,1})-\hat{Var}(\hat{Y}_{2,4}) \pm t{\alpha/2; ab(n-1)}\sqrt{\hat{Var}(\hat{L})}$$
+$$= 0.1661 - 0.0327- 0.0172 \pm t_{0.025;2*3*2}\sqrt{0.7635}= 0.117 \pm 0.034 =(0.0831, 0.1511)$$
+
+Como el intervalo de confianza no contiene al cero, hay suficiente evidencia para concluir que existe diferencia significativa entre la eficiencia del detergente Límpido  con la tela en _lino, en contraste con la aplicación de ese mismo detergente en las telas de _scuba y poliéster.
 
 
 \section{Conclusiones}
