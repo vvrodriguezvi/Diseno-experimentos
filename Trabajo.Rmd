@@ -501,14 +501,6 @@ El valor P de la prueba es $1.22e^{-05}  < \alpha=0.05$
 
 - No se presenta ___Encubrimiento___ de la significancia de ninguno de los factores del diseño experimental, dado que tanto la interacción como cada uno de los factores son significativos a un nivel de confianza del 5%.
 
-\subsection{Agrupaciones de medias y contrastes}
-
-Dado que con el análisis de significancia sobre los factores y su interacción, se concluyo que todos son significativos. Por consiguiente, se procede a realizar comparaciones de medias entre los tratamientos y pruebas de contrastes, a fin de determinar que combinaciones de tratamientos (tipo de tela y marca de detergente) presentan mayor eficacia a la hora mitigar la mancha de vino.
-
-\subsubsection{Diferencia de medias}
-
-Para la diferencia de medias se plantean los siguientes juegos de hipóteisis:
-
 
 \subsection{Verificación de los supuestos de los errores del modelo del diseño experimental}
 
@@ -633,6 +625,108 @@ Bartlett's K-squared = 0.15063, df = 3, p-value = 0.9851 \\ \hline
 \end{table}
 
 **Conclusión:** a un nivel de significancia del 5% se cumple el supuesto de homogeneidad de varianza para el termino de error del modelo, dado que los p-valores dieron mayores a $\alpha = 0.05$, y graficamente tampoco se observa un patrón que permita indicar que no se cumple el supuesto.
+
+\section{Comparación de Medias}
+
+Según los resultados anteriores, se quiere responder a la pregunta de cúal de los detergente o tipos de tela tiene una mejor calificación al momento de eliminar una mancha de vino, y como se puedo ver el los gráficos de los efectos, se puede observar que el tipo de detergente Límpido presentaba un puntaje de calificación más alto con respecto a los demás detergentes; y con respecto a las telas, se observaba que el tipo de tela poliéster presenta menores puntajes de eficiencia. Para corroborar lo anterior se plantean diversas pruebas de contrastes, pero antes de esto, se presentan algunos gráficos que permiten corroborar los resultados
+
+1. Boxplot para el factor A: Detergente
+
+```{r, fig.cap="Box-plot para tipo de Detergente"}
+
+ggplot(datos,aes(y=Promedio, x=Detergente, col=Detergente, fill=Detergente))+labs(title='Box-plot según el tipo de Detergente')+
+  geom_boxplot(alpha=0.4)+
+  stat_summary(aes(y=Promedio,x=Detergente, group=Detergente),
+               fun=mean, geom="point", shape=20, 
+               size=3, color="yellow")+theme(legend.title=element_text( face='bold', size=14, color='black', hjust=0.5), title=element_text( face='bold', size=14, color='black', hjust=0.5))
+
+```
+
+- Del gráfico se puede observar que el tipo de Detergente Límpido es quién presenta menor variabilidad, y el tipo de Detergente Vanish es quién presenta una variablidad mucho mayor con respectos a los otros dos tipos de detergentes. 
+
+- Del Box-Plot se podría inferir que existe diferencia significativa entre las medias de los promedios  de la eliminación de una mancha de vino según el tipo de Detergente, ya que para cada una de las 3 cajas del gráfico, se observan comportamientos diferentes.
+
+2. Boxplot para el factor B: Tipo de tela
+
+```{r, fig.cap="Box-plot para tipo de Tela"}
+
+ggplot(datos,aes(y=Promedio, x=Tela, col=Tela, fill=Tela))+labs(title='Box-plot según el tipo de Tela')+
+  geom_boxplot(alpha=0.4)+
+  stat_summary(aes(y=Promedio,x=Tela, group=Tela),
+               fun=mean, geom="point", shape=20, 
+               size=3, color="yellow")+theme(legend.title=element_text( face='bold', size=14, color='black', hjust=0.5), title=element_text( face='bold', size=14, color='black', hjust=0.5))
+
+```
+
+
+- Del gráfico se puede observar que el tipo de Tela Poliéster es quién presenta mayor variabilidad, y el tipo de Tela Lino y Microfibra presentan menor variablidad respectos a los otros dos tipos de telas. 
+
+- Del Box-Plot se podría inferir que existe diferencia significativa entre las medias de los promedios  de eficiencia de la eliminación de una mancha de vino según el tipo de tela, ya que para cada una de las 4 cajas del gráfico, se observan comportamientos diferentes.
+
+
+Para la diferencia de medias Se procede a utilizar el método Duncan para comparaciones de medias:
+
+\subsection{Diferencia de medias del Factor A}
+
+Para determinar si existe diferencia significativa entre las medias según el tipo de Detergente, se platea la siguiente prueba de hipótesis:
+
+$$
+\begin{cases}
+\begin{aligned}
+H_0&: \mu_{1..}=\mu_{2..}=\mu_{3..} \\
+H_a&: \mu_{i..} \neq\mu_{j..} ~p.a~i\neq j, ~i,j=1,2,3\ 
+\end{aligned}
+\end{cases}
+$$
+
+Se presentan los resultados del método Duncan para el factor A (__Detergente__):
+
+\begin{table}[h]
+\caption{Comparación de Medias usando el método Duncan para el factor Detergente}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{1}{|l|}{Detergente} & \multicolumn{1}{l|}{Promedio} & \multicolumn{1}{l|}{Grupo} \\ \hline
+Límpido                          & 4.812500                      & a                          \\ \hline
+Bonaropa                         & 3.208333                      & b                          \\ \hline
+Vanish                           & 2.875000                      & c                          \\ \hline
+\end{tabular}
+\end{table}
+
+
+\subsection{Diferencia de medias del Factor B}
+
+Para determinar si existe diferencia significativa entre las medias según el tipo de Tela, se platea la siguiente prueba de hipótesis:
+
+$$
+\begin{cases}
+\begin{aligned}
+H_0&: \mu_{.1.}=\mu_{.2.}=\mu_{.3.}=\mu_{.4.} \\
+H_a&: \mu_{.i.} \neq\mu_{.j.} ~p.a~i\neq j, ~i,j=1,2,3,4\ 
+\end{aligned}
+\end{cases}
+$$
+
+Se presentan los resultados del método Duncan para el factor B (__Tela__):
+
+\begin{table}[h!]
+\caption{Comparación de Medias usando el método Duncan para el factor Tela}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Tela       & Promedio & Grupo \\ \hline
+Lino       & 4.527778 & a     \\ \hline
+Microfibra & 4.055556 & b     \\ \hline
+Scuba      & 3.444444 & c     \\ \hline
+Poliéster  & 2.500000 & d     \\ \hline
+\end{tabular}
+\end{table}
+
+__Conclusión:__ Se observa usando el método Duncan de comparaciones entre pares de medias, como para ambos factores (__Detergente__ y __Tela__) se crearon grupos distintos por cada media de los tratamientos. Lo cual da cuenta de la variedad en los resultados en canto a la eficiencia en quitar la mancha en cada tela y en las tres distintas marcas de detergente.
+
+\subsection{Contrastes de medias}
+
+
 
 \section{Conclusiones}
 

@@ -483,9 +483,7 @@ Dado que con el análisis de significancia sobre los factores y su interacción,
 
 \subsubsection{Diferencia de medias}
 
-Para la diferencia de medias se realizan 
-
-Se procede a utilizar el método duncan para comparaciones de medias:
+Para la diferencia de medias Se procede a utilizar el método Duncan para comparaciones de medias:
 
 __Método duncan:__
 
@@ -533,7 +531,9 @@ Poliéster  & 2.500000 & d     \\ \hline
 __Conclusión:__ Se observa usando el método Duncan de comparaciones entre pares de medias, como para ambos factores (__Detergente__ y __Tela__) se crearon grupos distintos por cada media de los tratamientos. Lo cual da cuenta de la variedad en los resultados en canto a la eficiencia en quitar la mancha en cada tela y en las tres distintas marcas de detergente.
 
 
+\subsection{Contrastes de medias}
 
+Ademas de las comparaciones dobles entre medias de 
 
 
 
