@@ -28,4 +28,5 @@
 \contentsline {subsection}{\numberline {4.2}Diferencia de medias del Factor B}{24}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Contrastes de medias}{24}{subsection.4.3}%
 \contentsline {section}{\numberline {5}Conclusiones}{25}{section.5}%
-\contentsline {section}{\numberline {6}Referencias}{26}{section.6}%
+\contentsline {section}{\numberline {6}Referencias}{27}{section.6}%
+\contentsline {section}{\numberline {7}Anexos}{28}{section.7}%

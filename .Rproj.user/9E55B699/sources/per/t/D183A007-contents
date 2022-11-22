@@ -6,16 +6,18 @@ header-includes:
 - \setlength{\parindent}{1.25cm}
 - \usepackage{amsmath}
 output:
+  html_document:
+    df_print: paged
   pdf_document:
-    number_sections: true
+    number_sections: yes
 fontsize: 12pt
 papersize: letter
 geometry: margin = 1in
-language: "es"
+language: es
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = F, fig.align = 'center',  message = F, fig.pos = "H", fig.width=5, fig.height=4)
+knitr::opts_chunk$set(echo = T, fig.align = 'center',  message = F, fig.pos = "H", fig.width=5, fig.height=4)
 library(tidyverse)
 library(knitr)
 library(kableExtra)
@@ -200,6 +202,7 @@ Los promedios obtenidos por cada detergente y tipo de tela en cada réplica apar
 \center
 \caption{Resultados aplicación del diseño}
 \label{tab:my-table}
+\resizebox{8cm}{!} {
 \begin{tabular}{c|ccc|}
 \cline{2-4}
  & \multicolumn{3}{c|}{Detergente} \\ \cline{2-4} 
@@ -210,6 +213,7 @@ Los promedios obtenidos por cada detergente y tipo de tela en cada réplica apar
 \multicolumn{1}{|c|}{Microfibra} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}3.25\\ 3.75\\ 4.25\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}5\\ 5\\ 4.5\end{tabular}} & \begin{tabular}[c]{@{}c@{}}3.5\\ 3.25\\ 4\end{tabular} \\ \hline
 \multicolumn{1}{|c|}{Lino} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}3.75\\ 4.5\\ 4.5\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}5\\ 5\\ 5\end{tabular}} & \begin{tabular}[c]{@{}c@{}}4.75\\ 4.5\\ 3.75\end{tabular} \\ \hline
 \end{tabular}
+}
 \end{table}
 
 
@@ -251,6 +255,7 @@ InteraccionSd <- tapply(Promedio, list(Detergente, Tela), sd)
 \begin{table}[h]
 \center
 \caption{Medias de cada uno de los factores e interacción entre ellos}
+\resizebox{12cm}{!} {
 \begin{tabular}{|c|cccc|c|}
 \hline
 {\color[HTML]{000000} Factor} & \multicolumn{4}{c|}{Factor Tela} & Media de niveles \\ \cline{2-5}
@@ -260,6 +265,7 @@ Límpido & 5.00 & 4.83 & 4.67 & 4.75 & 4.81 \\
 Vanish & 4.33 & 3.58 & 1.42 & 2.17 & 2.88 \\ \hline
 Media por nivel & 4.53 & 4.06 & 2.50 & 3.44 & 3.63 = $\bar{\textbf{Y}}_{...}$ \\ \hline
 \end{tabular}
+}
 \end{table}
 
 
@@ -660,9 +666,10 @@ ggplot(datos,aes(y=Promedio, x=Detergente, col=Detergente, fill=Detergente))+lab
 
 ```
 
-- Del gráfico se puede observar que el tipo de Detergente Límpido es quién presenta menor variabilidad, y el tipo de Detergente Vanish es quién presenta una variablidad mucho mayor con respectos a los otros dos tipos de detergentes. 
 
-- Del Box-Plot se podría inferir que existe diferencia significativa entre las medias de los promedios  de la eliminación de una mancha de vino según el tipo de Detergente, ya que para cada una de las 3 cajas del gráfico, se observan comportamientos diferentes.
+- Del gráfico se puede observar que el tipo de detergente Límpido es el que presenta menor variabilidad, y el tipo de detergente Vanish es el que presenta una variabilidad mucho mayor con respecto a los otros dos tipos de detergentes. 
+
+- Del Box-Plot se podría inferir que existe diferencia significativa entre las medias de los promedios de la eliminación de una mancha de vino según el tipo de detergente, ya que para cada una de las 3 cajas del gráfico, se observan comportamientos diferentes.
 
 2. Boxplot para el factor B: Tipo de tela
 
@@ -677,9 +684,9 @@ ggplot(datos,aes(y=Promedio, x=Tela, col=Tela, fill=Tela))+labs(title='Box-plot 
 ```
 
 
-- Del gráfico se puede observar que el tipo de Tela Poliéster es quién presenta mayor variabilidad, y el tipo de Tela Lino y Microfibra presentan menor variablidad respectos a los otros dos tipos de telas. 
+- Del gráfico se puede observar que el tipo de tela Poliéster es la que presenta mayor variabilidad, y el tipo de tela Lino y Microfibra presentan menor variabilidad respecto a los otros dos tipos de telas. 
 
-- Del Box-Plot se podría inferir que existe diferencia significativa entre las medias de los promedios  de eficiencia de la eliminación de una mancha de vino según el tipo de tela, ya que para cada una de las 4 cajas del gráfico, se observan comportamientos diferentes.
+- Del Box-Plot se podría inferir que existe diferencia significativa entre las medias de los promedios de eficiencia de la eliminación de una mancha de vino según el tipo de tela, ya que para cada una de las 4 cajas del gráfico, se observan comportamientos diferentes.
 
 
 Para la diferencia de medias Se procede a utilizar el método Duncan para comparaciones de medias:
@@ -767,15 +774,19 @@ El diseño experimental presentado tuvo el fin de dar a conocer la eficiencia de
 
 Del diseño experimental es menester destacar lo siguiente:
 
-- El __Lmpido__ en definitiva, resulto ser el que presento mejores resultados a la hora de eliminar la mancha de vino, ya que sin importar el tipo de tela, esta marca dejo, en la mayoría de los casos, nula evidencia de la mancha de vino.
+- El __Límpido__ en definitiva, resulto ser el que presento mejores resultados a la hora de eliminar la mancha de vino, ya que sin importar el tipo de tela, esta marca dejo, en la mayoría de los casos, nula evidencia de la mancha de vino.
 
-- Resulta curioso dar cuenta de que, el detergente __Vanish__ pese a ser el más costoso de todos, fue el que menos resultados mostró a la hora de mitigar la mancha de vino. Sin embargo, resulta ser fácil de manipular y no deterioro tanto las telas a diferencia del detergente __limpido__.
+- Resulta curioso dar cuenta de que, el detergente __Vanish__ pese a ser el más costoso de todos, fue el que menos resultados mostró a la hora de mitigar la mancha de vino. Sin embargo, resulta ser fácil de manipular y no deterioro tanto las telas a diferencia del detergente __límpido__.
 
 - Se observó en cuanto a las telas _scuba_ y microfibra, como en este era un poco más complicado que la sustancia del vino se diluyera en ellas y perdurara dado la contextura de las mismas.
 
 - El lino es el tipo de tela que presentó menor resistencia a la remoción de la mancha del vino, al aplicar cualquiera de los 3 detergentes.
 
 - El poliéster fue el tipo de tela que mejor absorbió la mancha de vino, por lo que el detergente _Bonaropa_ y el detergente _Vanish_ demostraron ser menos efectivos en la remoción de la mancha de vino en este tipo de tela.
+
+- Los detergentes a base de __cloro__ presentan mayor efectividad para la remoción de la mancha de vino que los detergentes sin cloro.
+
+
 
 
 
@@ -793,7 +804,31 @@ Del diseño experimental es menester destacar lo siguiente:
 - [5]   https://www.norvilsa.com/tela-de-lino
 
 
+\newpage
 
+\section{Anexos}
+
+- Evidencia fotográfica:
+
+\begin{figure}[h]
+  \center
+\includegraphics[width=12cm, height=8cm]{foto5}
+\end{figure}
+
+\begin{figure}[h]
+  \center
+\includegraphics[width=12cm, height=8cm]{6}
+\end{figure}
+
+\begin{figure}[h]
+  \center
+  \includegraphics[width=12cm, height=8cm]{7}
+\end{figure}
+
+\begin{figure}[h]
+  \center
+\includegraphics[width=12cm, height=8cm]{8}
+\end{figure}
 
 
 

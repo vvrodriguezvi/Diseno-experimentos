@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.15)  21 NOV 2022 22:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.15)  21 NOV 2022 23:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -543,7 +543,7 @@ Package hyperref Info: Link coloring OFF on input line 88.
 \openout3 = `Trabajo.out'.
 
 (./titlepage.tex
-<escudo.png, id=124, 600.2425pt x 769.87625pt>
+<escudo.png, id=128, 600.2425pt x 769.87625pt>
 File: escudo.png Graphic file (type png)
 <use escudo.png>
 Package pdftex.def Info: escudo.png  used on input line 5.
@@ -590,7 +590,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 ...\numberline {6}Referencias}{26}{section.6}
+l.31 ...\numberline {6}Referencias}{27}{section.6}
                                                   % [1])
 \tf@toc=\write4
 \openout4 = `Trabajo.toc'.
@@ -610,111 +610,134 @@ LaTeX Info: Redefining \% on input line 1.
 \openout6 = `Trabajo.lot'.
 
 [2] [3] [4]
-<foto1.jpg, id=231, 1084.05pt x 1084.05pt>
+<foto1.jpg, id=236, 1084.05pt x 1084.05pt>
 File: foto1.jpg Graphic file (type jpg)
 <use foto1.jpg>
 Package pdftex.def Info: foto1.jpg  used on input line 245.
 (pdftex.def)             Requested size: 188.18979pt x 188.18979pt.
 [5 <./foto1.jpg>]
-<foto2.jpg, id=238, 1084.05pt x 1084.05pt>
+<foto2.jpg, id=243, 1084.05pt x 1084.05pt>
 File: foto2.jpg Graphic file (type jpg)
 <use foto2.jpg>
 Package pdftex.def Info: foto2.jpg  used on input line 276.
 (pdftex.def)             Requested size: 188.18979pt x 188.18979pt.
 [6 <./foto2.jpg>] [7]
-<foto3.png, id=248, 200.75pt x 200.24812pt>
+<foto3.png, id=253, 200.75pt x 200.24812pt>
 File: foto3.png Graphic file (type png)
 <use foto3.png>
 Package pdftex.def Info: foto3.png  used on input line 395.
 (pdftex.def)             Requested size: 284.57074pt x 283.85933pt.
 [8 <./foto3.png>]
-<foto4.jpg, id=255, 1084.05pt x 1084.05pt>
+<foto4.jpg, id=260, 1084.05pt x 1084.05pt>
 File: foto4.jpg Graphic file (type jpg)
 <use foto4.jpg>
 Package pdftex.def Info: foto4.jpg  used on input line 426.
 (pdftex.def)             Requested size: 284.52603pt x 284.52603pt.
-[9 <./foto4.jpg>]
+[9 <./foto4.jpg>] [10]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 511.
-
-[10]
-
-LaTeX Warning: Command \' invalid in math mode on input line 536.
+LaTeX Warning: Command \' invalid in math mode on input line 515.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 572--575
+LaTeX Warning: Command \' invalid in math mode on input line 540.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 576--579
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 590--593
+Underfull \hbox (badness 10000) in paragraph at lines 594--597
 
  []
 
-<Trabajo_files/figure-latex/unnamed-chunk-3-1.pdf, id=274, 361.35pt x 289.08pt>
+<Trabajo_files/figure-latex/unnamed-chunk-3-1.pdf, id=279, 361.35pt x 289.08pt>
 File: Trabajo_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type pdf)
 <use Trabajo_files/figure-latex/unnamed-chunk-3-1.pdf>
-Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-3-1.pdf  used on input line 607.
+Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-3-1.pdf  used on input line 611.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
 [12]
-<Trabajo_files/figure-latex/unnamed-chunk-4-1.pdf, id=280, 361.35pt x 289.08pt>
+<Trabajo_files/figure-latex/unnamed-chunk-4-1.pdf, id=285, 361.35pt x 289.08pt>
 File: Trabajo_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (type pdf)
 <use Trabajo_files/figure-latex/unnamed-chunk-4-1.pdf>
-Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-4-1.pdf  used on input line 633.
+Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-4-1.pdf  used on input line 637.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
 [13 <./Trabajo_files/figure-latex/unnamed-chunk-3-1.pdf>]
-<Trabajo_files/figure-latex/unnamed-chunk-5-1.pdf, id=291, 361.35pt x 289.08pt>
+<Trabajo_files/figure-latex/unnamed-chunk-5-1.pdf, id=296, 361.35pt x 289.08pt>
 File: Trabajo_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type pdf)
 <use Trabajo_files/figure-latex/unnamed-chunk-5-1.pdf>
-Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-5-1.pdf  used on input line 656.
+Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-5-1.pdf  used on input line 660.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
 [14 <./Trabajo_files/figure-latex/unnamed-chunk-4-1.pdf>] [15 <./Trabajo_files/figure-latex/unnamed-chunk-5-1.pdf>] [16] [17]
-<Trabajo_files/figure-latex/unnamed-chunk-7-1.pdf, id=326, 361.35pt x 289.08pt>
+<Trabajo_files/figure-latex/unnamed-chunk-7-1.pdf, id=331, 361.35pt x 289.08pt>
 File: Trabajo_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type pdf)
 <use Trabajo_files/figure-latex/unnamed-chunk-7-1.pdf>
-Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-7-1.pdf  used on input line 879.
+Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-7-1.pdf  used on input line 883.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
 [18]
-<Trabajo_files/figure-latex/unnamed-chunk-9-1.pdf, id=333, 361.35pt x 289.08pt>
+<Trabajo_files/figure-latex/unnamed-chunk-9-1.pdf, id=338, 361.35pt x 289.08pt>
 File: Trabajo_files/figure-latex/unnamed-chunk-9-1.pdf Graphic file (type pdf)
 <use Trabajo_files/figure-latex/unnamed-chunk-9-1.pdf>
-Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-9-1.pdf  used on input line 922.
+Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-9-1.pdf  used on input line 926.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
 [19 <./Trabajo_files/figure-latex/unnamed-chunk-7-1.pdf>]
-<Trabajo_files/figure-latex/unnamed-chunk-10-1.pdf, id=344, 361.35pt x 289.08pt>
+<Trabajo_files/figure-latex/unnamed-chunk-10-1.pdf, id=349, 361.35pt x 289.08pt>
 File: Trabajo_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (type pdf)
 <use Trabajo_files/figure-latex/unnamed-chunk-10-1.pdf>
-Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-10-1.pdf  used on input line 952.
+Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-10-1.pdf  used on input line 956.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
 [20 <./Trabajo_files/figure-latex/unnamed-chunk-9-1.pdf>] [21 <./Trabajo_files/figure-latex/unnamed-chunk-10-1.pdf>]
-<Trabajo_files/figure-latex/unnamed-chunk-12-1.pdf, id=365, 361.35pt x 289.08pt>
+<Trabajo_files/figure-latex/unnamed-chunk-12-1.pdf, id=370, 361.35pt x 289.08pt>
 File: Trabajo_files/figure-latex/unnamed-chunk-12-1.pdf Graphic file (type pdf)
 <use Trabajo_files/figure-latex/unnamed-chunk-12-1.pdf>
-Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-12-1.pdf  used on input line 1008.
+Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-12-1.pdf  used on input line 1012.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-<Trabajo_files/figure-latex/unnamed-chunk-13-1.pdf, id=366, 361.35pt x 289.08pt>
+<Trabajo_files/figure-latex/unnamed-chunk-13-1.pdf, id=371, 361.35pt x 289.08pt>
 File: Trabajo_files/figure-latex/unnamed-chunk-13-1.pdf Graphic file (type pdf)
 <use Trabajo_files/figure-latex/unnamed-chunk-13-1.pdf>
-Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-13-1.pdf  used on input line 1038.
+Package pdftex.def Info: Trabajo_files/figure-latex/unnamed-chunk-13-1.pdf  used on input line 1042.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
 [22 <./Trabajo_files/figure-latex/unnamed-chunk-12-1.pdf>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [23 <./Trabajo_files/figure-latex/unnamed-chunk-13-1.pdf>]
-Overfull \hbox (27.36932pt too wide) detected at line 1147
+Overfull \hbox (27.36932pt too wide) detected at line 1151
 []\OT1/lmr/m/n/12 ([]) = []([]) + []([]) \OMS/lmsy/m/n/12 ^^@ []\OT1/lmr/m/n/12 ([]) = [] + [] \OMS/lmsy/m/n/12 ^^@ [][]  \OT1/lmr/m/n/12 = 3[] = [] = 0\OML/lmm/m/it/12 :\OT1/lmr/m/n/12 7635
  []
 
-[24] [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1209--1212
+[24] [25] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 1216--1219
 []\T1/lmr/m/n/12 [3] []$https : / / waixo . com / blog / tela -[] de -[] poliester -[] que -[] es -[] para -[] que -[] utilizarla -[] ventajas -[] y -[]
  []
 
-[26] (./Trabajo.aux
+[27]
+<foto5.jpg, id=425, 1084.05pt x 1084.05pt>
+File: foto5.jpg Graphic file (type jpg)
+<use foto5.jpg>
+Package pdftex.def Info: foto5.jpg  used on input line 1237.
+(pdftex.def)             Requested size: 227.60759pt x 227.60759pt.
+<6.jpg, id=426, 1084.05pt x 1084.05pt>
+File: 6.jpg Graphic file (type jpg)
+<use 6.jpg>
+Package pdftex.def Info: 6.jpg  used on input line 1242.
+(pdftex.def)             Requested size: 227.60759pt x 227.60759pt.
+<7.jpg, id=427, 1084.05pt x 1084.05pt>
+File: 7.jpg Graphic file (type jpg)
+<use 7.jpg>
+Package pdftex.def Info: 7.jpg  used on input line 1247.
+(pdftex.def)             Requested size: 227.60759pt x 227.60759pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<8.jpg, id=428, 1084.05pt x 1084.05pt>
+File: 8.jpg Graphic file (type jpg)
+<use 8.jpg>
+Package pdftex.def Info: 8.jpg  used on input line 1252.
+(pdftex.def)             Requested size: 227.60759pt x 227.60759pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[28 <./foto5.jpg> <./6.jpg>] [29 <./7.jpg> <./8.jpg>] (./Trabajo.aux
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
 )
@@ -725,21 +748,21 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Trabajo.out' has not changed.
-(rerunfilecheck)             Checksum: 959EC583B92E034157E8CB2ED9E4481F;6747.
+(rerunfilecheck)             Checksum: DE9B581E5F1B046EB0BC7586A4B1C238;6821.
  ) 
 Here is how much of TeX's memory you used:
- 13842 strings out of 476913
- 223855 string characters out of 5822910
- 585686 words of memory out of 5000000
- 34735 multiletter control sequences out of 15000+600000
+ 13897 strings out of 476913
+ 224464 string characters out of 5822910
+ 586686 words of memory out of 5000000
+ 34783 multiletter control sequences out of 15000+600000
  535265 words of font info for 63 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,16n,77p,633b,763s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,17n,77p,633b,763s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}<c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/Users/vvrod/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Trabajo.pdf (27 pages, 1034428 bytes).
+Output written on Trabajo.pdf (30 pages, 1531367 bytes).
 PDF statistics:
- 501 PDF objects out of 1000 (max. 8388607)
- 417 compressed objects within 5 object streams
- 92 named destinations out of 1000 (max. 500000)
- 306 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 522 PDF objects out of 1000 (max. 8388607)
+ 431 compressed objects within 5 object streams
+ 96 named destinations out of 1000 (max. 500000)
+ 334 words of extra memory for PDF output out of 10000 (max. 10000000)
 
