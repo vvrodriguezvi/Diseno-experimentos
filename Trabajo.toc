@@ -11,19 +11,21 @@
 \contentsline {subsection}{\numberline {3.2}Previo al diseño experimental}{6}{subsection.3.2}%
 \contentsline {subsubsection}{\numberline {3.2.1}Prueba piloto}{7}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Resultados obtenidos de la prueba piloto}{8}{subsubsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.3}Aleatorización}{8}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Aplicación del diseño experimental}{8}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}Estimación de los efectos de los niveles de los factores y de las interacciones(tratamientos)}{9}{subsubsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.5}Gráfico de los efectos de los factores}{12}{subsection.3.5}%
-\contentsline {subsubsection}{\numberline {3.5.1}Gráfico de interacción de los efectos}{13}{subsubsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.6}Modelo del diseño experimental}{14}{subsection.3.6}%
-\contentsline {subsubsection}{\numberline {3.6.1}Significancia de los efectos debidos a las interacciones y a los factores}{15}{subsubsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.7}Verificación de los supuestos de los errores del modelo del diseño experimental}{17}{subsection.3.7}%
-\contentsline {subsubsection}{\numberline {3.7.1}Normalidad}{17}{subsubsection.3.7.1}%
-\contentsline {subsubsection}{\numberline {3.7.2}Independencia}{18}{subsubsection.3.7.2}%
-\contentsline {subsubsection}{\numberline {3.7.3}Varianza}{19}{subsubsection.3.7.3}%
-\contentsline {section}{\numberline {4}Comparación de Medias}{20}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Diferencia de medias del Factor A}{22}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Diferencia de medias del Factor B}{23}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Conclusiones}{23}{section.5}%
-\contentsline {section}{\numberline {6}Referencias}{25}{section.6}%
+\contentsline {subsection}{\numberline {3.3}Evidencia fotográfica de la prueba piloto}{8}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Aleatorización}{8}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Aplicación del diseño experimental}{8}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Estimación de los efectos de los niveles de los factores y de las interacciones(tratamientos)}{10}{subsubsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.6}Gráfico de los efectos de los factores}{13}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}Gráfico de interacción de los efectos}{14}{subsubsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.7}Modelo del diseño experimental}{15}{subsection.3.7}%
+\contentsline {subsubsection}{\numberline {3.7.1}Significancia de los efectos debidos a las interacciones y a los factores}{16}{subsubsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.8}Verificación de los supuestos de los errores del modelo del diseño experimental}{18}{subsection.3.8}%
+\contentsline {subsubsection}{\numberline {3.8.1}Normalidad}{18}{subsubsection.3.8.1}%
+\contentsline {subsubsection}{\numberline {3.8.2}Independencia}{19}{subsubsection.3.8.2}%
+\contentsline {subsubsection}{\numberline {3.8.3}Varianza}{20}{subsubsection.3.8.3}%
+\contentsline {section}{\numberline {4}Comparación de Medias}{21}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Diferencia de medias del Factor A}{23}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Diferencia de medias del Factor B}{24}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Contrastes de medias}{24}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Conclusiones}{24}{section.5}%
+\contentsline {section}{\numberline {6}Referencias}{26}{section.6}%

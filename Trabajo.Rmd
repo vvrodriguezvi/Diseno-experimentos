@@ -131,13 +131,15 @@ De los resultados obtenidos de la realizacion de la prueba piloto, se llego a la
 
 - El estudio piloto sirvió para determinar cuál era el tiempo adecuado para dejar el retazo de tela sumergido en la solución de agua con cada uno de los diferentes tipos de tela. 
 
+\newpage
 
 \subsubsection{Resultados obtenidos de la prueba piloto}
 
-\begin{table}[h!]
+\begin{table}[h]
 \center
 \caption{Muestreo piloto}
 \label{tab:my-table}
+\resizebox{12cm}{!} {
 \begin{tabular}{|r|r|r|r|r|r|r|r|}
 \hline
  & Tipo de tela & Tipo de detergente & Genaro & Martín & Valentina & Daniela & Promedio: $Y_i$ \\ \hline
@@ -154,7 +156,13 @@ De los resultados obtenidos de la realizacion de la prueba piloto, se llego a la
 11 & Microfibra & Vanish & 5 & 3 & 4 & 4 & 4 \\ \hline
 12 & Lino & Vanish & 4 & 5 & 5 & 4 & 4.5 \\ \hline
 \end{tabular}
+}
 \end{table}
+
+\subsection{Evidencia fotográfica de la prueba piloto}
+
+![Evidencia de la aplicación de la prueba piloto](foto3.jpg)
+
 
 \subsection{Aleatorización}
 

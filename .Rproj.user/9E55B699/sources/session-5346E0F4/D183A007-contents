@@ -103,17 +103,19 @@ A fin de estudiar el efecto de los tres tipos de detergentes sobre los cuatro di
 
 \subsection{Previo al diseño experimental}
 
-Para llevar a cabo este diseño experimental, primero se compró medio metro de tela de cada uno de los tipos de tela (_scuba_, poliéster, microfibra y lino). Dado que se buscaba tener cierto nivel de variabilidad en cuanto los tipos de tela, la _scuba_  resulta ser muy fina y delgada, mientras que la tela en lino resulta ser un poco más gruesa y lisa. Por otro lado, la tela en microfibra resulta ser la más lanuda y gruesa a diferencia de la tela poliéster que presenta ser la más delgada y "fragil" de todas.  Con la compra de estas cuatro telas,  cuyos precios por medio metro fueron de 9.000 pesos colombianos para la tela en microfibra, 9.500 pesos para la tela en poliéster, 8.000 para la tela en lino y 8.500 para la tela en _Scuba_. Se espera tener una variedad suficiente de telas que permita dar a conocer el efecto del detergente líquido a la hora de remover manchas, en este caso en particular una mancha de vino. 
+Para llevar a cabo este diseño experimental, primero se compró medio metro de tela de cada uno de los tipos de tela (_scuba_, poliéster, microfibra y lino). Dado que se buscaba tener cierto nivel de variabilidad en cuanto los tipos de tela, la _scuba_  resulta ser muy fina y delgada, mientras que la tela en lino resulta ser un poco más gruesa y lisa. Por otro lado, la tela en microfibra resulta ser la más lanuda y gruesa a diferencia de la tela poliéster que presenta ser la más delgada y "fragil" de todas.  Con la compra de estas cuatro telas,  cuyos precios por medio metro fueron de 9.000 pesos colombianos para la tela en microfibra, 9.500 pesos para la tela en poliéster, 8.000 para la tela en lino y 8.500 para la tela en _Scuba_. Se espera tener una variedad suficiente de telas que permita dar a conocer el efecto del detergente líquido a la hora de remover manchas, en este caso en particular una mancha de vino.
 
-Posteriormente, se compró en un almacén del _D1_ la sustancia a ser echada en la tela, en este caso se optó por el vino, puesto que se concluyo que con estos cuatro tipos de tela blanca la mancha sería muy visible, en consecuencia esto permite que a la hora de realizar la calificación por cada uno de los integrantes la mancha sea lo que más resalte de la tela, ya sea por su ausencia o presencia de la misma después de aplicar el tratamiento (detergente líquido). Después se compraron las tres distintas marcas de detergente líquido también en un establecimiento _D1_ los cuales fueron _Bonaropa_ de 1000 ml costo 3.890 pesos, _Limpido_ de 1000 ml costo 4.328 pesos y _Vanish_ de 1000 ml costo 10.278 pesos.
+Posteriormente, se compró en un almacén del _D1_ la sustancia a ser echada en la tela, en este caso se optó por el vino, puesto que se concluyó que con estos cuatro tipos de tela blanca la mancha sería muy visible, en consecuencia esto permite que a la hora de realizar la calificación por cada uno de los integrantes la mancha sea lo que más resalte de la tela, ya sea por su ausencia o presencia de la misma después de aplicar el tratamiento (detergente líquido). Después se compraron las tres distintas marcas de detergente líquido también en un establecimiento _D1_ los cuales fueron _Bonaropa_ de 1000 ml costo 3.890 pesos, _Limpido_ de 1000 ml costo 4.328 pesos y _Vanish_ de 1000 ml costo 10.278 pesos.
 
-Adicionalmente, se compraron materiales secundarios para la realización de dicho experimento, materiales tales como: 2 tarros de orina, tijeras, cinta de enmascarar, un paquete de resortes, vasos desechables y un gotero. Ya después de haber conseguido estos materiales se procedió a realizar la muestra piloto, dicho procedimiento se detalla seguidamente.
+Adicionalmente, se utilizaron materiales secundarios para la realización de dicho experimento, materiales tales como: 2 tarros para muestras de orina, tijeras, marcadores, lápiz, cinta de enmascarar,, vasos transparentes desechables y un gotero. Ya después de haber conseguido estos materiales se procedió a realizar la muestra piloto, dicho procedimiento se detalla seguidamente.
+
 
 \subsubsection{Prueba piloto}
 
-Se realiza una prueba piloto con el fin de identificar qué inconvenientes se pueden llegar a presentar al momento de realizar el experimento final. El diseño piloto se llevará a cabo de la siguiente manera: de las 20 divisiones de cada tipo de tela se escogió de manera aleatoria 1 retazo de tela para cada uno de los 3 diferentes tipos de detergentes, estos retazos fueron cortados y luego manchados cada uno con 3 gotas de vino y se esperó un lapso de 1 minuto para que la mancha se acentuará sobre la tela y luego se procedió a dejar el el retazo de tela remojando en la solución de agua con cada uno de los detergentes durante dos minutos.
+Se realizó una prueba piloto con el fin de identificar qué inconvenientes se pueden llegar a presentar al momento de realizar el experimento final. El diseño piloto se llevó a cabo de la siguiente manera: de las 20 divisiones de cada tipo de tela se escogió de manera aleatoria 3 retazos de tela para cada uno de los 3 diferentes tipos de detergentes, estos retazos fueron cortados y luego manchados cada uno con 3 gotas de vino y se esperó un lapso de 1 minuto para que la mancha se acentuará sobre la tela y luego se procedió a dejar  el retazo de tela remojando en la solución de agua con cada uno de los detergentes durante dos minutos.
 
 Se contempló además de vino, usar chocolate para manchar los retazos de tela, pero debido al espesor del chocolate, las gotas de chocolate que se aplicaban no se adherían a los retazos de tela. 
+ 
 
 De los resultados obtenidos de la realizacion de la prueba piloto, se llego a las siguientes observaciones:
 
@@ -129,13 +131,15 @@ De los resultados obtenidos de la realizacion de la prueba piloto, se llego a la
 
 - El estudio piloto sirvió para determinar cuál era el tiempo adecuado para dejar el retazo de tela sumergido en la solución de agua con cada uno de los diferentes tipos de tela. 
 
+\newpage
 
 \subsubsection{Resultados obtenidos de la prueba piloto}
 
-\begin{table}[h!]
+\begin{table}[h]
 \center
 \caption{Muestreo piloto}
 \label{tab:my-table}
+\resizebox{12cm}{!} {
 \begin{tabular}{|r|r|r|r|r|r|r|r|}
 \hline
  & Tipo de tela & Tipo de detergente & Genaro & Martín & Valentina & Daniela & Promedio: $Y_i$ \\ \hline
@@ -152,13 +156,36 @@ De los resultados obtenidos de la realizacion de la prueba piloto, se llego a la
 11 & Microfibra & Vanish & 5 & 3 & 4 & 4 & 4 \\ \hline
 12 & Lino & Vanish & 4 & 5 & 5 & 4 & 4.5 \\ \hline
 \end{tabular}
+}
 \end{table}
+
+\subsection{Evidencia fotográfica de la prueba piloto}
+
+![Evidencia de la aplicación de la prueba piloto](foto3.jpg)
+
+
+\subsection{Aleatorización}
+
+Para el proceso de aleatorización se llevo a cabo lo siguiente:
+
+__1.__ Para cada uno de los tipos de tela se realizó una división de 20 fragmentos de 10x10cm.
+
+__2.__ Se le asignó un número a cada una de las 20 divisiones en cada uno de los diferentes tipos de tela.
+
+__3.__ Se pusieron en un vaso desechable 20 papelitos con el números del 1 a 20, de esos se escogieron 3 números aleatorios, para seleccionar qué división de la tela fue cortada y manchada con vino, donde el primer número aleatorio corresponde al retazo de tela que fue sumergido en la solución de agua y el detergente _Bonaropa_, el segundo número aleatorio corresponde al retazo de tela que fue sumergido en la solución de agua y el detergente _Límpido_. El tercer número aleatorio corresponde al retazo de tela que fue sumergido en la solución de agua y el detergente _Vanish_.
+
+__4.__ Este proceso anterior se repitió con cada una de las diferentes tipos de tela.
 
 
 \subsection{Aplicación del diseño experimental}
 
+Después de haber obtenido las unidades experimentales producto de la aleatorización. Se realizaron 3 réplicas del diseño factorial para investigar el efecto de las telas y de los detergentes en la eficiencia al eliminar una mancha de vino. Esencialmente, se les aplicó a las telas tres gotas de vino, utilizando un gotero y velando porque el perímetro de las manchas para cada tipo de tela fuera el más similar posible. Se esperó un tiempo prudencial de cinco minutos, tiempo en el cual el vino ya se había secado en todas las telas.
 
-Se realizaron 3 réplicas del diseño factorial para investigar el efecto de las telas y de los detergentes en la eficiencia al eliminar una mancha de vino. Los promedios obtenidos por cada detergente y tipo de tela en cada réplica aparece en la tabla siguiente:
+Posteriormente, se sumergió las telas en vasos desechables que contenían agua y el detergente en cuestión, específicamente se echaron dos basados de agua por uno de detergente usando como medidor un frasco para muestras de orina de 56.3 mm. Se esperó un tiempo de aproximadamente cinco minutos, entre cada tanda de telas, es decir, las tres corridas de tela distintas por tela y detergente. También, se registraron los órdenes en que fueron tomadas las mediciones.
+
+Finalmente, se extrajeron las telas y se escurrieron, luego se organizaron preservando el orden en el cual se habían aplicado los tratamientos a la tela. Seguidamente, cada integrante del equipo de manera individual observaba cada una de las telas y realizaba la calificación. Así mismo para cada una de las tandas o corridas experimentales realizadas.
+
+Los promedios obtenidos por cada detergente y tipo de tela en cada réplica aparece en la tabla siguiente:
 
 \begin{table}[h!]
 \center
@@ -482,6 +509,7 @@ El valor P de la prueba es $1.22e^{-05}  < \alpha=0.05$
 
 - No se presenta ___Encubrimiento___ de la significancia de ninguno de los factores del diseño experimental, dado que tanto la interacción como cada uno de los factores son significativos a un nivel de confianza del 5%.
 
+
 \subsection{Verificación de los supuestos de los errores del modelo del diseño experimental}
 
 \subsubsection{Normalidad}
@@ -492,8 +520,8 @@ Para verificar la normalidad de los errores del modelo, se plantea la siguiente 
 $$
 \begin{cases}
 \begin{aligned}
-H_0&: \varepsilon_{ijk} \sim N(0,\sigma^2) \\
-H_a&: \varepsilon_{ijk} \nsim N(0,\sigma^2)\ 
+H_0&: \varepsilon_{ijk} \sim  Normales \\
+H_a&: \varepsilon_{ijk} \nsim Normales\ 
 \end{aligned}
 \end{cases}
 $$
@@ -606,7 +634,6 @@ Bartlett's K-squared = 0.15063, df = 3, p-value = 0.9851 \\ \hline
 
 **Conclusión:** a un nivel de significancia del 5% se cumple el supuesto de homogeneidad de varianza para el termino de error del modelo, dado que los p-valores dieron mayores a $\alpha = 0.05$, y graficamente tampoco se observa un patrón que permita indicar que no se cumple el supuesto.
 
-
 \section{Comparación de Medias}
 
 Según los resultados anteriores, se quiere responder a la pregunta de cúal de los detergente o tipos de tela tiene una mejor calificación al momento de eliminar una mancha de vino, y como se puedo ver el los gráficos de los efectos, se puede observar que el tipo de detergente Límpido presentaba un puntaje de calificación más alto con respecto a los demás detergentes; y con respecto a las telas, se observaba que el tipo de tela poliéster presenta menores puntajes de eficiencia. Para corroborar lo anterior se plantean diversas pruebas de contrastes, pero antes de esto, se presentan algunos gráficos que permiten corroborar los resultados
@@ -645,6 +672,8 @@ ggplot(datos,aes(y=Promedio, x=Tela, col=Tela, fill=Tela))+labs(title='Box-plot 
 - Del Box-Plot se podría inferir que existe diferencia significativa entre las medias de los promedios  de eficiencia de la eliminación de una mancha de vino según el tipo de tela, ya que para cada una de las 4 cajas del gráfico, se observan comportamientos diferentes.
 
 
+Para la diferencia de medias Se procede a utilizar el método Duncan para comparaciones de medias:
+
 \subsection{Diferencia de medias del Factor A}
 
 Para determinar si existe diferencia significativa entre las medias según el tipo de Detergente, se platea la siguiente prueba de hipótesis:
@@ -658,10 +687,19 @@ H_a&: \mu_{i..} \neq\mu_{j..} ~p.a~i\neq j, ~i,j=1,2,3\
 \end{cases}
 $$
 
-```{r}
-modDet <- aov(Promedio~Detergente)
-summary(modDet)
-```
+Se presentan los resultados del método Duncan para el factor A (__Detergente__):
+
+\begin{table}[h]
+\caption{Comparación de Medias usando el método Duncan para el factor Detergente}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+\multicolumn{1}{|l|}{Detergente} & \multicolumn{1}{l|}{Promedio} & \multicolumn{1}{l|}{Grupo} \\ \hline
+Límpido                          & 4.812500                      & a                          \\ \hline
+Bonaropa                         & 3.208333                      & b                          \\ \hline
+Vanish                           & 2.875000                      & c                          \\ \hline
+\end{tabular}
+\end{table}
 
 
 \subsection{Diferencia de medias del Factor B}
@@ -676,7 +714,43 @@ H_a&: \mu_{.i.} \neq\mu_{.j.} ~p.a~i\neq j, ~i,j=1,2,3,4\
 \end{aligned}
 \end{cases}
 $$
+
+Se presentan los resultados del método Duncan para el factor B (__Tela__):
+
+\begin{table}[h!]
+\caption{Comparación de Medias usando el método Duncan para el factor Tela}
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+Tela       & Promedio & Grupo \\ \hline
+Lino       & 4.527778 & a     \\ \hline
+Microfibra & 4.055556 & b     \\ \hline
+Scuba      & 3.444444 & c     \\ \hline
+Poliéster  & 2.500000 & d     \\ \hline
+\end{tabular}
+\end{table}
+
+__Conclusión:__ Se observa usando el método Duncan de comparaciones entre pares de medias, como para ambos factores (__Detergente__ y __Tela__) se crearon grupos distintos por cada media de los tratamientos. Lo cual da cuenta de la variedad en los resultados en canto a la eficiencia en quitar la mancha en cada tela y en las tres distintas marcas de detergente.
+
+\subsection{Contrastes de medias}
+
+
+
 \section{Conclusiones}
+
+El diseño experimental presentado tuvo el fin de dar a conocer la eficiencia de tres marcas de detergentes (_Limpido_, _Bonaropa_ y _vanish_) a la hora de eliminar o hasta cierto punto mitigar una mancha causada por el vino en cuatro distintos tipos de tela (lino, _scuba_, poliester y microfibra). A continuación, se presentan conclusiones, observaciones, comentarios y recomendaciones; dadas por los investigadores y que son fruto del desarrollo de este experimento, así como los resultados e impresiones generadas durante la realización del mismo.
+
+Del diseño experimental es menester destacar lo siguiente:
+
+- El __Lmpido__ en definitiva, resulto ser el que presento mejores resultados a la hora de eliminar la mancha de vino, ya que sin importar el tipo de tela, esta marca dejo, en la mayoría de los casos, nula evidencia de la mancha de vino.
+
+- Resulta curioso dar cuenta de que, el detergente __Vanish__ pese a ser el más costoso de todos, fue el que menos resultados mostró a la hora de mitigar la mancha de vino. Sin embargo, resulta ser fácil de manipular y no deterioro tanto las telas a diferencia del detergente __limpido__.
+
+- Se observó en cuanto a las telas _scuba_ y microfibra, como en este era un poco más complicado que la sustancia del vino se diluyera en ellas y perdurara dado la contextura de las mismas.
+
+- El lino es el tipo de tela que presentó menor resistencia a la remoción de la mancha del vino, al aplicar cualquiera de los 3 detergentes.
+
+- El poliéster fue el tipo de tela que mejor absorbió la mancha de vino, por lo que el detergente _Bonaropa_ y el detergente _Vanish_ demostraron ser menos efectivos en la remoción de la mancha de vino en este tipo de tela.
 
 
 
