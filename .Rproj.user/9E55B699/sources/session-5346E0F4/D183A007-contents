@@ -161,8 +161,11 @@ De los resultados obtenidos de la realizacion de la prueba piloto, se llego a la
 
 \subsection{Evidencia fotográfica de la prueba piloto}
 
-![Evidencia de la aplicación de la prueba piloto](foto3.jpg)
-
+\begin{figure}[h]
+  \center
+  \caption{Evidencia fotográfica de la prueba piloto}
+  \includegraphics[width=10cm, height=10cm]{foto3}
+\end{figure}
 
 \subsection{Aleatorización}
 
@@ -178,6 +181,12 @@ __4.__ Este proceso anterior se repitió con cada una de las diferentes tipos de
 
 
 \subsection{Aplicación del diseño experimental}
+
+\begin{figure}[h]
+  \center
+  \caption{Evidencia fotográfica de la prueba final}
+  \includegraphics[width=10cm, height=10cm]{foto4}
+\end{figure}
 
 Después de haber obtenido las unidades experimentales producto de la aleatorización. Se realizaron 3 réplicas del diseño factorial para investigar el efecto de las telas y de los detergentes en la eficiencia al eliminar una mancha de vino. Esencialmente, se les aplicó a las telas tres gotas de vino, utilizando un gotero y velando porque el perímetro de las manchas para cada tipo de tela fuera el más similar posible. Se esperó un tiempo prudencial de cinco minutos, tiempo en el cual el vino ya se había secado en todas las telas.
 
@@ -202,6 +211,7 @@ Los promedios obtenidos por cada detergente y tipo de tela en cada réplica apar
 \multicolumn{1}{|c|}{Lino} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}3.75\\ 4.5\\ 4.5\end{tabular}} & \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}5\\ 5\\ 5\end{tabular}} & \begin{tabular}[c]{@{}c@{}}4.75\\ 4.5\\ 3.75\end{tabular} \\ \hline
 \end{tabular}
 \end{table}
+
 
 ```{r}
 #Datos

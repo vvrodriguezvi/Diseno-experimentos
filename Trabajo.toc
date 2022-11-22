@@ -13,7 +13,7 @@
 \contentsline {subsubsection}{\numberline {3.2.2}Resultados obtenidos de la prueba piloto}{8}{subsubsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.3}Evidencia fotográfica de la prueba piloto}{8}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Aleatorización}{8}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Aplicación del diseño experimental}{8}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.5}Aplicación del diseño experimental}{9}{subsection.3.5}%
 \contentsline {subsubsection}{\numberline {3.5.1}Estimación de los efectos de los niveles de los factores y de las interacciones(tratamientos)}{10}{subsubsection.3.5.1}%
 \contentsline {subsection}{\numberline {3.6}Gráfico de los efectos de los factores}{13}{subsection.3.6}%
 \contentsline {subsubsection}{\numberline {3.6.1}Gráfico de interacción de los efectos}{14}{subsubsection.3.6.1}%
